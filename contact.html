@@ -1,1 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Rahhali Luxury Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>tailwind.config={theme:{extend:{colors:{gold:{DEFAULT:'#C8A96E',light:'#D4B87A',dark:'#A8894A'},dark:{DEFAULT:'#0A0A0A',card:'#141414',border:'#2A2A2A',elevated:'#1A1A1A'},cream:{DEFAULT:'#E8E2D8',light:'#F5F0E8',muted:'#B8B0A4'}},fontFamily:{display:['Playfair Display','serif'],body:['Lato','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+  <nav class="nav-fixed scrolled" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="nav-brand"><div class="nav-brand-icon"></div><div><div class="nav-brand-text">Rahhali</div></div></a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="tours.html" class="nav-link">Tours</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </div>
+      <button class="md:hidden text-cream p-1" onclick="toggleMobileMenu()" aria-label="Menu"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="absolute top-5 right-5 text-cream p-1" onclick="toggleMobileMenu()" aria-label="Close"><i data-lucide="x" class="w-6 h-6"></i></button>
+    <div class="flex flex-col items-center mb-2">
+      <div class="nav-brand-icon" style="width:40px;height:30px;margin-bottom:0.8rem;"></div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#C8A96E;letter-spacing:0.3em;text-transform:uppercase;">Rahhali</div>
+      <div style="font-size:0.55rem;color:#666;letter-spacing:0.45em;text-transform:uppercase;margin-top:0.3rem;">Luxury Travel</div>
+    </div>
+    <a href="index.html" class="mobile-link" onclick="toggleMobileMenu()">Home</a>
+    <a href="tours.html" class="mobile-link" onclick="toggleMobileMenu()">Tours</a>
+    <a href="about.html" class="mobile-link" onclick="toggleMobileMenu()">About</a>
+    <a href="reviews.html" class="mobile-link" onclick="toggleMobileMenu()">Reviews</a>
+    <a href="contact.html" class="mobile-link" onclick="toggleMobileMenu()">Contact</a>
+    <div class="gold-line mt-2" style="width:40px;"></div>
+    <p style="font-size:0.55rem;color:#555;letter-spacing:0.3em;text-transform:uppercase;margin-top:0.5rem;">Premium Morocco Travel</p>
+  </div>
+
+  <section class="page-header px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto text-center fade-up">
+      <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">Reach Out</p>
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">Contact Us</h2>
+      <div class="gold-line mt-3 mb-4"></div>
+      <p class="text-cream-muted max-w-lg mx-auto text-sm sm:text-base">Ready to start planning? Get in touch and our team will respond within 24 hours.</p>
+    </div>
+  </section>
+
+  <section class="px-4 sm:px-6 py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-10 fade-up">
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-3">
+        <form id="contact-form" onsubmit="submitContact(event)" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="form-label">First Name *</label>
+              <input type="text" class="form-input" id="contact-fname" placeholder="Your first name" required>
+            </div>
+            <div>
+              <label class="form-label">Last Name *</label>
+              <input type="text" class="form-input" id="contact-lname" placeholder="Your last name" required>
+            </div>
+          </div>
+          <div>
+            <label class="form-label">Email *</label>
+            <input type="email" class="form-input" id="contact-email" placeholder="your@email.com" required>
+          </div>
+          <div>
+            <label class="form-label">Phone (optional)</label>
+            <input type="tel" class="form-input" id="contact-phone" placeholder="+212 6XX XXX XXX">
+          </div>
+          <div>
+            <label class="form-label">Subject *</label>
+            <select class="form-input" id="contact-subject" required>
+              <option value="">Select a subject</option>
+              <option value="booking">Tour Booking Inquiry</option>
+              <option value="custom">Custom Itinerary Request</option>
+              <option value="info">General Information</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label">Message *</label>
+            <textarea class="form-input" id="contact-message" placeholder="Tell us how we can help you..." required></textarea>
+          </div>
+          <button type="submit" class="btn-gold w-full">
+            Send Message <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="lg:col-span-2 space-y-6">
+        <div>
+          <div class="gold-line-left mb-5" style="width:40px;"></div>
+          <h3 class="font-display text-lg text-white mb-5">Get in Touch</h3>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 border border-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="message-circle" class="w-4 h-4 text-gold"></i>
+          </div>
+          <div>
+            <p class="text-cream text-xs font-bold tracking-wider uppercase mb-0.5">WhatsApp</p>
+            <a href="https://wa.me/212644182733" target="_blank" class="text-gold text-sm hover:underline">+212 644-182733</a>
+            <p class="text-cream-muted text-xs mt-0.5">Instant replies available</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 border border-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="mail" class="w-4 h-4 text-gold"></i>
+          </div>
+          <div>
+            <p class="text-cream text-xs font-bold tracking-wider uppercase mb-0.5">Email</p>
+            <a href="mailto:rahhaliluxrytravel@gmail.com" class="text-gold text-sm hover:underline">rahhaliluxrytravel@gmail.com</a>
+            <p class="text-cream-muted text-xs mt-0.5">Response within 24 hours</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 border border-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i>
+          </div>
+          <div>
+            <p class="text-cream text-xs font-bold tracking-wider uppercase mb-0.5">Address</p>
+            <p class="text-cream-muted text-sm">124 Avenue Hassan II</p>
+            <p class="text-cream-muted text-sm">Hivernage, Marrakech, Morocco</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 border border-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="clock" class="w-4 h-4 text-gold"></i>
+          </div>
+          <div>
+            <p class="text-cream text-xs font-bold tracking-wider uppercase mb-0.5">Availability</p>
+            <p class="text-cream-muted text-sm">Monday – Sunday</p>
+            <p class="text-cream-muted text-xs mt-0.5">8:00 AM – 10:00 PM (GMT+1)</p>
+          </div>
+        </div>
+
+        <div class="pt-3">
+          <a href="https://wa.me/212644182733?text=Hello%20Rahhali%20Luxury%20Travel%2C%20I%27d%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="btn-outline w-full" style="display:inline-flex;text-decoration:none;">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="px-4 sm:px-6 pb-16">
+    <div class="max-w-7xl mx-auto fade-up">
+      <div class="relative h-[300px] sm:h-[350px] overflow-hidden border border-dark-border">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.846!2d-8.012!3d31.629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDM3JzQ0LjQiTiA4wrAwMCczMi4wIlc!5e0!3m2!1sen!2sma!4v1700000000000!5m2!1sen!2sma"
+          width="100%" height="100%" style="border:0;filter:grayscale(1) invert(0.92) contrast(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to top,#0A0A0A 0%,transparent 15%,transparent 85%,#0A0A0A 100%);"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/212644182733?text=Hello%20Rahhali%20Luxury%20Travel%2C%20I%27d%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="border-t border-dark-border px-4 sm:px-6 py-12 sm:py-16 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+        <div>
+          <div class="footer-brand-arch"></div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#E8E2D8;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:0.3rem;">Rahhali</div>
+          <div style="font-size:0.55rem;color:#888;letter-spacing:0.4em;text-transform:uppercase;margin-bottom:0.8rem;">Luxury Travel</div>
+          <p class="text-cream-muted text-sm leading-relaxed">Premium travel experiences across Morocco. Luxury, authenticity, and seamless organization.</p>
+        </div>
+        <div>
+          <h4 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-3">Explore</h4>
+          <div class="space-y-2">
+            <a href="index.html" class="footer-link block">Home</a>
+            <a href="tours.html" class="footer-link block">Tours</a>
+            <a href="about.html" class="footer-link block">About Us</a>
+            <a href="reviews.html" class="footer-link block">Reviews</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-3">Experiences</h4>
+          <div class="space-y-2">
+            <a href="tours.html" class="footer-link block">Desert Adventures</a>
+            <a href="tours.html" class="footer-link block">Cultural Tours</a>
+            <a href="tours.html" class="footer-link block">Atlas Mountains</a>
+            <a href="tours.html" class="footer-link block">Coastal Escapes</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-3">Contact</h4>
+          <div class="space-y-2">
+            <a href="mailto:rahhaliluxrytravel@gmail.com" class="footer-link block">rahhaliluxrytravel@gmail.com</a>
+            <a href="https://wa.me/212644182733" target="_blank" class="footer-link block">+212 644-182733</a>
+            <p class="footer-link">124 Avenue Hassan II</p>
+            <p class="footer-link">Hivernage, Marrakech</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-dark-border pt-7 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-cream-muted text-xs tracking-wider">&copy; 2025 Rahhali Luxury Travel. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <a href="#" class="text-cream-muted hover:text-gold transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" class="text-cream-muted hover:text-gold transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="https://wa.me/212644182733" target="_blank" class="text-cream-muted hover:text-gold transition-colors"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    }
+
+    function observeFadeUps() {
+      var observer = new IntersectionObserver(function(entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) {
+            entries[i].target.classList.add('visible');
+            observer.unobserve(entries[i].target);
+          }
+        }
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      var els = document.querySelectorAll('.fade-up:not(.visible)');
+      for (var i = 0; i < els.length; i++) observer.observe(els[i]);
+    }
+
+    function submitContact(e) {
+      e.preventDefault();
+      var fname = document.getElementById('contact-fname').value.trim();
+      var lname = document.getElementById('contact-lname').value.trim();
+      var email = document.getElementById('contact-email').value.trim();
+      var subject = document.getElementById('contact-subject').value;
+      var message = document.getElementById('contact-message').value.trim();
+
+      if (!fname || !lname || !email || !subject || !message) {
+        showToast('Please fill in all required fields.', 'warning');
+        return;
+      }
+
+      showToast('Your message has been sent successfully! We will get back to you within 24 hours.', 'success');
+      document.getElementById('contact-form').reset();
+    }
+
+    function showToast(message, type) {
+      type = type || 'info';
+      var container = document.getElementById('toast-container');
+      var toast = document.createElement('div');
+      toast.className = 'toast';
+      var icons = {
+        success: '<svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+        warning: '<svg class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>',
+        info: '<svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+      };
+      toast.innerHTML = (icons[type] || icons.info) + '<span>' + message + '</span>';
+      container.appendChild(toast);
+      setTimeout(function() {
+        toast.classList.add('removing');
+        setTimeout(function() { toast.remove(); }, 300);
+      }, 4500);
+    }
+
+    window.addEventListener('load', function() {
+      lucide.createIcons();
+      observeFadeUps();
+    });
+  </script>
+</body>
+</html>

@@ -4,349 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rahhali Luxury Travel — Premium Morocco Experiences</title>
-  <meta name="description" content="Rahhali Luxury Travel offers curated private tours, desert adventures, cultural journeys, and luxury experiences across Morocco.">
-  <meta property="og:title" content="Rahhali Luxury Travel — Premium Morocco Experiences">
-  <meta property="og:description" content="Curated private tours, desert adventures, and authentic cultural journeys across Morocco.">
-  <meta property="og:type" content="website">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <meta name="description" content="Rahhali Luxury Travel offers curated private tours, desert adventures, and luxury experiences across Morocco.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            gold: { DEFAULT: '#C8A96E', light: '#D4B87A', dark: '#A8894A', hover: '#B89558', muted: 'rgba(200,169,110,0.15)', faint: 'rgba(200,169,110,0.08)' },
-            dark: { DEFAULT: '#0A0A0A', card: '#141414', border: '#2A2A2A', elevated: '#1A1A1A', subtle: '#1E1E1E' },
-            cream: { DEFAULT: '#E8E2D8', light: '#F5F0E8', muted: '#B8B0A4' }
-          },
-          fontFamily: {
-            display: ['Playfair Display', 'serif'],
-            body: ['Lato', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; color-scheme: dark; }
-    body { font-family: 'Lato', sans-serif; background: #0A0A0A; color: #E8E2D8; overflow-x: hidden; }
-    ::selection { background: rgba(200,169,110,0.4); color: #fff; }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: #0A0A0A; }
-    ::-webkit-scrollbar-thumb { background: #C8A96E; border-radius: 3px; }
-
-    /* Preloader */
-    #preloader {
-      position: fixed; inset: 0; z-index: 9999; background: #0A0A0A;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      transition: opacity 0.8s ease, visibility 0.8s ease;
-    }
-    #preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-    .preloader-brand {
-      text-align: center;
-      animation: preloaderPulse 1.5s ease-in-out infinite;
-    }
-    .preloader-brand .brand-arch {
-      width: 48px; height: 36px; margin: 0 auto 1rem;
-      border: 1.5px solid #C8A96E; border-radius: 50% 50% 0 0;
-      position: relative;
-    }
-    .preloader-brand .brand-arch::before {
-      content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-      width: 60%; height: 1px; background: #C8A96E;
-    }
-    .preloader-brand .brand-name {
-      font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #C8A96E;
-      letter-spacing: 0.35em; text-transform: uppercase; line-height: 1;
-    }
-    .preloader-brand .brand-sub {
-      font-family: 'Lato', sans-serif; font-size: 0.55rem; color: #666;
-      letter-spacing: 0.5em; text-transform: uppercase; margin-top: 0.6rem;
-    }
-    .preloader-bar {
-      width: 40px; height: 1px; background: #2A2A2A; margin-top: 2rem;
-      position: relative; overflow: hidden; border-radius: 1px;
-    }
-    .preloader-bar::after {
-      content: ''; position: absolute; left: -100%; top: 0; width: 100%; height: 100%;
-      background: #C8A96E; animation: preloaderBar 1.5s ease-in-out infinite;
-    }
-    @keyframes preloaderPulse {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 1; }
-    }
-    @keyframes preloaderBar {
-      0% { left: -100%; }
-      50% { left: 0; }
-      100% { left: 100%; }
-    }
-
-    /* Navigation */
-    .nav-fixed {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      transition: all 0.4s ease;
-    }
-    .nav-fixed.scrolled {
-      background: rgba(10,10,10,0.96); backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(200,169,110,0.12);
-    }
-    .nav-brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; cursor: pointer; }
-    .nav-brand-icon {
-      width: 32px; height: 24px; border: 1px solid #C8A96E; border-radius: 50% 50% 0 0;
-      position: relative; transition: all 0.3s ease;
-    }
-    .nav-brand-icon::before {
-      content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-      width: 55%; height: 1px; background: #C8A96E;
-    }
-    .nav-fixed.scrolled .nav-brand-icon { width: 28px; height: 20px; }
-    .nav-brand-text {
-      font-family: 'Playfair Display', serif; font-size: 0.95rem; color: #E8E2D8;
-      letter-spacing: 0.25em; text-transform: uppercase; line-height: 1;
-      transition: all 0.3s ease;
-    }
-    .nav-fixed.scrolled .nav-brand-text { font-size: 0.82rem; }
-    .nav-link {
-      position: relative; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: #B8B0A4; transition: color 0.3s ease; cursor: pointer; padding: 0.5rem 0;
-      background: none; border: none; font-family: 'Lato', sans-serif;
-    }
-    .nav-link:hover, .nav-link.active { color: #C8A96E; }
-    .nav-link::after {
-      content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px;
-      background: #C8A96E; transition: width 0.3s ease;
-    }
-    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
-
-    /* Pages */
-    .page { display: none; opacity: 0; transition: opacity 0.5s ease; min-height: 100vh; }
-    .page.active { display: block; opacity: 1; }
-
-    /* Hero */
-    .hero-section {
-      position: relative; height: 100vh; min-height: 600px;
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background: url('https://picsum.photos/seed/morocco-desert-dunes-gold/1920/1080.jpg') center/cover no-repeat;
-    }
-    .hero-bg::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.25) 35%, rgba(10,10,10,0.65) 75%, #0A0A0A 100%);
-    }
-    .hero-content { position: relative; z-index: 10; text-align: center; max-width: 880px; padding: 0 1.5rem; }
-
-    /* Utility */
-    .gold-line { width: 50px; height: 1px; background: #C8A96E; margin: 0 auto; }
-    .gold-line-left { margin: 0; }
-
-    /* Buttons */
-    .btn-gold {
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.7rem;
-      padding: 0.9rem 2.2rem; background: #C8A96E; color: #0A0A0A;
-      font-family: 'Lato', sans-serif; font-size: 0.68rem; font-weight: 700;
-      letter-spacing: 0.18em; text-transform: uppercase; border: none; cursor: pointer;
-      transition: all 0.3s ease; text-decoration: none; line-height: 1;
-    }
-    .btn-gold:hover { background: #D4B87A; transform: translateY(-1px); box-shadow: 0 8px 30px rgba(200,169,110,0.25); }
-    .btn-outline {
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.7rem;
-      padding: 0.9rem 2.2rem; background: transparent; color: #C8A96E;
-      font-family: 'Lato', sans-serif; font-size: 0.68rem; font-weight: 700;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      border: 1px solid rgba(200,169,110,0.35); cursor: pointer;
-      transition: all 0.3s ease; text-decoration: none; line-height: 1;
-    }
-    .btn-outline:hover { border-color: #C8A96E; background: rgba(200,169,110,0.06); }
-
-    /* Tour Cards */
-    .tour-card {
-      background: #141414; border: 1px solid #2A2A2A; overflow: hidden;
-      transition: all 0.4s ease; cursor: pointer;
-    }
-    .tour-card:hover {
-      border-color: rgba(200,169,110,0.25); transform: translateY(-3px);
-      box-shadow: 0 16px 50px rgba(0,0,0,0.4);
-    }
-    .tour-card .card-img { height: 260px; overflow: hidden; position: relative; }
-    .tour-card .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-    .tour-card:hover .card-img img { transform: scale(1.04); }
-    .tour-card .card-img .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,0.55) 0%, transparent 50%); }
-    .tour-card .card-badge {
-      position: absolute; top: 0.8rem; left: 0.8rem;
-      background: rgba(10,10,10,0.65); backdrop-filter: blur(8px);
-      padding: 0.3rem 0.75rem; font-size: 0.6rem; letter-spacing: 0.12em;
-      text-transform: uppercase; color: #C8A96E; border: 1px solid rgba(200,169,110,0.15);
-    }
-
-    /* Forms */
-    .form-input {
-      width: 100%; padding: 0.9rem 1.1rem; background: #141414;
-      border: 1px solid #2A2A2A; color: #E8E2D8;
-      font-family: 'Lato', sans-serif; font-size: 0.88rem;
-      transition: border-color 0.3s ease; outline: none;
-      -webkit-appearance: none;
-    }
-    .form-input:focus { border-color: #C8A96E; }
-    .form-input::placeholder { color: #555; }
-    .form-label {
-      display: block; font-size: 0.68rem; font-weight: 700;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: #777; margin-bottom: 0.4rem;
-    }
-    textarea.form-input { resize: vertical; min-height: 110px; }
-    select.form-input { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23888' viewBox='0 0 16 16'%3E%3Cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
-
-    /* Modals */
-    .modal-overlay {
-      position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center;
-      padding: 1rem; opacity: 0; transition: opacity 0.3s ease;
-    }
-    .modal-overlay.open { display: flex; opacity: 1; }
-    .modal-content {
-      background: #141414; border: 1px solid #2A2A2A;
-      max-width: 900px; width: 100%; max-height: 92vh; overflow-y: auto;
-      position: relative;
-    }
-    .modal-content::-webkit-scrollbar { width: 3px; }
-    .modal-content::-webkit-scrollbar-thumb { background: #C8A96E; border-radius: 2px; }
-
-    /* Toasts */
-    .toast-container {
-      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 5000;
-      display: flex; flex-direction: column; gap: 0.6rem;
-      pointer-events: none;
-    }
-    .toast {
-      padding: 0.9rem 1.3rem; background: #1A1A1A; border: 1px solid rgba(200,169,110,0.25);
-      color: #E8E2D8; font-size: 0.82rem; max-width: 340px;
-      display: flex; align-items: flex-start; gap: 0.6rem;
-      animation: toastIn 0.3s ease forwards;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-      pointer-events: auto;
-    }
-    .toast.removing { animation: toastOut 0.3s ease forwards; }
-    @keyframes toastIn { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-    @keyframes toastOut { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(30px); } }
-
-    /* Mobile Menu */
-    .mobile-menu {
-      position: fixed; inset: 0; z-index: 1500; background: rgba(10,10,10,0.98);
-      backdrop-filter: blur(20px); display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 1.8rem;
-      opacity: 0; visibility: hidden; transition: all 0.4s ease;
-    }
-    .mobile-menu.open { opacity: 1; visibility: visible; }
-    .mobile-link {
-      font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #E8E2D8;
-      cursor: pointer; transition: color 0.3s ease; text-decoration: none;
-      background: none; border: none;
-    }
-    .mobile-link:hover { color: #C8A96E; }
-
-    /* Animations */
-    .fade-up {
-      opacity: 0; transform: translateY(25px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-    /* Review Form */
-    .upload-area {
-      border: 2px dashed #2A2A2A; padding: 1.5rem; text-align: center;
-      cursor: pointer; transition: all 0.3s ease;
-    }
-    .upload-area:hover { border-color: #C8A96E; background: rgba(200,169,110,0.04); }
-    .upload-area.has-files { border-color: #C8A96E; border-style: solid; }
-
-    /* Filter Tabs */
-    .filter-tab {
-      padding: 0.45rem 1.2rem; font-size: 0.65rem; font-weight: 700;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: #888; border: 1px solid transparent; cursor: pointer;
-      transition: all 0.3s ease; background: transparent;
-      font-family: 'Lato', sans-serif;
-    }
-    .filter-tab:hover { color: #C8A96E; }
-    .filter-tab.active { color: #C8A96E; border-color: rgba(200,169,110,0.25); background: rgba(200,169,110,0.06); }
-
-    /* Stars */
-    .star { color: #C8A96E; }
-    .star-empty { color: #2A2A2A; }
-    .star-btn { background: none; border: none; cursor: pointer; padding: 0; line-height: 1; }
-
-    /* Stats */
-    .stat-number {
-      font-family: 'Playfair Display', serif; font-size: 3rem;
-      font-weight: 400; color: #C8A96E; line-height: 1;
-    }
-
-    /* Value Cards */
-    .value-card {
-      padding: 2rem 1.5rem; border: 1px solid #2A2A2A;
-      background: #141414; transition: all 0.4s ease;
-    }
-    .value-card:hover { border-color: rgba(200,169,110,0.25); }
-
-    /* Footer */
-    .footer-link {
-      color: #888; font-size: 0.82rem; transition: color 0.3s ease;
-      cursor: pointer; text-decoration: none;
-    }
-    .footer-link:hover { color: #C8A96E; }
-
-    /* Footer brand */
-    .footer-brand-arch {
-      width: 36px; height: 26px; border: 1px solid #C8A96E; border-radius: 50% 50% 0 0;
-      position: relative; margin-bottom: 0.8rem;
-    }
-    .footer-brand-arch::before {
-      content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-      width: 55%; height: 1px; background: #C8A96E;
-    }
-
-    /* Floating WhatsApp */
-    .whatsapp-float {
-      position: fixed; bottom: 1.5rem; left: 1.5rem; z-index: 900;
-      width: 52px; height: 52px; background: #25D366; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-      transition: all 0.3s ease; cursor: pointer; text-decoration: none;
-    }
-    .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 6px 25px rgba(37,211,102,0.5); }
-
-    /* Grain */
-    body::before {
-      content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.025;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-content h1 { font-size: 2.2rem !important; line-height: 1.15 !important; }
-      .hero-content p.text-lg { font-size: 0.95rem !important; }
-      .stat-number { font-size: 2.2rem; }
-      .tour-card .card-img { height: 200px; }
-      .modal-content { max-height: 100vh; height: 100%; border: none; border-radius: 0; }
-      .modal-overlay { padding: 0; }
-      .toast-container { bottom: 1rem; right: 1rem; left: 1rem; }
-      .toast { min-width: auto; max-width: 100%; font-size: 0.78rem; }
-      .whatsapp-float { bottom: 1rem; left: 1rem; width: 46px; height: 46px; }
-      .value-card { padding: 1.5rem 1.2rem; }
-      .preloader-brand .brand-name { font-size: 1.3rem; }
-    }
-    @media (max-width: 480px) {
-      .hero-content h1 { font-size: 1.8rem !important; }
-      .btn-gold, .btn-outline { padding: 0.8rem 1.5rem; font-size: 0.63rem; }
-      .preloader-brand .brand-name { font-size: 1.1rem; letter-spacing: 0.25em; }
-      .preloader-brand .brand-sub { font-size: 0.45rem; letter-spacing: 0.35em; }
-    }
-  </style>
+  <script>tailwind.config={theme:{extend:{colors:{gold:{DEFAULT:'#C8A96E',light:'#D4B87A',dark:'#A8894A'},dark:{DEFAULT:'#0A0A0A',card:'#141414',border:'#2A2A2A',elevated:'#1A1A1A'},cream:{DEFAULT:'#E8E2D8',light:'#F5F0E8',muted:'#B8B0A4'}},fontFamily:{display:['Playfair Display','serif'],body:['Lato','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -360,496 +23,115 @@
     <div class="preloader-bar"></div>
   </div>
 
-  <!-- NAVIGATION -->
+  <!-- NAV -->
   <nav class="nav-fixed" id="navbar">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-      <a class="nav-brand" onclick="navigateTo('home')">
-        <div class="nav-brand-icon"></div>
-        <div>
-          <div class="nav-brand-text">Rahhali</div>
-        </div>
-      </a>
+      <a href="index.html" class="nav-brand"><div class="nav-brand-icon"></div><div><div class="nav-brand-text">Rahhali</div></div></a>
       <div class="hidden md:flex items-center gap-7">
-        <button class="nav-link active" data-page="home" onclick="navigateTo('home')">Home</button>
-        <button class="nav-link" data-page="tours" onclick="navigateTo('tours')">Tours</button>
-        <button class="nav-link" data-page="about" onclick="navigateTo('about')">About</button>
-        <button class="nav-link" data-page="reviews" onclick="navigateTo('reviews')">Reviews</button>
-        <button class="nav-link" data-page="contact" onclick="navigateTo('contact')">Contact</button>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="tours.html" class="nav-link">Tours</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </div>
-      <button class="md:hidden text-cream p-1" onclick="toggleMobileMenu()" aria-label="Open menu">
-        <i data-lucide="menu" class="w-5 h-5"></i>
-      </button>
+      <button class="md:hidden text-cream p-1" onclick="toggleMobileMenu()" aria-label="Menu"><i data-lucide="menu" class="w-5 h-5"></i></button>
     </div>
   </nav>
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobile-menu">
-    <button class="absolute top-5 right-5 text-cream p-1" onclick="toggleMobileMenu()" aria-label="Close menu">
-      <i data-lucide="x" class="w-6 h-6"></i>
-    </button>
+    <button class="absolute top-5 right-5 text-cream p-1" onclick="toggleMobileMenu()" aria-label="Close"><i data-lucide="x" class="w-6 h-6"></i></button>
     <div class="flex flex-col items-center mb-2">
       <div class="nav-brand-icon" style="width:40px;height:30px;margin-bottom:0.8rem;"></div>
       <div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#C8A96E;letter-spacing:0.3em;text-transform:uppercase;">Rahhali</div>
       <div style="font-size:0.55rem;color:#666;letter-spacing:0.45em;text-transform:uppercase;margin-top:0.3rem;">Luxury Travel</div>
     </div>
-    <button class="mobile-link" onclick="navigateTo('home'); toggleMobileMenu();">Home</button>
-    <button class="mobile-link" onclick="navigateTo('tours'); toggleMobileMenu();">Tours</button>
-    <button class="mobile-link" onclick="navigateTo('about'); toggleMobileMenu();">About</button>
-    <button class="mobile-link" onclick="navigateTo('reviews'); toggleMobileMenu();">Reviews</button>
-    <button class="mobile-link" onclick="navigateTo('contact'); toggleMobileMenu();">Contact</button>
+    <a href="index.html" class="mobile-link" onclick="toggleMobileMenu()">Home</a>
+    <a href="tours.html" class="mobile-link" onclick="toggleMobileMenu()">Tours</a>
+    <a href="about.html" class="mobile-link" onclick="toggleMobileMenu()">About</a>
+    <a href="reviews.html" class="mobile-link" onclick="toggleMobileMenu()">Reviews</a>
+    <a href="contact.html" class="mobile-link" onclick="toggleMobileMenu()">Contact</a>
     <div class="gold-line mt-2" style="width:40px;"></div>
-    <p class="text-cream-muted text-xs tracking-widest mt-1" style="font-size:0.55rem;color:#555;">PREMIUM MOROCCO TRAVEL</p>
+    <p style="font-size:0.55rem;color:#555;letter-spacing:0.3em;text-transform:uppercase;margin-top:0.5rem;">Premium Morocco Travel</p>
   </div>
 
-  <!-- ==================== HOME PAGE ==================== -->
-  <div class="page active" id="page-home">
-    <section class="hero-section">
-      <div class="hero-bg"></div>
-      <div class="hero-content">
-        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-5" style="font-size:0.6rem;">Rahhali Luxury Travel</p>
-        <h1 class="font-display text-4xl sm:text-5xl md:text-7xl font-500 text-white leading-tight mb-5" style="text-shadow: 0 4px 30px rgba(0,0,0,0.5);">
-          Discover Morocco<br><em class="text-gold font-normal">in Absolute Luxury</em>
-        </h1>
-        <div class="gold-line mb-5"></div>
-        <p class="text-cream-muted text-base sm:text-lg font-light max-w-lg mx-auto mb-9 leading-relaxed">
-          Curated private tours, desert adventures, and authentic cultural journeys — tailored exclusively for the discerning traveler.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-          <button class="btn-gold" onclick="navigateTo('tours')">
-            Explore Tours <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </button>
-          <button class="btn-outline" onclick="navigateTo('contact')">
-            Get in Touch
-          </button>
-        </div>
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-5" style="font-size:0.6rem;">Rahhali Luxury Travel</p>
+      <h1 class="font-display text-4xl sm:text-5xl md:text-7xl font-500 text-white leading-tight mb-5" style="text-shadow:0 4px 30px rgba(0,0,0,0.5);">Discover Morocco<br><em class="text-gold font-normal">in Absolute Luxury</em></h1>
+      <div class="gold-line mb-5"></div>
+      <p class="text-cream-muted text-base sm:text-lg font-light max-w-lg mx-auto mb-9 leading-relaxed">Curated private tours, desert adventures, and authentic cultural journeys — tailored exclusively for the discerning traveler.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="tours.html" class="btn-gold">Explore Tours <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+        <a href="contact.html" class="btn-outline">Get in Touch</a>
       </div>
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-        <span class="text-cream-muted text-xs tracking-widest uppercase" style="font-size:0.55rem;">Scroll</span>
-        <div class="w-px h-7 bg-gradient-to-b from-gold to-transparent"></div>
-      </div>
-    </section>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+      <span class="text-cream-muted text-xs tracking-widest uppercase" style="font-size:0.55rem;">Scroll</span>
+      <div class="w-px h-7 bg-gradient-to-b from-gold to-transparent"></div>
+    </div>
+  </section>
 
-    <section class="py-20 sm:py-24 px-4 sm:px-6">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14 fade-up">
-          <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">Handpicked For You</p>
-          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">Curated Experiences</h2>
-          <div class="gold-line mt-3"></div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5" id="featured-tours"></div>
-      </div>
-    </section>
-
-    <section class="py-20 sm:py-24 px-4 sm:px-6" style="background: linear-gradient(to bottom, #0A0A0A, #0E0E0E, #0A0A0A);">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14 fade-up">
-          <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">The Rahhali Difference</p>
-          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">Why Choose Us</h2>
-          <div class="gold-line mt-3"></div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 fade-up">
-          <div class="value-card text-center">
-            <div class="w-12 h-12 border border-gold/25 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i data-lucide="shield-check" class="w-5 h-5 text-gold"></i>
-            </div>
-            <h3 class="font-display text-base text-white mb-2">Premium Quality</h3>
-            <p class="text-cream-muted text-sm leading-relaxed">Hand-selected accommodations, private transport, and top-tier service at every step.</p>
-          </div>
-          <div class="value-card text-center">
-            <div class="w-12 h-12 border border-gold/25 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i data-lucide="map-pin" class="w-5 h-5 text-gold"></i>
-            </div>
-            <h3 class="font-display text-base text-white mb-2">Local Expertise</h3>
-            <p class="text-cream-muted text-sm leading-relaxed">Deep knowledge of Morocco's hidden gems, culture, and traditions from native guides.</p>
-          </div>
-          <div class="value-card text-center">
-            <div class="w-12 h-12 border border-gold/25 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i data-lucide="user-check" class="w-5 h-5 text-gold"></i>
-            </div>
-            <h3 class="font-display text-base text-white mb-2">Private & Tailored</h3>
-            <p class="text-cream-muted text-sm leading-relaxed">Every journey is custom-designed to match your preferences, pace, and interests.</p>
-          </div>
-          <div class="value-card text-center">
-            <div class="w-12 h-12 border border-gold/25 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i data-lucide="headphones" class="w-5 h-5 text-gold"></i>
-            </div>
-            <h3 class="font-display text-base text-white mb-2">24/7 Support</h3>
-            <p class="text-cream-muted text-sm leading-relaxed">Dedicated assistance from your first inquiry until you return home safely.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 sm:py-24 px-4 sm:px-6 relative overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://picsum.photos/seed/moroccan-riad-architecture/1920/600.jpg');"></div>
-      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(10,10,10,0.92), rgba(10,10,10,0.75));"></div>
-      <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 fade-up">
-        <div class="text-center md:text-left">
-          <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-2" style="font-size:0.6rem;">Start Planning</p>
-          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl text-white mb-2">Your Moroccan Journey<br>Awaits</h2>
-          <p class="text-cream-muted max-w-md text-sm sm:text-base">Let us craft a bespoke itinerary that captures the essence of Morocco in unparalleled luxury.</p>
-        </div>
-        <button class="btn-gold" onclick="navigateTo('contact')">
-          Plan My Trip <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </button>
-      </div>
-    </section>
-  </div>
-
-  <!-- ==================== TOURS PAGE ==================== -->
-  <div class="page" id="page-tours">
-    <section class="pt-28 sm:pt-32 pb-6 px-4 sm:px-6">
-      <div class="max-w-7xl mx-auto text-center fade-up">
-        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">Our Collection</p>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">Luxury Tours & Experiences</h2>
-        <div class="gold-line mt-3 mb-4"></div>
-        <p class="text-cream-muted max-w-lg mx-auto text-sm sm:text-base">Each experience is carefully crafted to deliver comfort, authenticity, and unforgettable memories across Morocco.</p>
-      </div>
-    </section>
-    <section class="px-4 sm:px-6 pb-6">
-      <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-2 fade-up">
-        <button class="filter-tab active" data-filter="all" onclick="filterTours('all', this)">All</button>
-        <button class="filter-tab" data-filter="desert" onclick="filterTours('desert', this)">Desert</button>
-        <button class="filter-tab" data-filter="cultural" onclick="filterTours('cultural', this)">Cultural</button>
-        <button class="filter-tab" data-filter="mountain" onclick="filterTours('mountain', this)">Mountain</button>
-        <button class="filter-tab" data-filter="coastal" onclick="filterTours('coastal', this)">Coastal</button>
-      </div>
-    </section>
-    <section class="px-4 sm:px-6 pb-20">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="tours-grid"></div>
-    </section>
-  </div>
-
-  <!-- ==================== ABOUT PAGE ==================== -->
-  <div class="page" id="page-about">
-    <section class="pt-28 sm:pt-32 pb-12 px-4 sm:px-6">
-      <div class="max-w-7xl mx-auto text-center fade-up">
-        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">Our Story</p>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">About Rahhali Luxury Travel</h2>
+  <!-- FEATURED -->
+  <section class="py-20 sm:py-24 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 fade-up">
+        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">Handpicked For You</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">Curated Experiences</h2>
         <div class="gold-line mt-3"></div>
       </div>
-    </section>
-    <section class="px-4 sm:px-6 pb-16">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center fade-up">
-        <div>
-          <div class="relative">
-            <img src="https://picsum.photos/seed/moroccan-door-carved-detail/800/900.jpg" alt="Moroccan Heritage" class="w-full h-[420px] sm:h-[480px] object-cover">
-            <div class="absolute -bottom-4 -right-4 w-28 h-28 border border-gold/20 hidden sm:block"></div>
-          </div>
-        </div>
-        <div class="lg:pl-6">
-          <div class="gold-line-left mb-5" style="width:40px;"></div>
-          <h3 class="font-display text-xl sm:text-2xl text-white mb-5">A Legacy of Moroccan Hospitality</h3>
-          <p class="text-cream-muted leading-relaxed mb-4 text-sm sm:text-base">
-            Rahhali Luxury Travel was born from a deep passion for Morocco and a commitment to sharing its wonders with the world. Founded by local experts with years of experience in the travel industry, we understand that true luxury lies in the details — the hidden riads, the private guides who know every story, the sunset views that take your breath away.
-          </p>
-          <p class="text-cream-muted leading-relaxed mb-4 text-sm sm:text-base">
-            We don't just organize trips; we create journeys that immerse you in the rich tapestry of Moroccan culture — from the labyrinthine medinas of Fes to the golden silence of the Sahara, from the snow-capped Atlas peaks to the breezy Atlantic coast.
-          </p>
-          <p class="text-cream-muted leading-relaxed text-sm sm:text-base">
-            Every itinerary is personally crafted, every partner carefully vetted, and every guest treated like family. This is Morocco as it was meant to be experienced — with elegance, authenticity, and warmth.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="px-4 sm:px-6 pb-16" style="background: linear-gradient(to bottom, #0A0A0A, #0E0E0E, #0A0A0A);">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-12 fade-up">
-          <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">What We Stand For</p>
-          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl text-white">Our Values</h2>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 fade-up">
-          <div class="value-card">
-            <i data-lucide="gem" class="w-7 h-7 text-gold mb-4"></i>
-            <h3 class="font-display text-lg text-white mb-2">Excellence</h3>
-            <p class="text-cream-muted text-sm leading-relaxed">We hold ourselves to the highest standards in every aspect — from the vehicles we use to the guides we hire. Mediocrity has no place in our vocabulary.</p>
-          </div>
-          <div class="value-card">
-            <i data-lucide="heart-handshake" class="w-7 h-7 text-gold mb-4"></i>
-            <h3 class="font-display text-lg text-white mb-2">Authenticity</h3>
-            <p class="text-cream-muted text-sm leading-relaxed">We celebrate real Morocco — its traditions, its people, its flavors. Our experiences go beyond tourist surfaces to create genuine cultural connections.</p>
-          </div>
-          <div class="value-card">
-            <i data-lucide="sparkles" class="w-7 h-7 text-gold mb-4"></i>
-            <h3 class="font-display text-lg text-white mb-2">Personalization</h3>
-            <p class="text-cream-muted text-sm leading-relaxed">No two travelers are the same. We listen, understand, and design each journey around your unique desires, ensuring a truly bespoke experience.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="px-4 sm:px-6 py-16">
-      <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center fade-up">
-        <div>
-          <div class="stat-number" data-target="12">0</div>
-          <p class="text-cream-muted text-xs mt-2 tracking-wider uppercase">Years Experience</p>
-        </div>
-        <div>
-          <div class="stat-number" data-target="2500">0</div>
-          <p class="text-cream-muted text-xs mt-2 tracking-wider uppercase">Happy Travelers</p>
-        </div>
-        <div>
-          <div class="stat-number" data-target="150">0</div>
-          <p class="text-cream-muted text-xs mt-2 tracking-wider uppercase">Tours Completed</p>
-        </div>
-        <div>
-          <div class="stat-number" data-target="35">0</div>
-          <p class="text-cream-muted text-xs mt-2 tracking-wider uppercase">Expert Guides</p>
-        </div>
-      </div>
-    </section>
-    <section class="px-4 sm:px-6 pb-20">
-      <div class="max-w-7xl mx-auto fade-up">
-        <div class="relative h-[300px] sm:h-[380px] overflow-hidden">
-          <img src="https://picsum.photos/seed/morocco-landscape-panoramic/1400/500.jpg" alt="Morocco Landscape" class="w-full h-full object-cover">
-          <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent, rgba(10,10,10,0.85));"></div>
-          <div class="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
-            <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-2" style="font-size:0.6rem;">Our Promise</p>
-            <p class="font-display text-lg sm:text-xl md:text-2xl text-white max-w-2xl">"Every journey with Rahhali is a promise — of comfort, discovery, and memories that last a lifetime."</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ==================== REVIEWS PAGE ==================== -->
-  <div class="page" id="page-reviews">
-    <section class="pt-28 sm:pt-32 pb-6 px-4 sm:px-6">
-      <div class="max-w-7xl mx-auto text-center fade-up">
-        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">Client Feedback</p>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">Share Your Experience</h2>
-        <div class="gold-line mt-3 mb-4"></div>
-        <p class="text-cream-muted max-w-lg mx-auto text-sm sm:text-base">Your feedback helps us continue delivering exceptional experiences. Every review matters to us.</p>
-      </div>
-    </section>
-    <section class="px-4 sm:px-6 py-12 sm:py-16" style="background: linear-gradient(to bottom, #0A0A0A, #0E0E0E);">
-      <div class="max-w-2xl mx-auto fade-up">
-        <form id="review-form" class="space-y-5" onsubmit="submitReview(event)">
-          <div>
-            <label class="form-label">Trip Booked</label>
-            <select class="form-input" id="review-trip">
-              <option value="">Select a trip (optional)</option>
-            </select>
-          </div>
-          <div>
-            <label class="form-label">Your Name</label>
-            <input type="text" class="form-input" id="review-name" placeholder="Enter your name (optional)">
-          </div>
-          <div>
-            <label class="form-label">Rating</label>
-            <div class="flex gap-1.5" id="star-rating">
-              <button type="button" class="star-btn text-2xl star-empty" data-star="1" onclick="setRating(1)">&#9733;</button>
-              <button type="button" class="star-btn text-2xl star-empty" data-star="2" onclick="setRating(2)">&#9733;</button>
-              <button type="button" class="star-btn text-2xl star-empty" data-star="3" onclick="setRating(3)">&#9733;</button>
-              <button type="button" class="star-btn text-2xl star-empty" data-star="4" onclick="setRating(4)">&#9733;</button>
-              <button type="button" class="star-btn text-2xl star-empty" data-star="5" onclick="setRating(5)">&#9733;</button>
-            </div>
-          </div>
-          <div>
-            <label class="form-label">Your Review</label>
-            <textarea class="form-input" id="review-comment" placeholder="Tell us about your experience (optional)"></textarea>
-          </div>
-          <div>
-            <label class="form-label">Photos (optional)</label>
-            <div class="upload-area" id="upload-area" onclick="document.getElementById('review-photos').click()">
-              <i data-lucide="image-plus" class="w-7 h-7 text-cream-muted mx-auto mb-1"></i>
-              <p class="text-cream-muted text-sm">Click to upload photos from your trip</p>
-              <p class="text-xs mt-1" style="color:#555;">JPG, PNG — up to 5 files</p>
-            </div>
-            <input type="file" id="review-photos" multiple accept="image/*" class="hidden" onchange="handlePhotoUpload(event)">
-            <div class="flex flex-wrap gap-2 mt-3" id="photo-preview-container"></div>
-          </div>
-          <div class="pt-3">
-            <button type="submit" class="btn-gold w-full">
-              Submit Review <i data-lucide="send" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
-  </div>
-
-  <!-- ==================== CONTACT PAGE ==================== -->
-  <div class="page" id="page-contact">
-    <section class="pt-28 sm:pt-32 pb-6 px-4 sm:px-6">
-      <div class="max-w-7xl mx-auto text-center fade-up">
-        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">Reach Out</p>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">Contact Us</h2>
-        <div class="gold-line mt-3 mb-4"></div>
-        <p class="text-cream-muted max-w-lg mx-auto text-sm sm:text-base">Ready to start planning? Get in touch and our team will respond within 24 hours.</p>
-      </div>
-    </section>
-    <section class="px-4 sm:px-6 py-12 sm:py-16">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-10 fade-up">
-        <div class="lg:col-span-3">
-          <form id="contact-form" onsubmit="submitContact(event)" class="space-y-5">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label class="form-label">First Name *</label>
-                <input type="text" class="form-input" id="contact-fname" placeholder="Your first name" required>
-              </div>
-              <div>
-                <label class="form-label">Last Name *</label>
-                <input type="text" class="form-input" id="contact-lname" placeholder="Your last name" required>
-              </div>
-            </div>
-            <div>
-              <label class="form-label">Email *</label>
-              <input type="email" class="form-input" id="contact-email" placeholder="your@email.com" required>
-            </div>
-            <div>
-              <label class="form-label">Phone (optional)</label>
-              <input type="tel" class="form-input" id="contact-phone" placeholder="+212 6XX XXX XXX">
-            </div>
-            <div>
-              <label class="form-label">Subject *</label>
-              <select class="form-input" id="contact-subject" required>
-                <option value="">Select a subject</option>
-                <option value="booking">Tour Booking Inquiry</option>
-                <option value="custom">Custom Itinerary Request</option>
-                <option value="info">General Information</option>
-                <option value="feedback">Feedback</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div>
-              <label class="form-label">Message *</label>
-              <textarea class="form-input" id="contact-message" placeholder="Tell us how we can help you..." required></textarea>
-            </div>
-            <button type="submit" class="btn-gold w-full">
-              Send Message <i data-lucide="send" class="w-3.5 h-3.5"></i>
-            </button>
-          </form>
-        </div>
-        <div class="lg:col-span-2 space-y-6">
-          <div>
-            <div class="gold-line-left mb-5" style="width:40px;"></div>
-            <h3 class="font-display text-lg text-white mb-5">Get in Touch</h3>
-          </div>
-          <div class="flex items-start gap-3">
-            <div class="w-9 h-9 border border-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <i data-lucide="message-circle" class="w-4 h-4 text-gold"></i>
-            </div>
-            <div>
-              <p class="text-cream text-xs font-bold tracking-wider uppercase mb-0.5">WhatsApp</p>
-              <a href="https://wa.me/212644182733" target="_blank" class="text-gold text-sm hover:underline">+212 644-182733</a>
-              <p class="text-cream-muted text-xs mt-0.5">Instant replies available</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <div class="w-9 h-9 border border-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <i data-lucide="mail" class="w-4 h-4 text-gold"></i>
-            </div>
-            <div>
-              <p class="text-cream text-xs font-bold tracking-wider uppercase mb-0.5">Email</p>
-              <a href="mailto:rahhaliluxrytravel@gmail.com" class="text-gold text-sm hover:underline">rahhaliluxrytravel@gmail.com</a>
-              <p class="text-cream-muted text-xs mt-0.5">Response within 24 hours</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <div class="w-9 h-9 border border-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i>
-            </div>
-            <div>
-              <p class="text-cream text-xs font-bold tracking-wider uppercase mb-0.5">Address</p>
-              <p class="text-cream-muted text-sm">124 Avenue Hassan II</p>
-              <p class="text-cream-muted text-sm">Hivernage, Marrakech, Morocco</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <div class="w-9 h-9 border border-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <i data-lucide="clock" class="w-4 h-4 text-gold"></i>
-            </div>
-            <div>
-              <p class="text-cream text-xs font-bold tracking-wider uppercase mb-0.5">Availability</p>
-              <p class="text-cream-muted text-sm">Monday – Sunday</p>
-              <p class="text-cream-muted text-xs mt-0.5">8:00 AM – 10:00 PM (GMT+1)</p>
-            </div>
-          </div>
-          <div class="pt-3">
-            <a href="https://wa.me/212644182733?text=Hello%20Rahhali%20Luxury%20Travel%2C%20I%27d%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="btn-outline w-full" style="display:inline-flex; text-decoration:none;">
-              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ==================== TOUR DETAIL MODAL ==================== -->
-  <div class="modal-overlay" id="tour-modal">
-    <div class="modal-content">
-      <button class="absolute top-3 right-3 z-10 w-9 h-9 bg-dark/80 border border-dark-border flex items-center justify-center hover:border-gold/30 transition-colors" onclick="closeTourModal()" aria-label="Close">
-        <i data-lucide="x" class="w-4 h-4 text-cream"></i>
-      </button>
-      <div id="tour-modal-content"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5" id="featured-tours"></div>
     </div>
-  </div>
+  </section>
 
-  <!-- ==================== BOOKING MODAL ==================== -->
-  <div class="modal-overlay" id="booking-modal">
-    <div class="modal-content" style="max-width:480px;">
-      <button class="absolute top-3 right-3 z-10 w-9 h-9 bg-dark/80 border border-dark-border flex items-center justify-center hover:border-gold/30 transition-colors" onclick="closeBookingModal()" aria-label="Close">
-        <i data-lucide="x" class="w-4 h-4 text-cream"></i>
-      </button>
-      <div class="p-6 sm:p-8">
-        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-2" style="font-size:0.6rem;">Complete Your Booking</p>
-        <h3 class="font-display text-xl sm:text-2xl text-white mb-1" id="booking-tour-title"></h3>
-        <p class="text-cream-muted text-sm mb-5" id="booking-tour-duration"></p>
-        <div class="gold-line-left mb-5" style="width:35px;"></div>
-        <form id="booking-form" class="space-y-4" onsubmit="submitBooking(event)">
-          <div>
-            <label class="form-label">Full Name *</label>
-            <input type="text" class="form-input" id="booking-name" placeholder="Your full name" required>
-          </div>
-          <div>
-            <label class="form-label">Email *</label>
-            <input type="email" class="form-input" id="booking-email" placeholder="your@email.com" required>
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="form-label">Participants *</label>
-              <input type="number" class="form-input" id="booking-participants" min="1" max="20" value="2" required>
-            </div>
-            <div>
-              <label class="form-label">Phone</label>
-              <input type="tel" class="form-input" id="booking-phone" placeholder="+212 6XX XXX XXX">
-            </div>
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="form-label">Start Date *</label>
-              <input type="date" class="form-input" id="booking-date" required>
-            </div>
-            <div>
-              <label class="form-label">End Date</label>
-              <input type="date" class="form-input" id="booking-end-date">
-            </div>
-          </div>
-          <div>
-            <label class="form-label">Special Requests</label>
-            <textarea class="form-input" id="booking-requests" placeholder="Dietary needs, celebrations, accessibility..." style="min-height:70px;"></textarea>
-          </div>
-          <input type="hidden" id="booking-method" value="whatsapp">
-          <div class="pt-2 space-y-2.5">
-            <button type="button" class="btn-gold w-full" onclick="doBooking('whatsapp')">
-              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Book via WhatsApp
-            </button>
-            <button type="button" class="btn-outline w-full" onclick="doBooking('email')">
-              <i data-lucide="mail" class="w-3.5 h-3.5"></i> Book via Email
-            </button>
-          </div>
-        </form>
+  <!-- WHY CHOOSE US -->
+  <section class="py-20 sm:py-24 px-4 sm:px-6" style="background:linear-gradient(to bottom,#0A0A0A,#0E0E0E,#0A0A0A);">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 fade-up">
+        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">The Rahhali Difference</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">Why Choose Us</h2>
+        <div class="gold-line mt-3"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 fade-up">
+        <div class="value-card text-center">
+          <div class="w-12 h-12 border border-gold/25 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="shield-check" class="w-5 h-5 text-gold"></i></div>
+          <h3 class="font-display text-base text-white mb-2">Premium Quality</h3>
+          <p class="text-cream-muted text-sm leading-relaxed">Hand-selected accommodations, private transport, and top-tier service at every step.</p>
+        </div>
+        <div class="value-card text-center">
+          <div class="w-12 h-12 border border-gold/25 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="map-pin" class="w-5 h-5 text-gold"></i></div>
+          <h3 class="font-display text-base text-white mb-2">Local Expertise</h3>
+          <p class="text-cream-muted text-sm leading-relaxed">Deep knowledge of Morocco's hidden gems, culture, and traditions from native guides.</p>
+        </div>
+        <div class="value-card text-center">
+          <div class="w-12 h-12 border border-gold/25 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="user-check" class="w-5 h-5 text-gold"></i></div>
+          <h3 class="font-display text-base text-white mb-2">Private & Tailored</h3>
+          <p class="text-cream-muted text-sm leading-relaxed">Every journey is custom-designed to match your preferences, pace, and interests.</p>
+        </div>
+        <div class="value-card text-center">
+          <div class="w-12 h-12 border border-gold/25 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="headphones" class="w-5 h-5 text-gold"></i></div>
+          <h3 class="font-display text-base text-white mb-2">24/7 Support</h3>
+          <p class="text-cream-muted text-sm leading-relaxed">Dedicated assistance from your first inquiry until you return home safely.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- TOAST CONTAINER -->
-  <div class="toast-container" id="toast-container"></div>
-
-  <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/212644182733?text=Hello%20Rahhali%20Luxury%20Travel%2C%20I%27d%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+  <!-- CTA -->
+  <section class="py-20 sm:py-24 px-4 sm:px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://picsum.photos/seed/moroccan-riad-architecture/1920/600.jpg');"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(10,10,10,0.92),rgba(10,10,10,0.75));"></div>
+    <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 fade-up">
+      <div class="text-center md:text-left">
+        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-2" style="font-size:0.6rem;">Start Planning</p>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl text-white mb-2">Your Moroccan Journey<br>Awaits</h2>
+        <p class="text-cream-muted max-w-md text-sm sm:text-base">Let us craft a bespoke itinerary that captures the essence of Morocco in unparalleled luxury.</p>
+      </div>
+      <a href="contact.html" class="btn-gold">Plan My Trip <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="border-t border-dark-border px-4 sm:px-6 py-12 sm:py-16 relative z-10">
@@ -859,34 +141,19 @@
           <div class="footer-brand-arch"></div>
           <div style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#E8E2D8;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:0.3rem;">Rahhali</div>
           <div style="font-size:0.55rem;color:#888;letter-spacing:0.4em;text-transform:uppercase;margin-bottom:0.8rem;">Luxury Travel</div>
-          <p class="text-cream-muted text-sm leading-relaxed">Premium travel experiences across Morocco. Luxury, authenticity, and seamless organization.</p>
+          <p class="text-cream-muted text-sm leading-relaxed">Premium travel experiences across Morocco.</p>
         </div>
         <div>
           <h4 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-3">Explore</h4>
-          <div class="space-y-2">
-            <p class="footer-link" onclick="navigateTo('home')">Home</p>
-            <p class="footer-link" onclick="navigateTo('tours')">Tours</p>
-            <p class="footer-link" onclick="navigateTo('about')">About Us</p>
-            <p class="footer-link" onclick="navigateTo('reviews')">Reviews</p>
-          </div>
+          <div class="space-y-2"><a href="index.html" class="footer-link block">Home</a><a href="tours.html" class="footer-link block">Tours</a><a href="about.html" class="footer-link block">About Us</a><a href="reviews.html" class="footer-link block">Reviews</a></div>
         </div>
         <div>
           <h4 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-3">Experiences</h4>
-          <div class="space-y-2">
-            <p class="footer-link" onclick="navigateTo('tours'); setTimeout(function(){filterTours('desert')},200);">Desert Adventures</p>
-            <p class="footer-link" onclick="navigateTo('tours'); setTimeout(function(){filterTours('cultural')},200);">Cultural Tours</p>
-            <p class="footer-link" onclick="navigateTo('tours'); setTimeout(function(){filterTours('mountain')},200);">Atlas Mountains</p>
-            <p class="footer-link" onclick="navigateTo('tours'); setTimeout(function(){filterTours('coastal')},200);">Coastal Escapes</p>
-          </div>
+          <div class="space-y-2"><a href="tours.html" class="footer-link block">Desert Adventures</a><a href="tours.html" class="footer-link block">Cultural Tours</a><a href="tours.html" class="footer-link block">Atlas Mountains</a><a href="tours.html" class="footer-link block">Coastal Escapes</a></div>
         </div>
         <div>
           <h4 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-3">Contact</h4>
-          <div class="space-y-2">
-            <a href="mailto:rahhaliluxrytravel@gmail.com" class="footer-link block">rahhaliluxrytravel@gmail.com</a>
-            <a href="https://wa.me/212644182733" target="_blank" class="footer-link block">+212 644-182733</a>
-            <p class="footer-link">124 Avenue Hassan II</p>
-            <p class="footer-link">Hivernage, Marrakech</p>
-          </div>
+          <div class="space-y-2"><a href="mailto:rahhaliluxrytravel@gmail.com" class="footer-link block">rahhaliluxrytravel@gmail.com</a><a href="https://wa.me/212644182733" target="_blank" class="footer-link block">+212 644-182733</a><p class="footer-link">124 Avenue Hassan II</p><p class="footer-link">Hivernage, Marrakech</p></div>
         </div>
       </div>
       <div class="border-t border-dark-border pt-7 flex flex-col sm:flex-row items-center justify-between gap-3">
@@ -900,389 +167,21 @@
     </div>
   </footer>
 
-  <!-- ==================== JAVASCRIPT ==================== -->
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/212644182733?text=Hello%20Rahhali%20Luxury%20Travel%2C%20I%27d%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="whatsapp-float" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+  <!-- TOAST -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/data.js"></script>
   <script>
-    (function() {
-      'use strict';
-
-      var tours = [
-        {
-          id: 1, title: "Sahara Luxury Camp", subtitle: "Desert Odyssey", category: "desert",
-          duration: "3 Days / 2 Nights", price: "From \u20AC890",
-          image: "https://picsum.photos/seed/sahara-golden-dunes-camp/800/600.jpg",
-          gallery: [
-            "https://picsum.photos/seed/sahara-luxury-tent-night/800/500.jpg",
-            "https://picsum.photos/seed/sahara-camel-desert-sun/800/500.jpg",
-            "https://picsum.photos/seed/sahara-starry-sky-desert/800/500.jpg"
-          ],
-          highlights: ["Private luxury desert camp", "Camel trek at sunset", "Traditional Berber dinner under stars", "4x4 desert excursion", "Sandboarding on golden dunes"],
-          inclusions: ["Private A/C vehicle", "Luxury tent accommodation", "All meals & traditional tea", "Camel ride", "English-speaking guide", "Airport pickup & drop-off"],
-          description: "Experience the magic of the Sahara in absolute luxury. This exclusive desert adventure takes you through the majestic Erg Chebbi dunes, where a private luxury camp awaits with all the comforts you desire. Watch the sunset from atop a camel, dine on traditional Berber cuisine under a canopy of stars, and wake to a desert sunrise that will take your breath away.",
-          featured: true
-        },
-        {
-          id: 2, title: "Imperial Cities Tour", subtitle: "Royal Heritage", category: "cultural",
-          duration: "7 Days / 6 Nights", price: "From \u20AC1,850",
-          image: "https://picsum.photos/seed/morocco-royal-palace-gate/800/600.jpg",
-          gallery: [
-            "https://picsum.photos/seed/marrakech-palace-entrance/800/500.jpg",
-            "https://picsum.photos/seed/fes-ancient-tanneries/800/500.jpg",
-            "https://picsum.photos/seed/rabat-royal-mausoleum/800/500.jpg"
-          ],
-          highlights: ["Marrakech medina exploration", "Fes ancient tanneries", "Rabat's royal landmarks", "Meknes imperial gates", "Private guided tours", "Traditional riad stays"],
-          inclusions: ["Private transport throughout", "Luxury riad accommodation", "Daily breakfast & dinner", "Certified local guides", "Entrance fees", "Airport transfers"],
-          description: "Journey through Morocco's four imperial cities \u2014 Marrakech, Fes, Rabat, and Meknes \u2014 each a treasure trove of history, architecture, and culture. Stay in hand-picked luxury riads, explore labyrinthine medinas with expert guides, and discover the royal heritage that shaped this extraordinary kingdom.",
-          featured: true
-        },
-        {
-          id: 3, title: "Atlas Mountains Retreat", subtitle: "Highland Escape", category: "mountain",
-          duration: "4 Days / 3 Nights", price: "From \u20AC1,100",
-          image: "https://picsum.photos/seed/atlas-mountain-peak-snow/800/600.jpg",
-          gallery: [
-            "https://picsum.photos/seed/atlas-berber-village-mountain/800/500.jpg",
-            "https://picsum.photos/seed/atlas-hiking-trail-scenic/800/500.jpg",
-            "https://picsum.photos/seed/atlas-green-valley-view/800/500.jpg"
-          ],
-          highlights: ["Toubkal National Park trek", "Berber village immersion", "Traditional mountain lunch", "Scenic valley drives", "Luxury mountain lodge"],
-          inclusions: ["Private 4x4 transport", "Mountain lodge accommodation", "All meals", "Experienced mountain guide", "Hiking equipment", "Marrakech transfers"],
-          description: "Escape to the breathtaking Atlas Mountains, where snow-capped peaks meet lush valleys and ancient Berber villages. This retreat combines adventure with relaxation \u2014 trek through stunning landscapes, share meals with local families, and unwind in a luxury mountain lodge with panoramic views.",
-          featured: true
-        },
-        {
-          id: 4, title: "Essaouira Coastal Escape", subtitle: "Ocean Breeze", category: "coastal",
-          duration: "2 Days / 1 Night", price: "From \u20AC490",
-          image: "https://picsum.photos/seed/essaouira-blue-coast-town/800/600.jpg",
-          gallery: [
-            "https://picsum.photos/seed/essaouira-medina-port-view/800/500.jpg",
-            "https://picsum.photos/seed/essaouira-sunset-beach/800/500.jpg",
-            "https://picsum.photos/seed/essaouira-fortress-wall/800/500.jpg"
-          ],
-          highlights: ["Scenic coastal drive", "Medina of Essaouira", "Gnawa music experience", "Fresh seafood lunch", "Beach relaxation", "Argan oil cooperative visit"],
-          inclusions: ["Private transport", "Boutique hotel", "Breakfast & seafood lunch", "Guided medina tour", "Essaouira transfers"],
-          description: "Discover the enchanting coastal town of Essaouira, where Portuguese fortifications meet bohemian charm. Stroll through the windswept medina, savor the freshest seafood, listen to hypnotic Gnawa music, and relax on the expansive beach with the Atlantic breeze.",
-          featured: false
-        },
-        {
-          id: 5, title: "Fes Cultural Immersion", subtitle: "Spirit of Fes", category: "cultural",
-          duration: "3 Days / 2 Nights", price: "From \u20AC750",
-          image: "https://picsum.photos/seed/fes-ancient-medina-arch/800/600.jpg",
-          gallery: [
-            "https://picsum.photos/seed/fes-pottery-artisan/800/500.jpg",
-            "https://picsum.photos/seed/fes-zellige-mosaic-art/800/500.jpg",
-            "https://picsum.photos/seed/fes-narrow-alley-stone/800/500.jpg"
-          ],
-          highlights: ["UNESCO-listed medina", "Ancient tanneries visit", "Traditional pottery workshop", "Moroccan cooking class", "Sacred sites & madrasas"],
-          inclusions: ["Private guide in Fes", "Luxury riad stay", "All meals", "Workshop fees", "Airport/train transfers"],
-          description: "Dive deep into the spiritual and cultural heart of Morocco. Fes is the world's largest car-free urban area and a living museum of Islamic civilization. Experience its ancient tanneries, sacred madrasas, vibrant souks, and artisan workshops with a guide who brings centuries of history to life.",
-          featured: false
-        },
-        {
-          id: 6, title: "Marrakech Private Experience", subtitle: "Red City Exclusive", category: "cultural",
-          duration: "4 Days / 3 Nights", price: "From \u20AC1,250",
-          image: "https://picsum.photos/seed/marrakech-luxury-garden/800/600.jpg",
-          gallery: [
-            "https://picsum.photos/seed/marrakech-bahia-palace-room/800/500.jpg",
-            "https://picsum.photos/seed/majorelle-garden-blue-botanical/800/500.jpg",
-            "https://picsum.photos/seed/marrakech-souk-evening-lights/800/500.jpg"
-          ],
-          highlights: ["Private medina tour at sunrise", "Majorelle Garden access", "Luxury hammam & spa", "Jemaa el-Fnaa by night", "Atlas Mountains day trip", "Private cooking class"],
-          inclusions: ["Private vehicle & driver", "5-star riad or hotel", "Daily breakfast", "Hammam experience", "All guided tours", "Airport transfers"],
-          description: "Experience Marrakech like never before with this fully private, luxury-curated journey. From early-morning medina explorations to sunset rooftop views of the Atlas Mountains, every moment is designed to captivate. Includes exclusive spa treatments, private culinary experiences, and insider access to the city's most treasured spots.",
-          featured: false
-        }
-      ];
-
-      var selectedRating = 0;
-      var uploadedPhotos = [];
-      var currentBookingTour = null;
-
-      window.navigateTo = function(page) {
-        var pages = document.querySelectorAll('.page');
-        for (var i = 0; i < pages.length; i++) {
-          pages[i].classList.remove('active');
-          pages[i].style.opacity = '0';
-        }
-        var target = document.getElementById('page-' + page);
-        if (target) {
-          setTimeout(function() {
-            target.classList.add('active');
-            setTimeout(function() { target.style.opacity = '1'; }, 30);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setTimeout(function() { observeFadeUps(); }, 200);
-            if (page === 'about') setTimeout(function() { animateStats(); }, 400);
-          }, 120);
-        }
-        var links = document.querySelectorAll('.nav-link');
-        for (var j = 0; j < links.length; j++) {
-          if (links[j].getAttribute('data-page') === page) links[j].classList.add('active');
-          else links[j].classList.remove('active');
-        }
-      };
-
-      window.toggleMobileMenu = function() {
-        document.getElementById('mobile-menu').classList.toggle('open');
-      };
-
-      window.addEventListener('scroll', function() {
-        var nav = document.getElementById('navbar');
-        if (window.scrollY > 50) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-      });
-
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          document.getElementById('preloader').classList.add('hidden');
-          if (typeof lucide !== 'undefined') lucide.createIcons();
-          observeFadeUps();
-        }, 1800);
-      });
-
-      function observeFadeUps() {
-        var observer = new IntersectionObserver(function(entries) {
-          for (var i = 0; i < entries.length; i++) {
-            if (entries[i].isIntersecting) {
-              entries[i].target.classList.add('visible');
-              observer.unobserve(entries[i].target);
-            }
-          }
-        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-        var els = document.querySelectorAll('.fade-up:not(.visible)');
-        for (var i = 0; i < els.length; i++) observer.observe(els[i]);
-      }
-
-      function animateStats() {
-        var els = document.querySelectorAll('.stat-number');
-        for (var i = 0; i < els.length; i++) {
-          (function(el) {
-            var target = parseInt(el.getAttribute('data-target'));
-            var start = performance.now();
-            function update(now) {
-              var progress = Math.min((now - start) / 2000, 1);
-              el.textContent = Math.round(target * (1 - Math.pow(1 - progress, 3))).toLocaleString();
-              if (progress < 1) requestAnimationFrame(update);
-              else el.textContent = target.toLocaleString() + '+';
-            }
-            requestAnimationFrame(update);
-          })(els[i]);
-        }
-      }
-
-      function renderTourCard(tour) {
-        return '<div class="tour-card" onclick="openTourModal(' + tour.id + ')" data-category="' + tour.category + '">' +
-          '<div class="card-img"><img src="' + tour.image + '" alt="' + tour.title + '" loading="lazy"><div class="overlay"></div>' +
-          '<div class="card-badge">' + tour.category + '</div></div>' +
-          '<div class="p-5"><p class="text-gold text-xs font-bold tracking-[0.12em] uppercase mb-1" style="font-size:0.6rem;">' + tour.subtitle + '</p>' +
-          '<h3 class="font-display text-lg text-white mb-2">' + tour.title + '</h3>' +
-          '<div class="flex items-center gap-3 text-cream-muted text-sm mb-3"><span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ' + tour.duration + '</span></div>' +
-          '<div class="flex items-center justify-between"><span class="text-gold font-bold text-sm">' + tour.price + '</span>' +
-          '<span class="text-cream-muted text-xs tracking-wider uppercase flex items-center gap-1">Details <i data-lucide="arrow-right" class="w-3 h-3"></i></span></div></div></div>';
-      }
-
-      function renderFeaturedTours() {
-        var html = '';
-        for (var i = 0; i < tours.length; i++) {
-          if (tours[i].featured) html += renderTourCard(tours[i]);
-        }
-        document.getElementById('featured-tours').innerHTML = html;
-        if (typeof lucide !== 'undefined') lucide.createIcons();
-      }
-
-      function renderAllTours(filter) {
-        filter = filter || 'all';
-        var html = '';
-        for (var i = 0; i < tours.length; i++) {
-          if (filter === 'all' || tours[i].category === filter) html += renderTourCard(tours[i]);
-        }
-        document.getElementById('tours-grid').innerHTML = html;
-        if (typeof lucide !== 'undefined') lucide.createIcons();
-      }
-
-      window.filterTours = function(category, btn) {
-        var tabs = document.querySelectorAll('.filter-tab');
-        for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('active');
-        if (btn) btn.classList.add('active');
-        else { var el = document.querySelector('.filter-tab[data-filter="' + category + '"]'); if (el) el.classList.add('active'); }
-        renderAllTours(category);
-      };
-
-      window.openTourModal = function(id) {
-        var tour = null;
-        for (var i = 0; i < tours.length; i++) { if (tours[i].id === id) { tour = tours[i]; break; } }
-        if (!tour) return;
-        var starsHtml = '';
-        for (var s = 0; s < 5; s++) starsHtml += '<span class="star">\u2605</span>';
-        var galleryHtml = '';
-        for (var g = 0; g < tour.gallery.length; g++) galleryHtml += '<img src="' + tour.gallery[g] + '" alt="' + tour.title + '" class="w-full h-40 sm:h-48 object-cover" loading="lazy">';
-        var highlightsHtml = '';
-        for (var h = 0; h < tour.highlights.length; h++) highlightsHtml += '<li class="flex items-start gap-2 text-cream-muted text-sm"><span class="text-gold mt-0.5">\u2726</span> ' + tour.highlights[h] + '</li>';
-        var inclusionsHtml = '';
-        for (var inc = 0; inc < tour.inclusions.length; inc++) inclusionsHtml += '<li class="flex items-start gap-2 text-cream-muted text-sm"><span class="text-gold mt-0.5">\u2713</span> ' + tour.inclusions[inc] + '</li>';
-        document.getElementById('tour-modal-content').innerHTML =
-          '<div class="relative h-52 sm:h-72 md:h-80 overflow-hidden"><img src="' + tour.image + '" alt="' + tour.title + '" class="w-full h-full object-cover">' +
-          '<div class="absolute inset-0" style="background: linear-gradient(to top, #141414 0%, transparent 55%);"></div>' +
-          '<div class="absolute bottom-5 left-5 right-5"><p class="text-gold text-xs font-bold tracking-[0.15em] uppercase mb-1" style="font-size:0.6rem;">' + tour.subtitle + ' \u2014 ' + tour.category + '</p>' +
-          '<h2 class="font-display text-2xl sm:text-3xl text-white">' + tour.title + '</h2></div></div>' +
-          '<div class="p-5 sm:p-7"><div class="flex flex-wrap items-center gap-4 sm:gap-6 mb-5 pb-5 border-b border-dark-border">' +
-          '<span class="flex items-center gap-1.5 text-cream-muted text-sm"><i data-lucide="clock" class="w-4 h-4 text-gold"></i> ' + tour.duration + '</span>' +
-          '<span class="flex items-center gap-1 text-cream-muted text-sm">' + starsHtml + '</span>' +
-          '<span class="text-gold font-bold text-base sm:text-lg ml-auto">' + tour.price + '</span></div>' +
-          '<p class="text-cream-muted leading-relaxed mb-7 text-sm sm:text-base">' + tour.description + '</p>' +
-          '<div class="mb-7"><h4 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-3" style="font-size:0.65rem;">Gallery</h4><div class="grid grid-cols-3 gap-2">' + galleryHtml + '</div></div>' +
-          '<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-7"><div><h4 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-3" style="font-size:0.65rem;">Highlights</h4><ul class="space-y-1.5">' + highlightsHtml + '</ul></div>' +
-          '<div><h4 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-3" style="font-size:0.65rem;">Inclusions</h4><ul class="space-y-1.5">' + inclusionsHtml + '</ul></div></div>' +
-          '<button class="btn-gold w-full" onclick="openBookingModal(' + tour.id + ')">Book This Experience <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></button></div>';
-        document.getElementById('tour-modal').classList.add('open');
-        document.body.style.overflow = 'hidden';
-        if (typeof lucide !== 'undefined') lucide.createIcons();
-      };
-
-      window.closeTourModal = function() {
-        document.getElementById('tour-modal').classList.remove('open');
-        document.body.style.overflow = '';
-      };
-
-      window.openBookingModal = function(tourId) {
-        var tour = null;
-        for (var i = 0; i < tours.length; i++) { if (tours[i].id === tourId) { tour = tours[i]; break; } }
-        if (!tour) return;
-        currentBookingTour = tour;
-        document.getElementById('booking-tour-title').textContent = tour.title;
-        document.getElementById('booking-tour-duration').textContent = tour.duration + ' \u2014 ' + tour.price;
-        closeTourModal();
-        setTimeout(function() {
-          document.getElementById('booking-modal').classList.add('open');
-          document.body.style.overflow = 'hidden';
-          if (typeof lucide !== 'undefined') lucide.createIcons();
-        }, 250);
-      };
-
-      window.closeBookingModal = function() {
-        document.getElementById('booking-modal').classList.remove('open');
-        document.body.style.overflow = '';
-      };
-
-      window.doBooking = function(method) {
-        var name = document.getElementById('booking-name').value.trim();
-        var email = document.getElementById('booking-email').value.trim();
-        var participants = document.getElementById('booking-participants').value;
-        var date = document.getElementById('booking-date').value;
-        var endDate = document.getElementById('booking-end-date').value;
-        var phone = document.getElementById('booking-phone').value.trim();
-        var requests = document.getElementById('booking-requests').value.trim();
-        if (!name || !email || !participants || !date) { showToast('Please fill in all required fields.', 'warning'); return; }
-        if (!currentBookingTour) return;
-        var msg = '\u2708\uFE0F *New Booking \u2014 Rahhali Luxury Travel*\n\n' +
-          '\u25B9 *Tour:* ' + currentBookingTour.title + '\n\u25B9 *Duration:* ' + currentBookingTour.duration + '\n\u25B9 *Price:* ' + currentBookingTour.price + '\n\n' +
-          '\uD83D\uDC64 *Client:* ' + name + '\n\uD83D\uDCE7 *Email:* ' + email + '\n\uD83D\uDCF1 *Phone:* ' + (phone || 'Not provided') + '\n' +
-          '\uD83D\uDC65 *Participants:* ' + participants + '\n\uD83D\uDCC5 *Start:* ' + date + '\n\uD83D\uDCC5 *End:* ' + (endDate || 'Not specified') + '\n\n' +
-          '\uD83D\uDCAC *Special Requests:*\n' + (requests || 'None') + '\n\n---\nSent via Rahhali Luxury Travel Website';
-        if (method === 'whatsapp') {
-          window.open('https://wa.me/212644182733?text=' + encodeURIComponent(msg), '_blank');
-          showToast('Opening WhatsApp with your booking details...', 'success');
-        } else {
-          window.location.href = 'mailto:rahhaliluxrytravel@gmail.com?subject=' + encodeURIComponent('Booking Inquiry: ' + currentBookingTour.title) + '&body=' + encodeURIComponent(msg.replace(/\*/g, ''));
-          showToast('Opening your email client...', 'success');
-        }
-        closeBookingModal();
-        document.getElementById('booking-form').reset();
-      };
-
-      window.submitBooking = function(e) { e.preventDefault(); };
-
-      function populateReviewTripSelect() {
-        var select = document.getElementById('review-trip');
-        for (var i = 0; i < tours.length; i++) {
-          var opt = document.createElement('option');
-          opt.value = tours[i].title;
-          opt.textContent = tours[i].title;
-          select.appendChild(opt);
-        }
-      }
-
-      window.setRating = function(n) {
-        selectedRating = n;
-        var btns = document.querySelectorAll('.star-btn');
-        for (var i = 0; i < btns.length; i++) {
-          var star = parseInt(btns[i].getAttribute('data-star'));
-          if (star <= n) { btns[i].classList.add('star'); btns[i].classList.remove('star-empty'); }
-          else { btns[i].classList.remove('star'); btns[i].classList.add('star-empty'); }
-        }
-      };
-
-      window.handlePhotoUpload = function(e) {
-        var container = document.getElementById('photo-preview-container');
-        var area = document.getElementById('upload-area');
-        var files = e.target.files;
-        for (var j = 0; j < files.length && uploadedPhotos.length < 5; j++) {
-          (function(file) {
-            var reader = new FileReader();
-            reader.onload = function(ev) {
-              uploadedPhotos.push(ev.target.result);
-              var div = document.createElement('div');
-              div.className = 'relative';
-              div.innerHTML = '<img src="' + ev.target.result + '" class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded border border-dark-border">' +
-                '<button type="button" class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-dark border border-dark-border rounded-full flex items-center justify-center text-cream text-xs hover:border-gold transition-colors" style="font-size:10px;line-height:1;">\u2715</button>';
-              div.querySelector('button').addEventListener('click', function() {
-                var idx = uploadedPhotos.indexOf(ev.target.result);
-                if (idx > -1) uploadedPhotos.splice(idx, 1);
-                div.remove();
-                area.classList.toggle('has-files', uploadedPhotos.length > 0);
-              });
-              container.appendChild(div);
-              area.classList.toggle('has-files', uploadedPhotos.length > 0);
-            };
-            reader.readAsDataURL(file);
-          })(files[j]);
-        }
-      };
-
-      window.submitReview = function(e) {
-        e.preventDefault();
-        showToast('Thank you for your review! It has been submitted successfully.', 'success');
-        document.getElementById('review-form').reset();
-        setRating(0);
-        uploadedPhotos = [];
-        document.getElementById('photo-preview-container').innerHTML = '';
-        document.getElementById('upload-area').classList.remove('has-files');
-      };
-
-      window.submitContact = function(e) {
-        e.preventDefault();
-        var fname = document.getElementById('contact-fname').value.trim();
-        var lname = document.getElementById('contact-lname').value.trim();
-        var email = document.getElementById('contact-email').value.trim();
-        var subject = document.getElementById('contact-subject').value;
-        var message = document.getElementById('contact-message').value.trim();
-        if (!fname || !lname || !email || !subject || !message) { showToast('Please fill in all required fields.', 'warning'); return; }
-        showToast('Your message has been sent successfully! We will get back to you within 24 hours.', 'success');
-        document.getElementById('contact-form').reset();
-      };
-
-      window.showToast = function(message, type) {
-        type = type || 'info';
-        var container = document.getElementById('toast-container');
-        var toast = document.createElement('div');
-        toast.className = 'toast';
-        var icons = {
-          success: '<svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
-          warning: '<svg class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>',
-          info: '<svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
-        };
-        toast.innerHTML = (icons[type] || icons.info) + '<span>' + message + '</span>';
-        container.appendChild(toast);
-        setTimeout(function() { toast.classList.add('removing'); setTimeout(function() { toast.remove(); }, 300); }, 4500);
-      };
-
-      document.getElementById('tour-modal').addEventListener('click', function(e) { if (e.target === document.getElementById('tour-modal')) closeTourModal(); });
-      document.getElementById('booking-modal').addEventListener('click', function(e) { if (e.target === document.getElementById('booking-modal')) closeBookingModal(); });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') { closeTourModal(); closeBookingModal(); if (document.getElementById('mobile-menu').classList.contains('open')) toggleMobileMenu(); }
-      });
-
-      renderFeaturedTours();
-      renderAllTours();
-      populateReviewTripSelect();
-    })();
+    function toggleMobileMenu(){document.getElementById('mobile-menu').classList.toggle('open');}
+    window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);});
+    window.addEventListener('load',function(){setTimeout(function(){document.getElementById('preloader').classList.add('hidden');lucide.createIcons();observeFadeUps();},1800);});
+    function observeFadeUps(){var o=new IntersectionObserver(function(e){for(var i=0;i<e.length;i++){if(e[i].isIntersecting){e[i].target.classList.add('visible');o.unobserve(e[i].target);}}},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});var els=document.querySelectorAll('.fade-up:not(.visible)');for(var i=0;i<els.length;i++)o.observe(els[i]);}
+    function renderTourCard(t){return '<a href="tour-detail.html?id='+t.id+'" class="tour-card"><div class="card-img"><img src="'+t.image+'" alt="'+t.title+'" loading="lazy"><div class="overlay"></div><div class="card-badge">'+t.category+'</div></div><div class="p-5"><p class="text-gold text-xs font-bold tracking-[0.12em] uppercase mb-1" style="font-size:0.6rem;">'+t.subtitle+'</p><h3 class="font-display text-lg text-white mb-2">'+t.title+'</h3><div class="flex items-center gap-3 text-cream-muted text-sm mb-3"><span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> '+t.duration+'</span></div><div class="flex items-center justify-between"><span class="text-gold font-bold text-sm">'+t.price+'</span><span class="text-cream-muted text-xs tracking-wider uppercase flex items-center gap-1">Details <i data-lucide="arrow-right" class="w-3 h-3"></i></span></div></div></a>';}
+    var html='';for(var i=0;i<tours.length;i++){if(tours[i].featured)html+=renderTourCard(tours[i]);}
+    document.getElementById('featured-tours').innerHTML=html;lucide.createIcons();
   </script>
 </body>
 </html>

@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews — Rahhali Luxury Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>tailwind.config={theme:{extend:{colors:{gold:{DEFAULT:'#C8A96E',light:'#D4B87A',dark:'#A8894A'},dark:{DEFAULT:'#0A0A0A',card:'#141414',border:'#2A2A2A',elevated:'#1A1A1A'},cream:{DEFAULT:'#E8E2D8',light:'#F5F0E8',muted:'#B8B0A4'}},fontFamily:{display:['Playfair Display','serif'],body:['Lato','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+  <nav class="nav-fixed scrolled" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="nav-brand"><div class="nav-brand-icon"></div><div><div class="nav-brand-text">Rahhali</div></div></a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="tours.html" class="nav-link">Tours</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="reviews.html" class="nav-link active">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <button class="md:hidden text-cream p-1" onclick="toggleMobileMenu()" aria-label="Menu"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="absolute top-5 right-5 text-cream p-1" onclick="toggleMobileMenu()"><i data-lucide="x" class="w-6 h-6"></i></button>
+    <div class="flex flex-col items-center mb-2"><div class="nav-brand-icon" style="width:40px;height:30px;margin-bottom:0.8rem;"></div><div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#C8A96E;letter-spacing:0.3em;text-transform:uppercase;">Rahhali</div></div>
+    <a href="index.html" class="mobile-link" onclick="toggleMobileMenu()">Home</a>
+    <a href="tours.html" class="mobile-link" onclick="toggleMobileMenu()">Tours</a>
+    <a href="about.html" class="mobile-link" onclick="toggleMobileMenu()">About</a>
+    <a href="reviews.html" class="mobile-link" onclick="toggleMobileMenu()">Reviews</a>
+    <a href="contact.html" class="mobile-link" onclick="toggleMobileMenu()">Contact</a>
+  </div>
+
+  <section class="page-header px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto text-center fade-up">
+      <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">Client Feedback</p>
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-3">Share Your Experience</h2>
+      <div class="gold-line mt-3 mb-4"></div>
+      <p class="text-cream-muted max-w-lg mx-auto text-sm sm:text-base">Your feedback helps us continue delivering exceptional experiences. Every review matters to us.</p>
+    </div>
+  </section>
+
+  <section class="px-4 sm:px-6 py-12 sm:py-16" style="background:linear-gradient(to bottom,#0A0A0A,#0E0E0E);">
+    <div class="max-w-2xl mx-auto fade-up">
+      <form id="review-form" class="space-y-5" onsubmit="submitReview(event)">
+        <div><label class="form-label">Trip Booked</label><select class="form-input" id="review-trip"><option value="">Select a trip (optional)</option></select></div>
+        <div><label class="form-label">Your Name</label><input type="text" class="form-input" id="review-name" placeholder="Enter your name (optional)"></div>
+        <div>
+          <label class="form-label">Rating</label>
+          <div class="flex gap-1.5">
+            <button type="button" class="star-btn text-2xl star-empty" data-star="1" onclick="setRating(1)">&#9733;</button>
+            <button type="button" class="star-btn text-2xl star-empty" data-star="2" onclick="setRating(2)">&#9733;</button>
+            <button type="button" class="star-btn text-2xl star-empty" data-star="3" onclick="setRating(3)">&#9733;</button>
+            <button type="button" class="star-btn text-2xl star-empty" data-star="4" onclick="setRating(4)">&#9733;</button>
+            <button type="button" class="star-btn text-2xl star-empty" data-star="5" onclick="setRating(5)">&#9733;</button>
+          </div>
+        </div>
+        <div><label class="form-label">Your Review</label><textarea class="form-input" id="review-comment" placeholder="Tell us about your experience (optional)"></textarea></div>
+        <div>
+          <label class="form-label">Photos (optional)</label>
+          <div class="upload-area" id="upload-area" onclick="document.getElementById('review-photos').click()">
+            <i data-lucide="image-plus" class="w-7 h-7 text-cream-muted mx-auto mb-1"></i>
+            <p class="text-cream-muted text-sm">Click to upload photos from your trip</p>
+            <p class="text-xs mt-1" style="color:#555;">JPG, PNG — up to 5 files</p>
+          </div>
+          <input type="file" id="review-photos" multiple accept="image/*" class="hidden" onchange="handlePhotoUpload(event)">
+          <div class="flex flex-wrap gap-2 mt-3" id="photo-preview-container"></div>
+        </div>
+        <div class="pt-3"><button type="submit" class="btn-gold w-full">Submit Review <i data-lucide="send" class="w-3.5 h-3.5"></i></button></div>
+      </form>
+    </div>
+  </section>
+
+  <a href="https://wa.me/212644182733" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.

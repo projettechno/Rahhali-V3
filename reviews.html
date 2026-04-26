@@ -27,15 +27,22 @@
   </nav>
 
   <div class="mobile-menu" id="mobile-menu">
-    <button class="absolute top-5 right-5 text-cream p-1" onclick="toggleMobileMenu()"><i data-lucide="x" class="w-6 h-6"></i></button>
-    <div class="flex flex-col items-center mb-2"><div class="nav-brand-icon" style="width:40px;height:30px;margin-bottom:0.8rem;"></div><div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#C8A96E;letter-spacing:0.3em;text-transform:uppercase;">Rahhali</div></div>
+    <button class="absolute top-5 right-5 text-cream p-1" onclick="toggleMobileMenu()" aria-label="Close"><i data-lucide="x" class="w-6 h-6"></i></button>
+    <div class="flex flex-col items-center mb-2">
+      <div class="nav-brand-icon" style="width:40px;height:30px;margin-bottom:0.8rem;"></div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#C8A96E;letter-spacing:0.3em;text-transform:uppercase;">Rahhali</div>
+      <div style="font-size:0.55rem;color:#666;letter-spacing:0.45em;text-transform:uppercase;margin-top:0.3rem;">Luxury Travel</div>
+    </div>
     <a href="index.html" class="mobile-link" onclick="toggleMobileMenu()">Home</a>
     <a href="tours.html" class="mobile-link" onclick="toggleMobileMenu()">Tours</a>
     <a href="about.html" class="mobile-link" onclick="toggleMobileMenu()">About</a>
     <a href="reviews.html" class="mobile-link" onclick="toggleMobileMenu()">Reviews</a>
     <a href="contact.html" class="mobile-link" onclick="toggleMobileMenu()">Contact</a>
+    <div class="gold-line mt-2" style="width:40px;"></div>
+    <p style="font-size:0.55rem;color:#555;letter-spacing:0.3em;text-transform:uppercase;margin-top:0.5rem;">Premium Morocco Travel</p>
   </div>
 
+  <!-- Page Header -->
   <section class="page-header px-4 sm:px-6">
     <div class="max-w-7xl mx-auto text-center fade-up">
       <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-3" style="font-size:0.6rem;">Client Feedback</p>
@@ -45,11 +52,23 @@
     </div>
   </section>
 
+  <!-- Review Form -->
   <section class="px-4 sm:px-6 py-12 sm:py-16" style="background:linear-gradient(to bottom,#0A0A0A,#0E0E0E);">
     <div class="max-w-2xl mx-auto fade-up">
       <form id="review-form" class="space-y-5" onsubmit="submitReview(event)">
-        <div><label class="form-label">Trip Booked</label><select class="form-input" id="review-trip"><option value="">Select a trip (optional)</option></select></div>
-        <div><label class="form-label">Your Name</label><input type="text" class="form-input" id="review-name" placeholder="Enter your name (optional)"></div>
+
+        <div>
+          <label class="form-label">Trip Booked</label>
+          <select class="form-input" id="review-trip">
+            <option value="">Select a trip (optional)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" id="review-name" placeholder="Enter your name (optional)">
+        </div>
+
         <div>
           <label class="form-label">Rating</label>
           <div class="flex gap-1.5">
@@ -60,7 +79,12 @@
             <button type="button" class="star-btn text-2xl star-empty" data-star="5" onclick="setRating(5)">&#9733;</button>
           </div>
         </div>
-        <div><label class="form-label">Your Review</label><textarea class="form-input" id="review-comment" placeholder="Tell us about your experience (optional)"></textarea></div>
+
+        <div>
+          <label class="form-label">Your Review</label>
+          <textarea class="form-input" id="review-comment" placeholder="Tell us about your experience (optional)"></textarea>
+        </div>
+
         <div>
           <label class="form-label">Photos (optional)</label>
           <div class="upload-area" id="upload-area" onclick="document.getElementById('review-photos').click()">
@@ -71,9 +95,145 @@
           <input type="file" id="review-photos" multiple accept="image/*" class="hidden" onchange="handlePhotoUpload(event)">
           <div class="flex flex-wrap gap-2 mt-3" id="photo-preview-container"></div>
         </div>
-        <div class="pt-3"><button type="submit" class="btn-gold w-full">Submit Review <i data-lucide="send" class="w-3.5 h-3.5"></i></button></div>
+
+        <div class="pt-3">
+          <button type="submit" class="btn-gold w-full">
+            Submit Review <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
       </form>
     </div>
   </section>
 
-  <a href="https://wa.me/212644182733" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/212644182733?text=Hello%20Rahhali%20Luxury%20Travel%2C%20I%27d%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="border-t border-dark-border px-4 sm:px-6 py-12 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="border-t border-dark-border pt-7 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-cream-muted text-xs tracking-wider">&copy; 2025 Rahhali Luxury Travel. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <a href="#" class="text-cream-muted hover:text-gold transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" class="text-cream-muted hover:text-gold transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="https://wa.me/212644182733" target="_blank" class="text-cream-muted hover:text-gold transition-colors"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script>
+    var selectedRating = 0;
+    var uploadedPhotos = [];
+
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    }
+
+    function observeFadeUps() {
+      var observer = new IntersectionObserver(function(entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) {
+            entries[i].target.classList.add('visible');
+            observer.unobserve(entries[i].target);
+          }
+        }
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      var els = document.querySelectorAll('.fade-up:not(.visible)');
+      for (var i = 0; i < els.length; i++) observer.observe(els[i]);
+    }
+
+    function setRating(n) {
+      selectedRating = n;
+      var btns = document.querySelectorAll('.star-btn');
+      for (var i = 0; i < btns.length; i++) {
+        var star = parseInt(btns[i].getAttribute('data-star'));
+        if (star <= n) {
+          btns[i].classList.add('star');
+          btns[i].classList.remove('star-empty');
+        } else {
+          btns[i].classList.remove('star');
+          btns[i].classList.add('star-empty');
+        }
+      }
+    }
+
+    function handlePhotoUpload(e) {
+      var container = document.getElementById('photo-preview-container');
+      var area = document.getElementById('upload-area');
+      var files = e.target.files;
+      for (var j = 0; j < files.length && uploadedPhotos.length < 5; j++) {
+        (function(file) {
+          var reader = new FileReader();
+          reader.onload = function(ev) {
+            uploadedPhotos.push(ev.target.result);
+            var div = document.createElement('div');
+            div.className = 'relative';
+            div.innerHTML = '<img src="' + ev.target.result + '" class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded border border-dark-border">' +
+              '<button type="button" class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-dark border border-dark-border rounded-full flex items-center justify-center text-cream text-xs hover:border-gold transition-colors" style="font-size:10px;line-height:1;">\u2715</button>';
+            div.querySelector('button').addEventListener('click', function() {
+              var idx = uploadedPhotos.indexOf(ev.target.result);
+              if (idx > -1) uploadedPhotos.splice(idx, 1);
+              div.remove();
+              area.classList.toggle('has-files', uploadedPhotos.length > 0);
+            });
+            container.appendChild(div);
+            area.classList.toggle('has-files', uploadedPhotos.length > 0);
+          };
+          reader.readAsDataURL(file);
+        })(files[j]);
+      }
+    }
+
+    function submitReview(e) {
+      e.preventDefault();
+      showToast('Thank you for your review! It has been submitted successfully.', 'success');
+      document.getElementById('review-form').reset();
+      setRating(0);
+      uploadedPhotos = [];
+      document.getElementById('photo-preview-container').innerHTML = '';
+      document.getElementById('upload-area').classList.remove('has-files');
+    }
+
+    function showToast(message, type) {
+      type = type || 'info';
+      var container = document.getElementById('toast-container');
+      var toast = document.createElement('div');
+      toast.className = 'toast';
+      var icons = {
+        success: '<svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+        warning: '<svg class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>'
+      };
+      toast.innerHTML = (icons[type] || icons.success) + '<span>' + message + '</span>';
+      container.appendChild(toast);
+      setTimeout(function() {
+        toast.classList.add('removing');
+        setTimeout(function() { toast.remove(); }, 300);
+      }, 4500);
+    }
+
+    function populateReviewTripSelect() {
+      var select = document.getElementById('review-trip');
+      for (var i = 0; i < tours.length; i++) {
+        var opt = document.createElement('option');
+        opt.value = tours[i].title;
+        opt.textContent = tours[i].title;
+        select.appendChild(opt);
+      }
+    }
+
+    window.addEventListener('load', function() {
+      lucide.createIcons();
+      observeFadeUps();
+      populateReviewTripSelect();
+    });
+  </script>
+</body>
+</html>

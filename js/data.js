@@ -30,11 +30,11 @@ var tours = [
   {
     id: 3, title: "Ourika Valley Day Trip", subtitle: "Atlas Foothills Escape", category: "mountain",
     duration: "1 Day", price: "From \u20AC45",
-    image: "https://picsum.photos/seed/ourika-valley-mountain-river/800/600.jpg",
+    image: "images/ourika-main.jpg",
     gallery: [
-      "https://picsum.photos/seed/ourika-berber-village-green/800/500.jpg",
-      "https://picsum.photos/seed/ourika-waterfall-setti-fatma/800/500.jpg",
-      "https://picsum.photos/seed/ourika-valley-landscape-scenic/800/500.jpg"
+      "images/ourika-gallery-1.jpg",
+      "images/ourika-gallery-2.jpg",
+      "images/ourika-gallery-3.jpg"
     ],
     highlights: ["Discover the Berber village & tea with locals", "Visit the traditional Berber mill", "Argan oil cooperative by Berber women", "Setti Fatma waterfalls visit", "Breathtaking Atlas Mountains landscape", "Air-conditioned vehicle transport"],
     inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Diesel fuel", "Transport insurance"],

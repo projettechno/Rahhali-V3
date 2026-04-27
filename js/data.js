@@ -28,18 +28,18 @@ var tours = [
     featured: true
   },
   {
-    id: 3, title: "Atlas Mountains Retreat", subtitle: "Highland Escape", category: "mountain",
-    duration: "4 Days / 3 Nights", price: "From \u20AC1,100",
-    image: "https://picsum.photos/seed/atlas-mountain-peak-snow/800/600.jpg",
+    id: 3, title: "Ourika Valley Day Trip", subtitle: "Atlas Foothills Escape", category: "mountain",
+    duration: "1 Day", price: "From \u20AC45",
+    image: "https://picsum.photos/seed/ourika-valley-mountain-river/800/600.jpg",
     gallery: [
-      "https://picsum.photos/seed/atlas-berber-village-mountain/800/500.jpg",
-      "https://picsum.photos/seed/atlas-hiking-trail-scenic/800/500.jpg",
-      "https://picsum.photos/seed/atlas-green-valley-view/800/500.jpg"
+      "https://picsum.photos/seed/ourika-berber-village-green/800/500.jpg",
+      "https://picsum.photos/seed/ourika-waterfall-setti-fatma/800/500.jpg",
+      "https://picsum.photos/seed/ourika-valley-landscape-scenic/800/500.jpg"
     ],
-    highlights: ["Toubkal National Park trek", "Berber village immersion", "Traditional mountain lunch", "Scenic valley drives", "Luxury mountain lodge"],
-    inclusions: ["Private 4x4 transport", "Mountain lodge accommodation", "All meals", "Experienced mountain guide", "Hiking equipment", "Marrakech transfers"],
-    description: "Escape to the breathtaking Atlas Mountains, where snow-capped peaks meet lush valleys and ancient Berber villages. This retreat combines adventure with relaxation \u2014 trek through stunning landscapes, share meals with local families, and unwind in a luxury mountain lodge with panoramic views.",
-    featured: true
+    highlights: ["Discover the Berber village & tea with locals", "Visit the traditional Berber mill", "Argan oil cooperative by Berber women", "Setti Fatma waterfalls visit", "Breathtaking Atlas Mountains landscape", "Air-conditioned vehicle transport"],
+    inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Diesel fuel", "Transport insurance"],
+    description: "Visiting the Ourika Valley during a stay in Marrakech is a must — a region very popular with tourists, where preserved nature and a magnificent river wind through the heart of the mountains. Explore the best of Morocco through this fascinating Marrakech day trip to the foothills of the Atlas Mountains. In the Ourika Valley you will enjoy the breathtaking landscape of the mountains, valley, and traditional Berber family earthen houses.",
+    featured: false
   },
   {
     id: 4, title: "Essaouira Coastal Escape", subtitle: "Ocean Breeze", category: "coastal",

@@ -39,7 +39,7 @@ var tours = [
     highlights: ["Discover the Berber village & tea with locals", "Visit the traditional Berber mill", "Argan oil cooperative by Berber women", "Setti Fatma waterfalls visit", "Breathtaking Atlas Mountains landscape", "Air-conditioned vehicle transport"],
     inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Diesel fuel", "Transport insurance"],
     description: "Visiting the Ourika Valley during a stay in Marrakech is a must — a region very popular with tourists, where preserved nature and a magnificent river wind through the heart of the mountains. Explore the best of Morocco through this fascinating Marrakech day trip to the foothills of the Atlas Mountains. In the Ourika Valley you will enjoy the breathtaking landscape of the mountains, valley, and traditional Berber family earthen houses.",
-    featured: false
+    featured: true
   },
   {
     id: 4, title: "Essaouira Coastal Escape", subtitle: "Ocean Breeze", category: "coastal",

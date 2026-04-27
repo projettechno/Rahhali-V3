@@ -128,12 +128,11 @@
       var email=document.getElementById('booking-email').value.trim();
       var participants=document.getElementById('booking-participants').value;
       var date=document.getElementById('booking-date').value;
-      var endDate=document.getElementById('booking-end-date').value;
       var phone=document.getElementById('booking-phone').value.trim();
       var requests=document.getElementById('booking-requests').value.trim();
       if(!name||!email||!participants||!date){showToast('Please fill in all required fields.','warning');return;}
       if(!tour){showToast('Tour not found.','warning');return;}
-      var msg='\u2708\uFE0F *New Booking \u2014 Rahhali Luxury Travel*\n\n\u25B9 *Tour:* '+tour.title+'\n\u25B9 *Duration:* '+tour.duration+'\n\u25B9 *Price:* '+tour.price+'\n\n\uD83D\uDC64 *Client:* '+name+'\n\uD83D\uDCE7 *Email:* '+email+'\n\uD83D\uDCF1 *Phone:* '+(phone||'Not provided')+'\n\uD83D\uDC65 *Participants:* '+participants+'\n\uD83D\uDCC5 *Start:* '+date+'\n\uD83D\uDCC5 *End:* '+(endDate||'Not specified')+'\n\n\uD83D\uDCAC *Special Requests:*\n'+(requests||'None')+'\n\n---\nSent via Rahhali Luxury Travel Website';
+      var msg='\u2708\uFE0F *New Booking \u2014 Rahhali Luxury Travel*\n\n\u25B9 *Tour:* '+tour.title+'\n\u25B9 *Duration:* '+tour.duration+'\n\u25B9 *Price:* '+tour.price+'\n\n\uD83D\uDC64 *Client:* '+name+'\n\uD83D\uDCE7 *Email:* '+email+'\n\uD83D\uDCF1 *Phone:* '+(phone||'Not provided')+'\n\uD83D\uDC65 *Participants:* '+participants+'\n\uD83D\uDCC5 *Preferred Date:* '+date+'\n\n\uD83D\uDCAC *Special Requests:*\n'+(requests||'None')+'\n\n---\nSent via Rahhali Luxury Travel Website';
       if(method==='whatsapp'){
         window.open('https://wa.me/212644182733?text='+encodeURIComponent(msg),'_blank');
         showToast('Opening WhatsApp with your booking details...','success');

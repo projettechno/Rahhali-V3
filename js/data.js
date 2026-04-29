@@ -27,7 +27,7 @@ var tours = [
     description: "Journey through Morocco's four imperial cities \u2014 Marrakech, Fes, Rabat, and Meknes \u2014 each a treasure trove of history, architecture, and culture. Stay in hand-picked luxury riads, explore labyrinthine medinas with expert guides, and discover the royal heritage that shaped this extraordinary kingdom.",
     featured: true
   },
-  {
+    {
     id: 3, title: "Ourika Valley Day Trip", subtitle: "Atlas Foothills Escape", category: "mountain",
     duration: "1 Day", price: "From \u20AC45",
     image: "images/ourika-main.jpg",
@@ -36,9 +36,9 @@ var tours = [
       "images/ourika-gallery-2.jpg",
       "images/ourika-gallery-3.jpg"
     ],
-    highlights: ["Discover the Berber village & tea with locals", "Visit the traditional Berber mill", "Argan oil cooperative by Berber women", "Setti Fatma waterfalls visit", "Breathtaking Atlas Mountains landscape", "Air-conditioned vehicle transport"],
-    inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Diesel fuel", "Transport insurance"],
-    description: "Visiting the Ourika Valley during a stay in Marrakech is a must — a region very popular with tourists, where preserved nature and a magnificent river wind through the heart of the mountains. Explore the best of Morocco through this fascinating Marrakech day trip to the foothills of the Atlas Mountains. In the Ourika Valley you will enjoy the breathtaking landscape of the mountains, valley, and traditional Berber family earthen houses.",
+    highlights: ["Discover the Berber village & tea with locals", "Visit the traditional Berber mill", "Argan oil cooperative by Berber women", "Setti Fatma waterfalls visit", "Breathtaking Atlas Mountains landscape", "Visit Barbary House", "Mountain tour guide included"],
+    inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Visit Barbary House", "Water bottle", "Mountain tour guide"],
+    description: "Visiting the Ourika Valley during a stay in Marrakech is a must — a region very popular with tourists, where preserved nature and a magnificent river wind through the heart of the mountains. Explore the best of Morocco through this fascinating Marrakech day trip to the foothills of the Atlas Mountains. In the Ourika Valley you will enjoy the breathtaking landscape of the mountains, valley, and traditional Berber family earthen houses.\n\nSchedule: Marrakech \u2014 Ourika \u2014 Setti Fatma\n\u2022 Departure from the hotel at 9:30 AM towards the High Atlas\n\u2022 Discover the Berber village (Monday or Friday) and have tea with the locals\n\u2022 Visit the traditional Berber mill\n\u2022 Stop at the cooperative of argan oil held by Moroccan Berber women\n\u2022 Free time for lunch\n\u2022 Free visit of the Setti Fatma waterfalls\n\u2022 Return to the hotel around 17:00\n\nNote: Lunch, drinks, tips, and personal expenses are not included.",
     featured: true
   },
   {

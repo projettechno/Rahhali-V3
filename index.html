@@ -5,11 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rahhali Luxury Travel — Premium Morocco Experiences</title>
   <meta name="description" content="Rahhali Luxury Travel offers curated private tours, desert adventures, and luxury experiences across Morocco.">
+  <meta property="og:title" content="Rahhali Luxury Travel — Premium Morocco Experiences">
+  <meta property="og:description" content="Curated private tours, desert adventures, and authentic cultural journeys across Morocco.">
+  <meta property="og:type" content="website">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>tailwind.config={theme:{extend:{colors:{gold:{DEFAULT:'#C8A96E',light:'#D4B87A',dark:'#A8894A'},dark:{DEFAULT:'#0A0A0A',card:'#141414',border:'#2A2A2A',elevated:'#1A1A1A'},cream:{DEFAULT:'#E8E2D8',light:'#F5F0E8',muted:'#B8B0A4'}},fontFamily:{display:['Playfair Display','serif'],body:['Lato','sans-serif']}}}}</script>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Hero Brand Reveal */
+    .hero-brand-reveal {
+      position: relative; height: 100vh; min-height: 600px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; background: #0A0A0A;
+    }
+    .hero-brand-bg {
+      position: absolute; inset: 0;
+      background: url('https://picsum.photos/seed/morocco-desert-dunes-gold/1920/1080.jpg') center/cover no-repeat;
+      opacity: 0;
+      animation: heroBgReveal 3s ease-out 0.5s forwards;
+      filter: brightness(0.6) saturate(0.7);
+    }
+    .hero-brand-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.85) 100%);
+    }
+    @keyframes heroBgReveal {
+      0% { opacity: 0; transform: scale(1.1); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .hero-brand-content {
+      position: relative; z-index: 10; text-align: center;
+      max-width: 880px; padding: 0 1.5rem;
+      opacity: 0;
+      animation: heroContentReveal 1.2s ease-out 0.8s forwards;
+    }
+    @keyframes heroContentReveal {
+      0% { opacity: 0; transform: translateY(15px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hero-brand-arch {
+      width: 60px; height: 44px; margin: 0 auto 1.5rem;
+      border: 1.5px solid #C8A96E; border-radius: 50% 50% 0 0;
+      position: relative; opacity: 0;
+      animation: archReveal 0.8s ease-out 1.2s forwards;
+    }
+    .hero-brand-arch::before {
+      content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 55%; height: 1px; background: #C8A96E;
+    }
+    @keyframes archReveal {
+      0% { opacity: 0; transform: scaleX(0.7); }
+      100% { opacity: 1; transform: scaleX(1); }
+    }
+    .hero-brand-name {
+      font-family: 'Playfair Display', serif; font-size: 2rem; color: #C8A96E;
+      letter-spacing: 0.5em; text-transform: uppercase; line-height: 1;
+      opacity: 0;
+      animation: nameReveal 1s ease-out 1.5s forwards;
+    }
+    @keyframes nameReveal {
+      0% { opacity: 0; letter-spacing: 0.8em; }
+      100% { opacity: 1; letter-spacing: 0.5em; }
+    }
+    .hero-brand-subtitle {
+      font-family: 'Lato', sans-serif; font-size: 0.55rem; color: #777;
+      letter-spacing: 0.55em; text-transform: uppercase; margin-top: 0.6rem;
+      opacity: 0;
+      animation: subReveal 0.8s ease-out 2s forwards;
+    }
+    @keyframes subReveal {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .hero-brand-divider {
+      width: 40px; height: 1px; background: #C8A96E; margin: 2rem auto;
+      opacity: 0;
+      animation: subReveal 0.8s ease-out 2.3s forwards;
+    }
+    .hero-brand-headline {
+      opacity: 0;
+      animation: heroContentReveal 1s ease-out 2.6s forwards;
+    }
+    .hero-brand-cta {
+      opacity: 0;
+      animation: heroContentReveal 0.8s ease-out 3s forwards;
+    }
+    .hero-brand-scroll {
+      opacity: 0;
+      animation: subReveal 0.6s ease-out 3.5s forwards;
+    }
+
+    @media (max-width: 768px) {
+      .hero-brand-arch { width: 48px; height: 35px; }
+      .hero-brand-name { font-size: 1.5rem; letter-spacing: 0.35em; }
+      .hero-brand-content h1 { font-size: 2rem !important; }
+    }
+    @media (max-width: 480px) {
+      .hero-brand-name { font-size: 1.2rem; letter-spacing: 0.25em; }
+      .hero-brand-content h1 { font-size: 1.7rem !important; }
+      .hero-brand-arch { width: 40px; height: 30px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -55,22 +153,32 @@
     <p style="font-size:0.55rem;color:#555;letter-spacing:0.3em;text-transform:uppercase;margin-top:0.5rem;">Premium Morocco Travel</p>
   </div>
 
-  <!-- HERO -->
-  <section class="hero-section">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-5" style="font-size:0.6rem;">Rahhali Luxury Travel</p>
-      <h1 class="font-display text-4xl sm:text-5xl md:text-7xl font-500 text-white leading-tight mb-5" style="text-shadow:0 4px 30px rgba(0,0,0,0.5);">Discover Morocco<br><em class="text-gold font-normal">in Absolute Luxury</em></h1>
-      <div class="gold-line mb-5"></div>
-      <p class="text-cream-muted text-base sm:text-lg font-light max-w-lg mx-auto mb-9 leading-relaxed">Curated private tours, desert adventures, and authentic cultural journeys — tailored exclusively for the discerning traveler.</p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="tours.html" class="btn-gold">Explore Tours <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-        <a href="contact.html" class="btn-outline">Get in Touch</a>
+  <!-- HERO — BRAND REVEAL -->
+  <section class="hero-brand-reveal">
+    <div class="hero-brand-bg"></div>
+    <div class="hero-brand-content">
+      <div class="hero-brand-arch"></div>
+      <div class="hero-brand-name">Rahhali</div>
+      <div class="hero-brand-subtitle">Luxury Travel</div>
+      <div class="hero-brand-divider"></div>
+      <div class="hero-brand-headline">
+        <h1 class="font-display text-3xl sm:text-5xl md:text-6xl font-400 text-white leading-tight mb-5" style="text-shadow: 0 4px 30px rgba(0,0,0,0.5);">
+          Discover Morocco<br><em class="text-gold font-normal">in Absolute Luxury</em>
+        </h1>
+        <p class="text-cream-muted text-base sm:text-lg font-light max-w-lg mx-auto mb-9 leading-relaxed">
+          Curated private tours, desert adventures, and authentic cultural journeys — tailored exclusively for the discerning traveler.
+        </p>
       </div>
-    </div>
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-      <span class="text-cream-muted text-xs tracking-widest uppercase" style="font-size:0.55rem;">Scroll</span>
-      <div class="w-px h-7 bg-gradient-to-b from-gold to-transparent"></div>
+      <div class="hero-brand-cta">
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="tours.html" class="btn-gold">Explore Tours <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+          <a href="contact.html" class="btn-outline">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-brand-scroll absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <span class="text-cream-muted text-xs tracking-widest uppercase" style="font-size:0.55rem;">Scroll</span>
+        <div class="w-px h-7 bg-gradient-to-b from-gold to-transparent"></div>
+      </div>
     </div>
   </section>
 

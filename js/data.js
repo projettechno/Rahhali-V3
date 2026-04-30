@@ -41,18 +41,18 @@ var tours = [
     description: "A day trip to the Ourika Valley is one of those experiences that stays with you long after you leave Morocco. Just an hour from Marrakech, the landscape transforms completely — the city fades away and you find yourself in a world of green valleys, flowing rivers, and towering Atlas peaks.\n\nYou'll start your morning at 9:30 AM, leaving the city behind as your driver takes you through winding mountain roads toward the High Atlas. The drive itself is beautiful, but what awaits is even better.\n\nYour first stop is a traditional Berber village, where locals welcome you with warm mint tea — a simple gesture that somehow feels incredibly special. You'll get a glimpse into daily life here, see the traditional Berber mill in action, and visit an argan oil cooperative run entirely by Moroccan Berber women. It's the kind of place where you learn something real, not just take a photo and move on.\n\nAfter some free time for lunch in one of the local restaurants (the food here is simple but genuinely good), you'll head toward the Setti Fatma waterfalls. The walk up is worth every step — the sound of the water, the cool mountain air, the views looking back down the valley. It's the kind of moment that reminds you why you traveled in the first place.\n\nYou'll be back at your hotel around 5:00 PM, just in time to watch the sunset from your rooftop.\n\nPlease note: Lunch, drinks, tips, and personal expenses are not included in this trip.",
     featured: true
   },
-  {
-    id: 4, title: "Essaouira Coastal Escape", subtitle: "Ocean Breeze", category: "coastal",
-    duration: "2 Days / 1 Night", price: "From \u20AC490",
-    image: "https://picsum.photos/seed/essaouira-blue-coast-town/800/600.jpg",
+    {
+    id: 4, title: "Mogador: Marrakech to Essaouira Day Trip", subtitle: "Coastal Escape", category: "coastal",
+    duration: "1 Day", price: "From \u20AC45",
+    image: "https://picsum.photos/seed/essaouira-coast-medina-blue/800/600.jpg",
     gallery: [
-      "https://picsum.photos/seed/essaouira-medina-port-view/800/500.jpg",
-      "https://picsum.photos/seed/essaouira-sunset-beach/800/500.jpg",
-      "https://picsum.photos/seed/essaouira-fortress-wall/800/500.jpg"
+      "https://picsum.photos/seed/essaouira-port-boats-harbor/800/500.jpg",
+      "https://picsum.photos/essaouira-old-town-blue/800/500.jpg",
+      "https://picsum.photos/seed/essaouira-sunset-atlantic/800/500.jpg"
     ],
-    highlights: ["Scenic coastal drive", "Medina of Essaouira", "Gnawa music experience", "Fresh seafood lunch", "Beach relaxation", "Argan oil cooperative visit"],
-    inclusions: ["Private transport", "Boutique hotel", "Breakfast & seafood lunch", "Guided medina tour", "Essaouira transfers"],
-    description: "Discover the enchanting coastal town of Essaouira, where Portuguese fortifications meet bohemian charm. Stroll through the windswept medina, savor the freshest seafood, listen to hypnotic Gnawa music, and relax on the expansive beach with the Atlantic breeze.",
+    highlights: ["See goats climbing argan trees", "Visit Berber women's argan oil cooperative", "Panoramic view of the city", "Discover the port of Essaouira", "Free visit of the old Medina", "Relax by the Atlantic beach"],
+    inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Water bottle", "Diesel fuel", "Transport insurance"],
+    description: "One of the best day trips you can do from Marrakech is the road to Essaouira. There's something about leaving the red city behind and watching the landscape gradually shift to green hills, argan forests, and finally the blue Atlantic coast that makes you feel like you've entered a different world.\n\nThe drive itself is part of the experience — around 8:30 AM you'll head west, passing through stunning countryside. Your first stop is one of those iconic Moroccan moments: goats actually climbing the argan trees. It's real, it's photogenic, and it always makes people smile.\n\nFrom there you'll visit an argan oil cooperative run by local Berber women who will show you the traditional process of extracting argan oil — it's fascinating to watch and a great way to support the local community directly.\n\nOnce in Essaouira, you'll first take in the panoramic view of the city — it's one of those sights that photos barely do justice to. Then you're free to explore on your own. Wander through the old Medina with its blue-painted doors and cedar wood workshops. Visit the historic port where fishing boats line up against the backdrop of an ancient fortress. Grab lunch by the water — the fish here is some of the freshest in Morocco.\n\nThere's no rush here. Essaouira has a different energy than Marrakech — it's slower, breezier, and you'll understand why so many travelers end up staying longer than they planned.\n\nYou'll be back at your hotel around 19:00, just in time for dinner.\n\nPlease note: Lunch, drinks, and personal expenses are not included.",
     featured: false
   },
   {

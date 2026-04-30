@@ -90,7 +90,7 @@
     function toggleMobileMenu(){document.getElementById('mobile-menu').classList.toggle('open');}
     function observeFadeUps(){var o=new IntersectionObserver(function(e){for(var i=0;i<e.length;i++){if(e[i].isIntersecting){e[i].target.classList.add('visible');o.unobserve(e[i].target);}}},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});var els=document.querySelectorAll('.fade-up:not(.visible)');for(var i=0;i<els.length;i++)o.observe(els[i]);}
     function animateStats(){var els=document.querySelectorAll('.stat-number');for(var i=0;i<els.length;i++){(function(el){var target=parseInt(el.getAttribute('data-target'));var start=performance.now();function update(now){var p=Math.min((now-start)/2000,1);el.textContent=Math.round(target*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(update);else el.textContent=target.toLocaleString()+'+';}requestAnimationFrame(update);})(els[i]);}}
-    window.addEventListener('load',function(){lucide.createIcons();observeFadeUps();setTimeout(animateStats,400);});
+    window.addEventListener('load',function(){lucide.createIcons();observeFadeUps();});
   </script>
   <script src="js/footer.js"></script>
   </body>

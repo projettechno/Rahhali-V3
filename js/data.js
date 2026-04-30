@@ -13,20 +13,20 @@ var tours = [
     description: "Experience the magic of the Sahara in absolute luxury. This exclusive desert adventure takes you through the majestic Erg Chebbi dunes, where a private luxury camp awaits with all the comforts you desire. Watch the sunset from atop a camel, dine on traditional Berber cuisine under a canopy of stars, and wake to a desert sunrise that will take your breath away.",
     featured: true
   },
-  {
-    id: 2, title: "Imperial Cities Tour", subtitle: "Royal Heritage", category: "cultural",
-    duration: "7 Days / 6 Nights", price: "From \u20AC1,850",
-    image: "https://picsum.photos/seed/morocco-royal-palace-gate/800/600.jpg",
+    {
+    id: 2, title: "Excursion Ouarzazate", subtitle: "Atlas & Desert Crossing", category: "desert",
+    duration: "1 Day", price: "From \u20AC55",
+    image: "https://picsum.photos/seed/ouarzazate-kasbah-desert-fort/800/600.jpg",
     gallery: [
-      "https://picsum.photos/seed/marrakech-palace-entrance/800/500.jpg",
-      "https://picsum.photos/seed/fes-ancient-tanneries/800/500.jpg",
-      "https://picsum.photos/seed/rabat-royal-mausoleum/800/500.jpg"
+      "https://picsum.photos/seed/ait-ben-haddou-fortress-unesco/800/500.jpg",
+      "https://picsum.photos/seed/atlas-film-studios-gameofthrones/800/500.jpg",
+      "https://picsum.photos/seed/tizi-n-tichka-mountain-pass/800/500.jpg"
     ],
-    highlights: ["Marrakech medina exploration", "Fes ancient tanneries", "Rabat's royal landmarks", "Meknes imperial gates", "Private guided tours", "Traditional riad stays"],
-    inclusions: ["Private transport throughout", "Luxury riad accommodation", "Daily breakfast & dinner", "Certified local guides", "Entrance fees", "Airport transfers"],
-    description: "Journey through Morocco's four imperial cities \u2014 Marrakech, Fes, Rabat, and Meknes \u2014 each a treasure trove of history, architecture, and culture. Stay in hand-picked luxury riads, explore labyrinthine medinas with expert guides, and discover the royal heritage that shaped this extraordinary kingdom.",
-    featured: true
-  },
+    highlights: ["Cross the Tizi n'Tichka pass at 2,260m", "Visit Ait Benhaddou Kasbah (UNESCO site)", "Atlas Film Studios — Game of Thrones location", "Explore Ait Ben Barka Berber village", "Stunning mountain and desert landscapes", "Wi-Fi in the vehicle during the drive"],
+    inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Water bottle", "Tour guide of Kasbah Ait Benhaddou"],
+    description: "Some of the most spectacular scenery in Morocco isn't at the destination — it's on the road to get there. That's exactly what this day trip delivers.\n\nYour driver picks you up from your Marrakech accommodation between 7:00 and 8:00 AM in a comfortable air-conditioned vehicle. As you leave the city behind, the landscape starts shifting — red earth gives way to green valleys, then rocky mountain slopes, and eventually the dramatic desert canyons that make this route famous.\n\nThe drive takes you through the Tizi n'Tichka pass at 2,260 meters above sea level — one of the highest mountain passes in Morocco. Pull over for photos at the summit because the views are genuinely breathtaking and you'll want proof that you were there.\n\nYour first proper stop is the small village of Ait Ben Barka near Toufliht, where you can stretch your legs and get a feel for mountain life. The driver will share context about the stops ahead so you know exactly what to expect.\n\nThen comes the unexpected gem — the Atlas Film Studios in Ouarzazate. This is the largest film studio in the world and a real behind-the-scenes experience. It's where Game of Thrones, Gladiator, and dozens of other productions were filmed. Even if you're not a movie buff, walking through the sets is genuinely impressive.\n\nAfter free time at the studios (and a well-deserved lunch break at one of the area's restaurants with panoramic views), you'll head to the star of the trip: Ait Benhaddou. This UNESCO-recognized kasbah is one of the most extraordinary fortresses in Morocco — the kind of place that makes you understand why it appears in so many films. Your guide will walk you through its narrow alleys and explain the history behind the fortified walls.\n\nThe drive back to Marrakech is relaxed and scenic, giving you time to process an incredible day. You'll arrive at your hotel around evening, probably already planning your next trip.\n\nPlease note: Lunch, drinks, tips, and personal expenses are not included.",
+    featured: false
+    },
     {
     id: 3, title: "Ourika Valley Day Trip", subtitle: "Atlas Foothills Escape", category: "mountain",
     duration: "1 Day", price: "From \u20AC45",

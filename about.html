@@ -101,8 +101,7 @@
     function animateStats(){var els=document.querySelectorAll('.stat-number');for(var i=0;i<els.length;i++){(function(el){var target=parseInt(el.getAttribute('data-target'));var start=performance.now();function update(now){var p=Math.min((now-start)/2000,1);el.textContent=Math.round(target*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(update);else el.textContent=target.toLocaleString()+'+';}requestAnimationFrame(update);})(els[i]);}}
     window.addEventListener('load',function(){lucide.createIcons();observeFadeUps();setTimeout(animateStats,400);});
   </script>
-      <div id="footer-container"></div>
-      <script>fetch('footer.html').then(r=>r.text()).then(t=>document.getElementById('footer-container').innerHTML=t).then(()=>lucide.createIcons());</script>
+  <script src="js/footer.js"></script>
   </body>
 </html>
 </body>

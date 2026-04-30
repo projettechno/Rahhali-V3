@@ -73,7 +73,6 @@
     function filterTours(cat,btn){var tabs=document.querySelectorAll('.filter-tab');for(var i=0;i<tabs.length;i++)tabs[i].classList.remove('active');if(btn)btn.classList.add('active');renderAllTours(cat);}
     renderAllTours();
   </script>
-  <div id="footer-container"></div>
-  <script>fetch('footer.html').then(r=>r.text()).then(t=>document.getElementById('footer-container').innerHTML=t).then(()=>lucide.createIcons());</script>
+    <script src="js/footer.js"></script>
 </body>
 </html>

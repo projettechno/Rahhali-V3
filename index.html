@@ -257,9 +257,6 @@
     var html='';for(var i=0;i<tours.length;i++){if(tours[i].featured)html+=renderTourCard(tours[i]);}
     document.getElementById('featured-tours').innerHTML=html;lucide.createIcons();
   </script>
-      <div id="footer-container"></div>
-      <script>fetch('footer.html').then(r=>r.text()).then(t=>document.getElementById('footer-container').innerHTML=t).then(()=>lucide.createIcons());</script>
-  </body>
-</html>
+  <script src="js/footer.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ var tours = [
     {
     id: 2, title: "Excursion Ouarzazate", subtitle: "Atlas & Desert Crossing", category: "desert",
     duration: "1 Day", price: "From \u20AC55",
-    image: "https://picsum.photos/seed/ouarzazate-kasbah-desert-fort/800/600.jpg",
+    image: "images/ouar-main.jpg",
     gallery: [
       "https://picsum.photos/seed/ait-ben-haddou-fortress-unesco/800/500.jpg",
       "https://picsum.photos/seed/atlas-film-studios-gameofthrones/800/500.jpg",

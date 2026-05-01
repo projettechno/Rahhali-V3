@@ -2,7 +2,7 @@ var tours = [
   {
     id: 1, title: "Sahara Luxury Camp", subtitle: "Desert Odyssey", category: "desert",
     duration: "3 Days / 2 Nights", price: "From \u20AC890",
-    image: "https://picsum.photos/seed/sahara-golden-dunes-camp/800/600.jpg",
+    image: "images/sahara-main.jpg",
     gallery: [
       "https://picsum.photos/seed/sahara-luxury-tent-night/800/500.jpg",
       "https://picsum.photos/seed/sahara-camel-desert-sun/800/500.jpg",

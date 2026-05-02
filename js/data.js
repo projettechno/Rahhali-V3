@@ -66,9 +66,12 @@ var tours = [
     duration: "1 Day", price: "From \u20AC45",
     image: "images/oz-main.jpg",
     gallery: [
-      "https://picsum.photos/seed/ouzoud-falls-pool-boat/800/500.jpg",
-      "https://picsum.photos/seed/ouzoud-olive-grove-trail/800/500.jpg",
-      "https://picsum.photos/seed/ouzoud-cascades-panoramic/800/500.jpg"
+      "images/f1.jpg",
+      "images/f2.jpg",
+      "images/f3.jpg",
+      "images/f4.jpg",
+      "images/f5.jpg",
+      "images/f6.jpg",
     ],
     highlights: ["360-foot waterfall — one of the highest in North Africa", "Guided hike through olive groves", "Boat ride to the base of the falls", "Argan oil cooperative & Berber culture", "Fresh orange juice at viewpoint", "Berber lunch overlooking the falls"],
     inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Water bottle", "Diesel fuel", "Transport insurance"],

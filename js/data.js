@@ -58,7 +58,7 @@ var tours = [
     {
     id: 5, title: "Ouzoud Waterfalls", subtitle: "Nature's Masterpiece", category: "coastal",
     duration: "1 Day", price: "From \u20AC45",
-    image: "https://picsum.photos/seed/ouzoud-waterfalls-morocco/800/600.jpg",
+    image: "images/oz-main.jpg",
     gallery: [
       "https://picsum.photos/seed/ouzoud-falls-pool-boat/800/500.jpg",
       "https://picsum.photos/seed/ouzoud-olive-grove-trail/800/500.jpg",

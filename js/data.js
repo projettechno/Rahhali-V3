@@ -49,9 +49,12 @@ var tours = [
     duration: "1 Day", price: "From \u20AC45",
     image: "images/ess-main.jpg",
     gallery: [
-      "https://picsum.photos/seed/essaouira-port-boats-harbor/800/500.jpg",
-      "https://picsum.photos/essaouira-old-town-blue/800/500.jpg",
-      "https://picsum.photos/seed/essaouira-sunset-atlantic/800/500.jpg"
+      "images/m1.jpg",
+      "images/m2.jpg",
+      "images/m3.jpg",
+      "images/m4.jpg",
+      "images/m5.jpg",
+      "images/m6.jpg",
     ],
     highlights: ["See goats climbing argan trees", "Visit Berber women's argan oil cooperative", "Panoramic view of the city", "Discover the port of Essaouira", "Free visit of the old Medina", "Relax by the Atlantic beach"],
     inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Water bottle", "Diesel fuel", "Transport insurance"],

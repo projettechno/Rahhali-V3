@@ -83,9 +83,12 @@ var tours = [
     duration: "4 Days / 3 Nights", price: "From \u20AC1,250",
     image: "images/at-main.jpg",
     gallery: [
-      "https://picsum.photos/seed/marrakech-bahia-palace-room/800/500.jpg",
-      "https://picsum.photos/seed/majorelle-garden-blue-botanical/800/500.jpg",
-      "https://picsum.photos/seed/marrakech-souk-evening-lights/800/500.jpg"
+      "images/t1.jpg",
+      "images/t2.jpg",
+      "images/t3.jpg",
+      "images/t4.jpg",
+      "images/t5.jpg",
+      "images/t6.jpg",
     ],
     highlights: ["Private medina tour at sunrise", "Majorelle Garden access", "Luxury hammam & spa", "Jemaa el-Fnaa by night", "Atlas Mountains day trip", "Private cooking class"],
     inclusions: ["Private vehicle & driver", "5-star riad or hotel", "Daily breakfast", "Hammam experience", "All guided tours", "Airport transfers"],

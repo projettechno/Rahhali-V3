@@ -4,16 +4,24 @@ var tours = [
     duration: "3 Days / 2 Nights", price: "From \u20AC890",
     image: "images/sahara-main.jpg",
     gallery: [
-      "https://picsum.photos/seed/sahara-luxury-tent-night/800/500.jpg",
-      "https://picsum.photos/seed/sahara-camel-desert-sun/800/500.jpg",
-      "https://picsum.photos/seed/sahara-starry-sky-desert/800/500.jpg"
+      "images/s1.jpg",
+      "images/s1.jpg",
+      "images/s1.jpg",
+      "images/s1.jpg",
+      "images/s1.jpg",
+      "images/s1.jpg",
+      "images/s1.jpg",
+      "images/s1.jpg",
+      "images/s1.jpg",
+      "images/s1.jpg",
     ],
-    highlights: ["Private luxury desert camp", "Camel trek at sunset", "Traditional Berber dinner under stars", "4x4 desert excursion", "Sandboarding on golden dunes"],
-    inclusions: ["Private A/C vehicle", "Luxury tent accommodation", "All meals & traditional tea", "Camel ride", "English-speaking guide", "Airport pickup & drop-off"],
-    description: "Experience the magic of the Sahara in absolute luxury. This exclusive desert adventure takes you through the majestic Erg Chebbi dunes, where a private luxury camp awaits with all the comforts you desire. Watch the sunset from atop a camel, dine on traditional Berber cuisine under a canopy of stars, and wake to a desert sunrise that will take your breath away.",
+    highlights: ["Visit Ait Benhaddou (UNESCO site)", "Ride camels in the dunes at sunset", "Overnight in a luxury Berber camp", "Tinghir Oasis and Valley of Roses", "Tinghir Gorge visit", "Erg Chebbi — highest dunes in Morocco", "Berber dinner under the stars"],
+    inclusions: ["Comfortable air-conditioned transportation", "1 night hotel in Dades Valley", "1 night luxury desert camp in Merzouga", "Camel trekking in the dunes", "English-speaking driver/guide", "Breakfasts & dinners", "Bottled water", "Fuel and road expenses", "Entrance fees included"],
+    description: "From Marrakech, your 3-day desert excursion to Merzouga is the one trip that changes everything. This isn't about visiting Morocco — it's about experiencing it.\n\nYour shared desert excursion begins early morning from Marrakech, crossing the Tizi Ntichka pass with breathtaking views of the entire mountain range. The first stop is Aït Ben Haddou — a UNESCO World Heritage Site that has been used as the setting for several Hollywood blockbusters. It's a stunning piece of real Morocco that photos can't fully capture.\n\nContinue to Ouarzate and the Kasbah Taourite for lunch before entering the Valley of Roses in Tinghir — a classified UNESCO heritage site with stunning red earthen houses and palm groves along the Todra Gorge. The cliffs are immense — and slightly unsettling in the most beautiful way possible.\n\nThe real magic happens in the afternoon as the landscape shifts to the Erg Chebbi — the highest sand dunes in Morocco. You'll find your camel at the dunes and ride through them as the sun sets and paints the entire landscape in gold. The images you've seen in photos are good, but the real thing is even more powerful.\n\nYou'll spend the night in a luxury desert camp, right in the middle of nowhere. No noise, no distractions — just you, the stars, a campfire, and the silence of the Sahara. Dinner is served under the stars with live Berber music — a moment many travelers call the highlight of their entire Morocco trip.\n\nDay 3 starts with a sunrise camel ride, then you head back through the valley of Roses one last time before driving through the Atlas Mountains back to Marrakech, arriving around 20:00. It's a simple idea — a 3-day trip that stays with you long after you go home.\n\nPlease note: Lunches, drinks, entrance fees (where applicable), tips, and personal expenses are not included.",
     featured: true
   },
-    {
+  
+  {
     id: 2, title: "Excursion Ouarzazate", subtitle: "Atlas & Desert Crossing", category: "desert",
     duration: "1 Day", price: "From \u20AC55",
     image: "images/ouar-main.jpg",

@@ -72,7 +72,7 @@ var tours = [
   {
     id: 6, title: "Marrakech Private Experience", subtitle: "Red City Exclusive", category: "cultural",
     duration: "4 Days / 3 Nights", price: "From \u20AC1,250",
-    image: "https://picsum.photos/seed/marrakech-luxury-garden/800/600.jpg",
+    image: "images/at-main.jpg",
     gallery: [
       "https://picsum.photos/seed/marrakech-bahia-palace-room/800/500.jpg",
       "https://picsum.photos/seed/majorelle-garden-blue-botanical/800/500.jpg",

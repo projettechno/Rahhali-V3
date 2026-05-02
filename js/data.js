@@ -18,9 +18,12 @@ var tours = [
     duration: "1 Day", price: "From \u20AC55",
     image: "images/ouar-main.jpg",
     gallery: [
-      "https://picsum.photos/seed/ait-ben-haddou-fortress-unesco/800/500.jpg",
-      "https://picsum.photos/seed/atlas-film-studios-gameofthrones/800/500.jpg",
-      "https://picsum.photos/seed/tizi-n-tichka-mountain-pass/800/500.jpg"
+       "images/o1.jpg",
+       "images/o2.jpg",
+       "images/o3.jpg",
+       "images/o4.jpg",
+       "images/o5.jpg",
+       "images/o6.jpg",
     ],
     highlights: ["Cross the Tizi n'Tichka pass at 2,260m", "Visit Ait Benhaddou Kasbah (UNESCO site)", "Atlas Film Studios — Game of Thrones location", "Explore Ait Ben Barka Berber village", "Stunning mountain and desert landscapes", "Wi-Fi in the vehicle during the drive"],
     inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Water bottle", "Tour guide of Kasbah Ait Benhaddou"],

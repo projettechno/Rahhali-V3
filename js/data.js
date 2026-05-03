@@ -83,8 +83,8 @@ var tours = [
     featured: true
   },
   {
-    id: 6, title: "Marrakech Private Experience", subtitle: "Red City Exclusive", category: "cultural",
-    duration: "4 Days / 3 Nights", price: "From \u20AC1,250",
+    id: 6,  title: "Private Transfer Service", subtitle: "Seamless Ground Transportation", category: "cultural",
+    duration: "Flexible", price: "Custom Quote",
     image: "images/at-main.jpg",
     gallery: [
       "images/t1.jpg",
@@ -94,9 +94,21 @@ var tours = [
       "images/t5.jpg",
       "images/t6.jpg",
     ],
-    highlights: ["Private medina tour at sunrise", "Majorelle Garden access", "Luxury hammam & spa", "Jemaa el-Fnaa by night", "Atlas Mountains day trip", "Private cooking class"],
-    inclusions: ["Private vehicle & driver", "5-star riad or hotel", "Daily breakfast", "Hammam experience", "All guided tours", "Airport transfers"],
-    description: "A private tour of Marrakech means you see the city on your terms — no groups, no rush, no compromises. Your dedicated driver and guide pick you up from the airport and from that moment, the city unfolds at your pace.\n\nDay 1 — Arrival & Medina Discovery\nAfter your airport transfer, settle into your 5-star riad in the heart of the old city. In the late afternoon, your guide takes you on a first walk through the medina — quiet lanes, hidden courtyards, and local life that most tourists miss. Dinner is on your own, and the guide will recommend the best spots.\n\nDay 2 — Majorelle, Hammam & Jemaa el-Fnaa\nStart with a private visit to the Majorelle Garden before the crowds arrive. Then experience a traditional Moroccan hammam — the full ritual: steam, scrub, relaxation. Your afternoon is free to explore the souks or rest at the riad. In the evening, your guide takes you to Jemaa el-Fnaa square to experience the real atmosphere as it comes alive at sunset.\n\nDay 3 — Atlas Mountains Day Trip\nLeave the city behind for a private day trip to the High Atlas Mountains. Visit Berber villages, enjoy lunch with a local family, and take in views that remind you why people fall in love with Morocco.\n\nDay 4 — Private Cooking Class & Departure\nYour final morning starts with a private Moroccan cooking class — learn to prepare traditional dishes you can recreate back home. After lunch, your driver transfers you back to the airport.\n\nIncludes: Private vehicle & driver, 3 nights in a 5-star riad, daily breakfast, private guided tours, hammam experience, cooking class, Atlas Mountains day trip, airport transfers.\n\nPlease note: Lunches, dinners, drinks, and personal expenses are not included.",
+    highlights: [
+      "Airport pick-up & drop-off", 
+      "Intercity private transfers", 
+      "Premium air-conditioned vehicles", 
+      "Door-to-door convenience", 
+      "Flight monitoring for punctuality"
+    ],
+    inclusions: [
+      "Private vehicle exclusively for you", 
+      "Professional driver", 
+      "Luggage handling assistance", 
+      "Complimentary bottled water",  
+      "All tolls and parking fees"
+    ],
+    description: "Experience seamless and premium ground transportation with Rahhali. Whether you are arriving at the airport, heading to your accommodation, or traveling between cities, our private transfer service guarantees a stress-free and comfortable journey.\n\nWe specialize in reliable, door-to-door airport transfers designed to start or end your Moroccan trip with absolute ease. Beyond the airports, our services extend to comfortable intercity transfers and private rides to specific destinations within our operational zones.\n\nWith a fleet of premium, air-conditioned vehicles and professional, discreet drivers, we prioritize your safety, punctuality, and comfort. Simply provide your pickup and drop-off details, and we will handle the logistics—provided the route falls within our available service areas.\n\nPlease note: Availability, vehicle type, and pricing depend on the specific pickup and drop-off locations. Contact us for a custom quote tailored to your itinerary.",
     featured: true
   }
 ];

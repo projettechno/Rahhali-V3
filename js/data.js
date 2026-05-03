@@ -82,37 +82,33 @@ var tours = [
     description: "Some places look better in photos than they do in person. The Ouzoud Waterfalls are the opposite — they're even more impressive when you're standing right in front of them.\n\nYour driver picks you up early from your hotel or riad and the journey begins. The road from Marrakech takes you through olive groves and rural countryside for about 150 km — the scenery gradually shifts from urban to untouched nature, and you know you're getting close when the air gets cooler and the valleys get greener.\n\nYou'll make a stop at a Berber argan oil cooperative along the way. This isn't a tourist trap — it's where local women actually work, and they'll show you the traditional process of extracting argan oil. It's quick, genuine, and you'll leave knowing something real about the region.\n\nWhen you arrive in the village of Ouzoud, the first glimpse of the waterfalls is already striking — they plunge 110 meters into a wide pool below, surrounded by red rock cliffs and green vegetation. Your guide leads you down a network of trails through olive groves, and along the way there's a viewpoint where you can grab fresh orange juice while taking in the full scale of the falls.\n\nThen comes the highlight that nobody expects — a traditional boat ride right to the base of the cascades. Being at water level, looking up at the water pouring down from 360 feet above you, is the kind of moment that makes the entire trip worthwhile. It's peaceful, powerful, and completely different from anything you'd see in a city.\n\nAfter the boat ride, you'll sit down for a late Berber lunch at a local restaurant that overlooks the falls. The food is simple, fresh, and the view is unbeatable. There's no better place to process what you've just experienced.\n\nIn the mid-afternoon, you'll climb a series of stairs back out of the valley for the return drive to Marrakech. Most people sleep on the way back — and honestly, that's part of the experience.\n\nPlease note: Lunch, drinks, tips, and personal expenses are not included.",
     featured: true
   },
-      {
-      id: 6, 
-      title: "Private Transfer Service", 
-      subtitle: "Seamless Ground Transportation", 
-      category: "transfers", // I also slightly changed this from "cultural" to "transfers" so it filters correctly!
-      duration: "Flexible", 
-      price: "Custom Quote",
-      image: "images/at-main.jpg",
-      gallery: [
-        "images/t1.jpg",
-        "images/t2.jpg",
-        "images/t3.jpg",
-        "images/t4.jpg",
-        "images/t5.jpg",
-        "images/t6.jpg",
-      ],
-      highlights: [
-        "Airport pick-up & drop-off", 
-        "Intercity private transfers", 
-        "Premium air-conditioned vehicles", 
-        "Door-to-door convenience", 
-        "Flight monitoring for punctuality"
-      ],
-      inclusions: [
-        "Private vehicle exclusively for you", 
-        "Professional driver", 
-        "Luggage handling assistance", 
-        "Complimentary bottled water",  
-        "All tolls and parking fees"
-      ],
-      description: "Experience seamless and premium ground transportation with Rahhali.\n\n━━━━━━━━━━━━━━━━━━━━\n✈️  WHAT WE OFFER\n━━━━━━━━━━━━━━━━━━━━\n• Airport Transfers: Reliable pick-up and drop-off to start or end your trip with absolute ease.\n• Intercity Transfers: Comfortable private rides between Morocco's major cities.\n• Custom Routes: Point-to-point transportation to specific destinations within our operational zones.\n\n━━━━━━━━━━━━━━━━━━━━\n🚗  THE RAHHALI STANDARD\n━━━━━━━━━━━━━━━━━━━━\n• Premium, air-conditioned vehicles exclusively for you.\n• Professional, discreet, and punctual drivers.\n• Flight monitoring to ensure we are always waiting for you.\n• Door-to-door convenience with full luggage assistance.\n\n━━━━━━━━━━━━━━━━━━━━\n📝  HOW TO BOOK\n━━━━━━━━━━━━━━━━━━━━\nSimply provide your pickup and drop-off details. Availability, vehicle type, and pricing depend on the specific route. Contact us to receive a custom quote tailored to your itinerary.",
-      featured: true
-    }
+  {
+    id: 6,  title: "Private Transfer Service", subtitle: "Seamless Ground Transportation", category: "transfers",
+    duration: "Flexible", price: "Custom Quote",
+    image: "images/at-main.jpg",
+    gallery: [
+      "images/t1.jpg",
+      "images/t2.jpg",
+      "images/t3.jpg",
+      "images/t4.jpg",
+      "images/t5.jpg",
+      "images/t6.jpg",
+    ],
+    highlights: [
+      "Airport pick-up & drop-off", 
+      "Intercity private transfers", 
+      "Premium air-conditioned vehicles", 
+      "Door-to-door convenience", 
+      "Flight monitoring for punctuality"
+    ],
+    inclusions: [
+      "Private vehicle exclusively for you", 
+      "Professional driver", 
+      "Luggage handling assistance", 
+      "Complimentary bottled water",  
+      "All tolls and parking fees"
+    ],
+    description: "Experience seamless and premium ground transportation with Rahhali. Whether you are arriving at the airport, heading to your accommodation, or traveling between cities, our private transfer service guarantees a stress-free and comfortable journey.\n\nWe specialize in reliable, door-to-door airport transfers designed to start or end your Moroccan trip with absolute ease. Beyond the airports, our services extend to comfortable intercity transfers and private rides to specific destinations within our operational zones.\n\nWith a fleet of premium, air-conditioned vehicles and professional, discreet drivers, we prioritize your safety, punctuality, and comfort. Simply provide your pickup and drop-off details, and we will handle the logistics—provided the route falls within our available service areas.\n\nPlease note: Availability, vehicle type, and pricing depend on the specific pickup and drop-off locations. Contact us for a custom quote tailored to your itinerary.",
+    featured: true
+  }
 ];

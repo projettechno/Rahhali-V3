@@ -23,7 +23,7 @@ body { font-family: 'Lato', sans-serif; background: #0A0A0A; color: #E8E2D8; ove
 .nav-fixed { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all 0.4s ease; }
 .nav-fixed.scrolled { background: rgba(10,10,10,0.96); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(200,169,110,0.12); }
 .nav-brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; cursor: pointer; }
-.nav-brand-icon { width: 32px; height: 24px; border: 1px solid #C8A96E; border-radius: 50% 50% 0 0; position: relative; transition: all 0.3s ease; }
+.nav-brand-icon { width: 32px; height: 24px; border: 1px solid #C8A96E; border-radius: 50% 50% 0 0; position: relative; transition: all 0.3s ease; display: flex; align-items: center;justify-content: center;font-family: 'Playfair Display', serif;font-size: 28px; /* Adjust this number to make the R bigger or smaller */color: #C8A96E; /* Your site's luxury gold color */font-style: italic; /* Makes the R look elegant and fancy */font-weight: 600;line-height: 1; }
 .nav-brand-icon::before { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 55%; height: 1px; background: #C8A96E; }
 .nav-fixed.scrolled .nav-brand-icon { width: 28px; height: 20px; }
 .nav-brand-text { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: #E8E2D8; letter-spacing: 0.25em; text-transform: uppercase; line-height: 1; transition: all 0.3s ease; }

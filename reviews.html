@@ -99,7 +99,6 @@
             <p class="text-cream-muted text-sm">Click to upload photos from your trip</p>
             <p class="text-xs mt-1" style="color:#555;">JPG, PNG — up to 3 files (Max 5MB each)</p>
           </div>
-          <!-- FIX 2: Changed name to "attachment" -->
           <input type="file" id="review-photos" name="attachment" multiple accept="image/*" class="hidden" onchange="handlePhotoUpload(event)">
           <div class="flex flex-wrap gap-2 mt-3" id="photo-preview-container"></div>
         </div>
@@ -111,7 +110,7 @@
         </div>
       </form>
 
-      <!-- SUCCESS MESSAGE (Hidden by default) -->
+      <!-- SUCCESS MESSAGE -->
       <div id="form-success-message" style="display: none; text-align: center; padding: 40px 20px;">
         <div class="w-16 h-16 rounded-full border-2 border-gold flex items-center justify-center mx-auto mb-6">
           <i data-lucide="check" class="w-8 h-8 text-gold"></i>
@@ -125,7 +124,6 @@
 
   <!-- ========================================== -->
   <!-- MANUALLY APPROVED REVIEWS SECTION          -->
-  <!-- ADD NEW REVIEWS BY COPYING THE DIV BLOCKS   -->
   <!-- ========================================== -->
   <section class="px-4 sm:px-6 pb-16 pt-8" style="background:#0E0E0E;">
     <div class="max-w-4xl mx-auto">
@@ -136,7 +134,7 @@
 
       <div class="space-y-6 fade-up">
         
-        <!-- EXAMPLE REVIEW 1 (WITH PHOTO) -->
+        <!-- EXAMPLE REVIEW 1 -->
         <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-gold text-sm tracking-wider">★★★★★</span>
@@ -146,10 +144,10 @@
           <div class="flex gap-2 mb-4">
             <img src="images/kech-home.jpg" alt="Client photo" class="w-24 h-24 object-cover rounded border border-dark-border">
           </div>
-          <p class="text-cream-muted text-sm font-bold">- Oussama M.</p>
+          <p class="text-cream-muted text-sm font-bold">- Sarah M.</p>
         </div>
 
-        <!-- EXAMPLE REVIEW 2 (NO PHOTO) -->
+        <!-- EXAMPLE REVIEW 2 -->
         <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-gold text-sm tracking-wider">★★★★★</span>
@@ -248,27 +246,31 @@
       var form = document.getElementById('review-form');
       var successMessage = document.getElementById('form-success-message');
       
+      // 1. Grab the rating
       document.getElementById('rating-hidden-input').value = selectedRating + " out of 5 Stars";
 
+      // 2. Get all form data
       var formData = new FormData(form);
       
-      // FIX 3: Changed 'files[]' to 'attachment'
+      // 3. Clear out the empty attachment input so we can add the real files
       formData.delete('attachment'); 
       
+      // 4. Append the actual files the user selected
       for (var i = 0; i < selectedFiles.length; i++) {
         formData.append('attachment', selectedFiles[i], selectedFiles[i].name);
       }
 
-      // FIX 1: Added 'Accept': 'application/json' to stop redirect and fix rating
+      // 5. Send the data
       fetch(form.action, {
           method: 'POST',
           body: formData,
           headers: {
-            'Accept': 'application/json'
+            'Accept': 'application/json' // THIS prevents the redirect
           }
       })
       .then(response => {
           if (response.ok) {
+              // Success!
               form.style.display = 'none';
               successMessage.style.display = 'block';
               showToast('Review submitted successfully!', 'success');
@@ -313,6 +315,9 @@
       lucide.createIcons();
       observeFadeUps();
       populateReviewTripSelect();
+      
+      // *** THIS IS THE CRITICAL FIX: IT TELLS THE FORM TO USE YOUR JAVASCRIPT ***
+      document.getElementById('review-form').addEventListener('submit', submitReview);
     });
   </script>
   <script src="js/footer.js"></script>

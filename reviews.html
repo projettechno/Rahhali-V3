@@ -57,7 +57,7 @@
     <div class="max-w-2xl mx-auto fade-up">
       
       <!-- *** ACTION LINK: Replace YOUR_FORMSPREE_ID_HERE with your real Formspree link *** -->
-      <form id="review-form" class="space-y-5" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+      <form id="review-form" class="space-y-5" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST" enctype="multipart/form-data">
         
         <!-- Formspree Settings (Hidden from user) -->
         <input type="hidden" name="_subject" value="New Rahhali Review Submitted!">
@@ -72,7 +72,6 @@
 
         <div>
           <label class="form-label">Your Name</label>
-          <!-- Added name="user_name" for Formspree -->
           <input type="text" class="form-input" name="user_name" id="review-name" placeholder="Enter your name" required>
         </div>
 
@@ -89,8 +88,19 @@
 
         <div>
           <label class="form-label">Your Review</label>
-          <!-- Added name="user_review" for Formspree -->
           <textarea class="form-input" name="user_review" id="review-comment" rows="5" placeholder="Tell us about your experience..." required></textarea>
+        </div>
+
+        <!-- PHOTO UPLOAD AREA -->
+        <div>
+          <label class="form-label">Photos (optional)</label>
+          <div class="upload-area" id="upload-area" onclick="document.getElementById('review-photos').click()">
+            <i data-lucide="image-plus" class="w-7 h-7 text-cream-muted mx-auto mb-1"></i>
+            <p class="text-cream-muted text-sm">Click to upload photos from your trip</p>
+            <p class="text-xs mt-1" style="color:#555;">JPG, PNG — up to 3 files (Max 5MB each)</p>
+          </div>
+          <input type="file" id="review-photos" name="files[]" multiple accept="image/*" class="hidden" onchange="handlePhotoUpload(event)">
+          <div class="flex flex-wrap gap-2 mt-3" id="photo-preview-container"></div>
         </div>
 
         <div class="pt-3">
@@ -125,28 +135,37 @@
 
       <div class="space-y-6 fade-up">
         
-        <!-- EXAMPLE REVIEW 1 -->
+        <!-- EXAMPLE REVIEW 1 (WITH PHOTO) -->
         <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-gold text-sm tracking-wider">★★★★★</span>
             <span class="text-cream-muted text-xs tracking-wider uppercase">Marrakech Private Experience</span>
           </div>
-          <p class="text-cream text-base leading-relaxed mb-4">"Absolutely incredible service from start to finish. The airport transfer was seamless, and the private guided tour of the medina was the highlight of our trip. Highly recommend Rahhali to anyone visiting Morocco!"</p>
+          <p class="text-cream text-base leading-relaxed mb-4">"Absolutely incredible service from start to finish. The airport transfer was seamless, and the private guided tour of the medina was the highlight of our trip!"</p>
+          <!-- Example of how to display a photo they sent you -->
+          <div class="flex gap-2 mb-4">
+            <img src="images/kech-home.jpg" alt="Client photo" class="w-24 h-24 object-cover rounded border border-dark-border">
+          </div>
           <p class="text-cream-muted text-sm font-bold">- Sarah M.</p>
         </div>
 
-        <!-- EXAMPLE REVIEW 2 -->
+        <!-- EXAMPLE REVIEW 2 (NO PHOTO) -->
         <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-gold text-sm tracking-wider">★★★★★</span>
             <span class="text-cream-muted text-xs tracking-wider uppercase">Private Transfer Service</span>
           </div>
-          <p class="text-cream text-base leading-relaxed mb-4">"We used Rahhali for our intercity transfers between Marrakech and Essaouira. The vehicle was spotless, the driver was incredibly professional, and we arrived feeling completely relaxed."</p>
+          <p class="text-cream text-base leading-relaxed mb-4">"We used Rahhali for our intercity transfers between Marrakech and Essaouira. The vehicle was spotless, and the driver was incredibly professional."</p>
           <p class="text-cream-muted text-sm font-bold">- David L.</p>
         </div>
 
-        <!-- TO ADD A NEW REVIEW: Just copy one of the <div class="bg-dark-card..."> blocks above, 
-             paste it right here, and change the text, name, and stars! -->
+        <!-- TO ADD A NEW REVIEW WITH PHOTOS: 
+             1. Download the photos from the Formspree email.
+             2. Upload them to your GitHub /images/ folder.
+             3. Copy one of the <div class="bg-dark-card..."> blocks above.
+             4. Paste it here.
+             5. Add the <img src="images/your-new-photo.jpg" ...> tag inside the block!
+        -->
 
       </div>
     </div>
@@ -165,6 +184,7 @@
   <script src="js/data.js"></script>
   <script>
     var selectedRating = 0;
+    var selectedFiles = []; // Stores the actual File objects to send via email
 
     function toggleMobileMenu() {
       document.getElementById('mobile-menu').classList.toggle('open');
@@ -198,33 +218,73 @@
       }
     }
 
-    // NEW SUBMIT FUNCTION (Handles Formspree background submission)
+    // Handles photo preview and tracks the actual files
+    function handlePhotoUpload(e) {
+      var container = document.getElementById('photo-preview-container');
+      var area = document.getElementById('upload-area');
+      var files = e.target.files;
+      
+      // Limit to 3 files so the email doesn't crash Formspree's size limits
+      for (var j = 0; j < files.length && selectedFiles.length < 3; j++) {
+        (function(file) {
+          // Save actual file for submission
+          selectedFiles.push(file);
+          
+          var reader = new FileReader();
+          reader.onload = function(ev) {
+            var div = document.createElement('div');
+            div.className = 'relative';
+            div.innerHTML = '<img src="' + ev.target.result + '" class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded border border-dark-border">' +
+              '<button type="button" class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-dark border border-dark-border rounded-full flex items-center justify-center text-cream text-xs hover:border-gold transition-colors" style="font-size:10px;line-height:1;">\u2715</button>';
+              
+            div.querySelector('button').addEventListener('click', function() {
+              div.remove();
+              // Remove file from our tracking array
+              var index = selectedFiles.indexOf(file);
+              if (index > -1) selectedFiles.splice(index, 1);
+              area.classList.toggle('has-files', selectedFiles.length > 0);
+            });
+            
+            container.appendChild(div);
+            area.classList.toggle('has-files', selectedFiles.length > 0);
+          };
+          reader.readAsDataURL(file);
+        })(files[j]);
+      }
+      // Clear input so they can re-select the same file if they delete it
+      e.target.value = '';
+    }
+
     function submitReview(e) {
       e.preventDefault();
       
       var form = document.getElementById('review-form');
       var successMessage = document.getElementById('form-success-message');
       
-      // Update hidden input with the star rating text (e.g., "5 out of 5 Stars")
       document.getElementById('rating-hidden-input').value = selectedRating + " out of 5 Stars";
 
       var formData = new FormData(form);
+      
+      // Remove default empty file input array
+      formData.delete('files[]'); 
+      
+      // Append our tracked actual files to the form data
+      for (var i = 0; i < selectedFiles.length; i++) {
+        formData.append('files[]', selectedFiles[i], selectedFiles[i].name);
+      }
 
-      // Send data to Formspree
+      // Send data to Formspree (Do NOT set Content-Type header manually, browser handles file boundaries automatically)
       fetch(form.action, {
           method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
+          body: formData
       })
       .then(response => {
           if (response.ok) {
-              // SUCCESS: Hide form, show success message
               form.style.display = 'none';
               successMessage.style.display = 'block';
               showToast('Review submitted successfully!', 'success');
-              lucide.createIcons(); // Re-render the checkmark icon
+              lucide.createIcons(); 
           } else {
-              // ERROR: Show warning toast
               showToast('Oops! There was a problem submitting your review.', 'warning');
           }
       })

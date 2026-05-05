@@ -57,7 +57,7 @@
     <div class="max-w-2xl mx-auto fade-up">
       
       <!-- *** ACTION LINK: Replace YOUR_FORMSPREE_ID_HERE with your real Formspree link *** -->
-      <form id="review-form" class="space-y-5" action="https://formspree.io/f/xrejkqkq" method="POST" enctype="multipart/form-data">
+      <form id="review-form" class="space-y-5" action="https://formspree.io/f/mwvybbvd" method="POST" enctype="multipart/form-data">
         
         <!-- Formspree Settings (Hidden from user) -->
         <input type="hidden" name="_subject" value="New Rahhali Review Submitted!">
@@ -276,7 +276,12 @@
               showToast('Review submitted successfully!', 'success');
               lucide.createIcons(); 
           } else {
-              showToast('Oops! There was a problem submitting your review.', 'warning');
+              // This reads the exact error from Formspree and alerts it to you
+              response.json().then(function(data) {
+                  alert("Formspree Error: " + data.errors[0].message);
+              }).catch(function() {
+                  alert("Failed to submit. Check if your Formspree link is correct and your email is verified.");
+              });
           }
       })
       .catch(error => {

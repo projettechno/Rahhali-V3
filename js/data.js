@@ -1,7 +1,7 @@
 var tours = [
   {
     id: 1, title: "Sahara Luxury Camp", subtitle: "Desert Odyssey", category: "desert",
-    duration: "3 Days / 2 Nights", price: "From \u20AC890",
+    duration: "3 Days / 2 Nights", price: "From \u20AC450per",
     image: "images/sahara-main.jpg",
     gallery: [
       "images/s1.jpg",
@@ -36,7 +36,7 @@ var tours = [
     },
     {
     id: 3, title: "Ourika Valley Day Trip", subtitle: "Atlas Foothills Escape", category: "mountain",
-    duration: "1 Day", price: "From \u20AC45",
+    duration: "1 Day", price: "From \u20AC45per",
     image: "images/ourika-main.jpg",
     gallery: [
       "images/ourika-gallery-1.jpg",
@@ -50,7 +50,7 @@ var tours = [
   },
     {
     id: 4, title: "Mogador: Marrakech to Essaouira Day Trip", subtitle: "Coastal Escape", category: "coastal",
-    duration: "1 Day", price: "From \u20AC120per",
+    duration: "1 Day", price: "From \u20AC40per",
     image: "images/ess-main.jpg",
     gallery: [
       "images/m1.jpg",

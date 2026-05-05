@@ -55,18 +55,25 @@
   <!-- Review Form -->
   <section class="px-4 sm:px-6 py-12 sm:py-16" style="background:linear-gradient(to bottom,#0A0A0A,#0E0E0E);">
     <div class="max-w-2xl mx-auto fade-up">
-      <form id="review-form" class="space-y-5" onsubmit="submitReview(event)">
+      
+      <!-- *** ACTION LINK: Replace YOUR_FORMSPREE_ID_HERE with your real Formspree link *** -->
+      <form id="review-form" class="space-y-5" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+        
+        <!-- Formspree Settings (Hidden from user) -->
+        <input type="hidden" name="_subject" value="New Rahhali Review Submitted!">
+        <input type="hidden" name="rating_text" id="rating-hidden-input" value="No rating selected">
 
         <div>
           <label class="form-label">Trip Booked</label>
-          <select class="form-input" id="review-trip">
+          <select class="form-input" name="trip_booked" id="review-trip">
             <option value="">Select a trip (optional)</option>
           </select>
         </div>
 
         <div>
           <label class="form-label">Your Name</label>
-          <input type="text" class="form-input" id="review-name" placeholder="Enter your name (optional)">
+          <!-- Added name="user_name" for Formspree -->
+          <input type="text" class="form-input" name="user_name" id="review-name" placeholder="Enter your name" required>
         </div>
 
         <div>
@@ -82,18 +89,8 @@
 
         <div>
           <label class="form-label">Your Review</label>
-          <textarea class="form-input" id="review-comment" placeholder="Tell us about your experience (optional)"></textarea>
-        </div>
-
-        <div>
-          <label class="form-label">Photos (optional)</label>
-          <div class="upload-area" id="upload-area" onclick="document.getElementById('review-photos').click()">
-            <i data-lucide="image-plus" class="w-7 h-7 text-cream-muted mx-auto mb-1"></i>
-            <p class="text-cream-muted text-sm">Click to upload photos from your trip</p>
-            <p class="text-xs mt-1" style="color:#555;">JPG, PNG — up to 5 files</p>
-          </div>
-          <input type="file" id="review-photos" multiple accept="image/*" class="hidden" onchange="handlePhotoUpload(event)">
-          <div class="flex flex-wrap gap-2 mt-3" id="photo-preview-container"></div>
+          <!-- Added name="user_review" for Formspree -->
+          <textarea class="form-input" name="user_review" id="review-comment" rows="5" placeholder="Tell us about your experience..." required></textarea>
         </div>
 
         <div class="pt-3">
@@ -102,8 +99,59 @@
           </button>
         </div>
       </form>
+
+      <!-- SUCCESS MESSAGE (Hidden by default) -->
+      <div id="form-success-message" style="display: none; text-align: center; padding: 40px 20px;">
+        <div class="w-16 h-16 rounded-full border-2 border-gold flex items-center justify-center mx-auto mb-6">
+          <i data-lucide="check" class="w-8 h-8 text-gold"></i>
+        </div>
+        <h3 class="font-display text-2xl text-white mb-3">Thank You!</h3>
+        <p class="text-cream-muted">Your review has been sent to our team. Once approved, it will appear on this page.</p>
+      </div>
+
     </div>
   </section>
+
+  <!-- ========================================== -->
+  <!-- MANUALLY APPROVED REVIEWS SECTION          -->
+  <!-- ADD NEW REVIEWS BY COPYING THE DIV BLOCKS   -->
+  <!-- ========================================== -->
+  <section class="px-4 sm:px-6 pb-16 pt-8" style="background:#0E0E0E;">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10 fade-up">
+        <p class="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-2" style="font-size:0.6rem;">Testimonials</p>
+        <h2 class="font-display text-2xl sm:text-3xl text-white">What Our Guests Say</h2>
+      </div>
+
+      <div class="space-y-6 fade-up">
+        
+        <!-- EXAMPLE REVIEW 1 -->
+        <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-gold text-sm tracking-wider">★★★★★</span>
+            <span class="text-cream-muted text-xs tracking-wider uppercase">Marrakech Private Experience</span>
+          </div>
+          <p class="text-cream text-base leading-relaxed mb-4">"Absolutely incredible service from start to finish. The airport transfer was seamless, and the private guided tour of the medina was the highlight of our trip. Highly recommend Rahhali to anyone visiting Morocco!"</p>
+          <p class="text-cream-muted text-sm font-bold">- Sarah M.</p>
+        </div>
+
+        <!-- EXAMPLE REVIEW 2 -->
+        <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-gold text-sm tracking-wider">★★★★★</span>
+            <span class="text-cream-muted text-xs tracking-wider uppercase">Private Transfer Service</span>
+          </div>
+          <p class="text-cream text-base leading-relaxed mb-4">"We used Rahhali for our intercity transfers between Marrakech and Essaouira. The vehicle was spotless, the driver was incredibly professional, and we arrived feeling completely relaxed."</p>
+          <p class="text-cream-muted text-sm font-bold">- David L.</p>
+        </div>
+
+        <!-- TO ADD A NEW REVIEW: Just copy one of the <div class="bg-dark-card..."> blocks above, 
+             paste it right here, and change the text, name, and stars! -->
+
+      </div>
+    </div>
+  </section>
+
 
   <!-- WhatsApp Float -->
   <a href="https://wa.me/212644182733?text=Hello%20Rahhali%20Luxury%20Travel%2C%20I%27d%20like%20to%20inquire%20about%20your%20tours." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
@@ -117,7 +165,6 @@
   <script src="js/data.js"></script>
   <script>
     var selectedRating = 0;
-    var uploadedPhotos = [];
 
     function toggleMobileMenu() {
       document.getElementById('mobile-menu').classList.toggle('open');
@@ -151,41 +198,39 @@
       }
     }
 
-    function handlePhotoUpload(e) {
-      var container = document.getElementById('photo-preview-container');
-      var area = document.getElementById('upload-area');
-      var files = e.target.files;
-      for (var j = 0; j < files.length && uploadedPhotos.length < 5; j++) {
-        (function(file) {
-          var reader = new FileReader();
-          reader.onload = function(ev) {
-            uploadedPhotos.push(ev.target.result);
-            var div = document.createElement('div');
-            div.className = 'relative';
-            div.innerHTML = '<img src="' + ev.target.result + '" class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded border border-dark-border">' +
-              '<button type="button" class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-dark border border-dark-border rounded-full flex items-center justify-center text-cream text-xs hover:border-gold transition-colors" style="font-size:10px;line-height:1;">\u2715</button>';
-            div.querySelector('button').addEventListener('click', function() {
-              var idx = uploadedPhotos.indexOf(ev.target.result);
-              if (idx > -1) uploadedPhotos.splice(idx, 1);
-              div.remove();
-              area.classList.toggle('has-files', uploadedPhotos.length > 0);
-            });
-            container.appendChild(div);
-            area.classList.toggle('has-files', uploadedPhotos.length > 0);
-          };
-          reader.readAsDataURL(file);
-        })(files[j]);
-      }
-    }
-
+    // NEW SUBMIT FUNCTION (Handles Formspree background submission)
     function submitReview(e) {
       e.preventDefault();
-      showToast('Thank you for your review! It has been submitted successfully.', 'success');
-      document.getElementById('review-form').reset();
-      setRating(0);
-      uploadedPhotos = [];
-      document.getElementById('photo-preview-container').innerHTML = '';
-      document.getElementById('upload-area').classList.remove('has-files');
+      
+      var form = document.getElementById('review-form');
+      var successMessage = document.getElementById('form-success-message');
+      
+      // Update hidden input with the star rating text (e.g., "5 out of 5 Stars")
+      document.getElementById('rating-hidden-input').value = selectedRating + " out of 5 Stars";
+
+      var formData = new FormData(form);
+
+      // Send data to Formspree
+      fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+          if (response.ok) {
+              // SUCCESS: Hide form, show success message
+              form.style.display = 'none';
+              successMessage.style.display = 'block';
+              showToast('Review submitted successfully!', 'success');
+              lucide.createIcons(); // Re-render the checkmark icon
+          } else {
+              // ERROR: Show warning toast
+              showToast('Oops! There was a problem submitting your review.', 'warning');
+          }
+      })
+      .catch(error => {
+          showToast('Network error. Please check your connection.', 'warning');
+      });
     }
 
     function showToast(message, type) {

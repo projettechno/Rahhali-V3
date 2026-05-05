@@ -50,7 +50,7 @@ var tours = [
   },
     {
     id: 4, title: "Mogador: Marrakech to Essaouira Day Trip", subtitle: "Coastal Escape", category: "coastal",
-    duration: "1 Day", price: "From \u20AC45",
+    duration: "1 Day", price: "From \u20AC120per",
     image: "images/ess-main.jpg",
     gallery: [
       "images/m1.jpg",

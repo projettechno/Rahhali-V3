@@ -19,7 +19,7 @@ var tours = [
   
   {
     id: 2, title: "Excursion Ouarzazate", subtitle: "Atlas & Desert Crossing", category: "desert",
-    duration: "1 Day", price: "From \u20AC55",
+    duration: "1 Day", price: "From \u20AC55per",
     image: "images/ouar-main.jpg",
     gallery: [
        "images/o1.jpg",
@@ -67,7 +67,7 @@ var tours = [
   },
     {
     id: 5, title: "Ouzoud Waterfalls", subtitle: "Nature's Masterpiece", category: "coastal",
-    duration: "1 Day", price: "From \u20AC45",
+    duration: "1 Day", price: "From \u20AC45per",
     image: "images/oz-main.jpg",
     gallery: [
       "images/f1.jpg",

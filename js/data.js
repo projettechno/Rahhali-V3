@@ -36,7 +36,7 @@ var tours = [
     },
     {
     id: 3, title: "Ourika Valley Day Trip", subtitle: "Atlas Foothills Escape", category: "mountain",
-    duration: "1 Day", price: "From \u20AC45per",
+    duration: "1 Day", price: "\u20AC95 From 2 people",
     image: "images/ourika4.jpg",
     gallery: [
       "images/ourika-gallery-1.jpg",

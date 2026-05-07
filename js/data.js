@@ -1,7 +1,7 @@
 var tours = [
   {
     id: 1, title: "Sahara Luxury Camp", subtitle: "Desert Odyssey", category: "desert",
-    duration: "3 Days / 2 Nights", price: "From \u20AC450per",
+    duration: "3 Days / 2 Nights", price: "\u20AC1290 from 2 people",
     image: "images/sahara-main.jpg",
     gallery: [
       "images/s1.jpg",
@@ -19,7 +19,7 @@ var tours = [
   
   {
     id: 2, title: "Excursion Ouarzazate", subtitle: "Atlas & Desert Crossing", category: "desert",
-    duration: "1 Day", price: "From \u20AC55per",
+    duration: "1 Day", price: "\u20AC170 From 2 people",
     image: "images/ouar-main.jpg",
     gallery: [
        "images/o1.jpg",
@@ -50,7 +50,7 @@ var tours = [
   },
     {
     id: 4, title: "Mogador: Marrakech to Essaouira Day Trip", subtitle: "Coastal Escape", category: "coastal",
-    duration: "1 Day", price: "From \u20AC40per",
+    duration: "1 Day", price: " \u20AC150 From 2 people",
     image: "images/ess-main.jpg",
     gallery: [
       "images/m1.jpg",
@@ -67,7 +67,7 @@ var tours = [
   },
     {
     id: 5, title: "Ouzoud Waterfalls", subtitle: "Nature's Masterpiece", category: "coastal",
-    duration: "1 Day", price: "From \u20AC45per",
+    duration: "1 Day", price: " \u20AC170 From 2 people",
     image: "images/oz-main.jpg",
     gallery: [
       "images/f1.jpg",

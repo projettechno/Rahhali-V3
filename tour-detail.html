@@ -128,16 +128,28 @@
       document.getElementById('tour-info-price').textContent=tour.price;
       document.getElementById('tour-description').textContent=tour.description;
 
-      // --- SMART GALLERY: HANDLES BOTH YOUTUBE VIDEOS AND IMAGES ---
+      // --- SMART GALLERY: HANDLES YOUTUBE, SHORTS, AND IMAGES ---
       var galleryHtml='';
       for(var g=0;g<tour.gallery.length;g++){
         var item = tour.gallery[g];
         
         // If the link contains "youtube", create a responsive video player
         if(item.indexOf("youtube") !== -1 || item.indexOf("youtu.be") !== -1) {
-          // sm:col-span-3 makes the video span the full width of the 3-column grid
-          galleryHtml += '<div class="sm:col-span-3 rounded-lg overflow-hidden border border-dark-border" style="aspect-ratio: 16/9;">';
-          galleryHtml += '<iframe src="' + item + '?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>';
+          
+          var embedUrl = item;
+          var isShort = item.indexOf("/shorts/") !== -1;
+          
+          // MAGIC TRICK: Automatically convert /shorts/ID to /embed/ID
+          if (isShort) {
+            var videoId = item.split("/shorts/")[1];
+            embedUrl = "https://www.youtube.com/embed/" + videoId;
+          }
+          
+          // If it's a vertical Short, use 9:16 ratio. If regular video, use 16:9
+          var aspectStyle = isShort ? 'aspect-ratio: 9/16; max-height: 500px; margin: 0 auto;' : 'aspect-ratio: 16/9;';
+          
+          galleryHtml += '<div class="sm:col-span-3 rounded-lg overflow-hidden border border-dark-border" style="' + aspectStyle + '">';
+          galleryHtml += '<iframe src="' + embedUrl + '?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>';
           galleryHtml += '</div>';
           
         // Otherwise, create a normal image

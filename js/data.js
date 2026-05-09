@@ -90,7 +90,6 @@ var tours = [
       "images/t1.jpg",
       "images/t2.jpg",
       "images/t3.jpg",
-      "https://www.youtube.com/shorts/SPiZ9-85bXE",
       "images/t4.jpg",
       "images/t5.jpg",
       "images/t6.jpg",

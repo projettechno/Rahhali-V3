@@ -116,7 +116,7 @@ var tours = [
     id: 7, title: "8-Day Morocco Cultural Journey", subtitle: "Casablanca · Rabat · Chefchaouen · Fes · Sahara · Marrakesh", category: "tours",
     duration: "9 Days / 8 Nights",
     price: "Custom Quote",
-    image: "images/mcj.jpg",
+    image: "images/tb.jpeg",
     gallery: [
     "images/casablanca.jpg",
     "images/chefchaouen.jpg",
@@ -124,6 +124,8 @@ var tours = [
     "images/sahara.jpg",
     "images/dades.jpg",
     "images/marrakesh.jpg",
+
+      
   ],
   highlights: [
     "Hassan II Mosque & Casablanca Corniche",

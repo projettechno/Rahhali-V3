@@ -3,6 +3,24 @@ var tours = [
     id: 1, title: "Sahara Luxury Camp", subtitle: "Desert Odyssey", category: "desert",
     duration: "3 Days / 2 Nights", price: "\u20AC1290 from 2 people",
     image: "images/sahara-main.jpg",
+itinerary: [
+    {
+      day: 1,
+      title: "Marrakech – Aït Benhaddou – Dades Valley",
+      description: "Early morning departure from Marrakech, crossing the dramatic Tizi n'Tichka pass with sweeping Atlas Mountain views. First stop is Aït Benhaddou — a UNESCO World Heritage Site and one of the most extraordinary fortified villages in the world. Continue through Ouarzazate and the Kasbah Taourite before entering the Valley of Roses in Tinghir, with its red earthen houses, dense palm groves, and the towering walls of Todra Gorge. Overnight in Dades Valley."
+    },
+    {
+      day: 2,
+      title: "Dades Valley – Merzouga Desert",
+      description: "The landscape opens into something else entirely — the Erg Chebbi, Morocco's highest sand dunes. Your camel is waiting. As the sun drops and the dunes shift from amber to deep gold, you'll understand why people come back to Morocco just for this moment. The night is spent in a private luxury desert camp — no noise, no distractions. Just a campfire, a sky full of stars, a Berber dinner, and live music drifting through the silence of the Sahara."
+    },
+    {
+      day: 3,
+      title: "Merzouga – Atlas Mountains – Marrakech",
+      description: "The day opens with a sunrise camel ride among the dunes before heading back through the Valley of Roses one last time. The long drive returns through the Atlas Mountains, arriving in Marrakech around 20:00. Simple in concept — impossible to forget."
+    }
+  ],
+    
     gallery: [
       "images/s1.jpg",
       "images/s2.jpg",

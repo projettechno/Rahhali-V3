@@ -111,4 +111,87 @@ var tours = [
     description: "Experience seamless and premium ground transportation with Rahhali. Whether you are arriving at the airport, heading to your accommodation, or traveling between cities, our private transfer service guarantees a stress-free and comfortable journey.\n\nWe specialize in reliable, door-to-door airport transfers designed to start or end your Moroccan trip with absolute ease. Beyond the airports, our services extend to comfortable intercity transfers and private rides to specific destinations within our operational zones.\n\nWith a fleet of premium, air-conditioned vehicles and professional, discreet drivers, we prioritize your safety, punctuality, and comfort. Simply provide your pickup and drop-off details, and we will handle the logistics—provided the route falls within our available service areas.\n\nPlease note: Availability, vehicle type, and pricing depend on the specific pickup and drop-off locations. Contact us for a custom quote tailored to your itinerary.",
     featured: true
   }
+
+  {
+    id: 7, title: "8-Day Morocco Cultural Journey", subtitle: "Casablanca · Rabat · Chefchaouen · Fes · Sahara · Marrakesh", category: "tours",
+    duration: "9 Days / 8 Nights",
+    price: "Custom Quote",
+    image: "images/mcj.jpg",
+    gallery: [
+    "images/casablanca.jpg",
+    "images/chefchaouen.jpg",
+    "images/fes.jpg",
+    "images/sahara.jpg",
+    "images/dades.jpg",
+    "images/marrakesh.jpg",
+  ],
+  highlights: [
+    "Hassan II Mosque & Casablanca Corniche",
+    "Blue city of Chefchaouen exploration",
+    "Guided tour of ancient Fes medina",
+    "Camel trek or 4WD ride in Merzouga Sahara",
+    "Overnight in a private desert camp under the stars",
+    "UNESCO-listed Kasbah of Aït Benhaddou",
+    "Scenic Tizi n'Tichka Mountain Pass (2,260m)",
+    "Marrakesh souks, Bahia Palace & Jemaa el-Fna",
+  ],
+  inclusions: [
+    "Professional English-speaking guide throughout",
+    "Comfortable private transportation",
+    "Hotel & riad accommodations (8 nights)",
+    "Daily breakfast and dinners",
+    "Camel trek or 4WD desert excursion",
+    "All entrance fees to listed sites",
+    "Airport transfers (arrival & departure)",
+  ],
+  itinerary: [
+    {
+      day: 1,
+      title: "Arrival in Casablanca",
+      description: "Welcome arrival at Casablanca airport with private transfer to your hotel. Time to check in, relax, and prepare for the adventure ahead."
+    },
+    {
+      day: 2,
+      title: "Casablanca – Rabat – Chefchaouen",
+      description: "Guided tour of Casablanca including the iconic Hassan II Mosque, Corniche, and Mohammed V Square. Continue to Rabat to visit the Mohammed V Mausoleum and Hassan Tower, then drive to the enchanting blue city of Chefchaouen for an overnight stay."
+    },
+    {
+      day: 3,
+      title: "Chefchaouen – Fes",
+      description: "Journey to Fes for a guided tour of its rich historical tapestry — El Quaraoiyin Mosque & University, the South Tower, Pottery Village, Nejjarine Square, the Royal Palace, and the Tanners and Jewish Quarter. Overnight in Fes."
+    },
+    {
+      day: 4,
+      title: "Fes – Merzouga Desert",
+      description: "Head southeastward through Ifrane, Azrou, and Midelt across the Middle Atlas region toward the Sahara gateway via Errachidia and Erfoud. Choose between a camel trek or 4WD excursion to your desert camp. Traditional music, campfire, dinner, and starlit overnight in a private tent among the dunes."
+    },
+    {
+      day: 5,
+      title: "Merzouga Desert – Dades Gorge",
+      description: "Depart the desert westward toward the famous Todra Gorge, passing through vibrant nomadic landscapes. Arrive at Dades Gorge and overnight at 'Dar Blues,' a luxurious Kasbah hotel in the scenic Dades Valley."
+    },
+    {
+      day: 6,
+      title: "Dades Gorge – Ouarzazate – Aït Benhaddou – Marrakesh",
+      description: "Scenic drive to Ouarzazate, the 'Hollywood of the Desert,' followed by a visit to the UNESCO-listed Kasbah of Aït Benhaddou. Traverse the breathtaking Tizi n'Tichka Pass (2,260m) and descend into Marrakesh by early evening. Overnight at Riad Palais Des Princesses & Spa or similar."
+    },
+    {
+      day: 7,
+      title: "Marrakesh Guided Tour",
+      description: "Full-day guided tour of Marrakesh: Bahia Palace, Koutoubia Mosque, the lively Jemaa el-Fna Square, vibrant Souks, and the Secret Gardens. Free time in the afternoon to explore at your own pace. Overnight in Marrakesh."
+    },
+    {
+      day: 8,
+      title: "Marrakesh – Casablanca",
+      description: "Leisurely morning in Marrakesh to soak up the city's atmosphere. Afternoon transfer to Casablanca for your final night of the tour."
+    },
+    {
+      day: 9,
+      title: "Transfer to Casablanca Airport",
+      description: "Coordinated airport transfer timed perfectly to your departure flight. Farewell to Morocco."
+    }
+  ],
+  description: "Explore the wonders of Morocco on a captivating 8-day cultural journey that begins and ends in Casablanca. This private tour takes you through incredible destinations across Morocco, immersing you in its rich cultural tapestry.\n\nFrom the grandeur of Hassan II Mosque in Casablanca to the labyrinthine medinas of Fes, from the dreamy blue streets of Chefchaouen to a night beneath the Sahara stars in Merzouga — every day reveals a new facet of this extraordinary country.\n\nTraverse the dramatic Tizi n'Tichka mountain pass, walk through the ancient UNESCO-listed Kasbah of Aït Benhaddou, and lose yourself in the sensory magic of Marrakesh's souks and squares.\n\nAccommodation in comfortable hotels and authentic riads is included throughout, along with a knowledgeable private guide, meals, and seamless door-to-door transportation — ensuring a completely hassle-free and unforgettable Moroccan experience.",
+  featured: true
+}
 ];

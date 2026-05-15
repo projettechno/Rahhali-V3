@@ -118,9 +118,9 @@ var tours = [
     price: "Custom Quote",
     image: "images/tb.jpeg",
     gallery: [
-    "images/casablanca.jpg",
-    "images/chefchaouen.jpg",
-    "images/fes.jpg",
+    "images/td2.jpg",
+    "images/td3.jpg",
+    "images/td33.jpg",
     "images/sahara.jpg",
     "images/dades.jpg",
     "images/marrakesh.jpg",

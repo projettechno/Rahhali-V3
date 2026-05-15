@@ -110,7 +110,7 @@ var tours = [
     ],
     description: "Experience seamless and premium ground transportation with Rahhali. Whether you are arriving at the airport, heading to your accommodation, or traveling between cities, our private transfer service guarantees a stress-free and comfortable journey.\n\nWe specialize in reliable, door-to-door airport transfers designed to start or end your Moroccan trip with absolute ease. Beyond the airports, our services extend to comfortable intercity transfers and private rides to specific destinations within our operational zones.\n\nWith a fleet of premium, air-conditioned vehicles and professional, discreet drivers, we prioritize your safety, punctuality, and comfort. Simply provide your pickup and drop-off details, and we will handle the logistics—provided the route falls within our available service areas.\n\nPlease note: Availability, vehicle type, and pricing depend on the specific pickup and drop-off locations. Contact us for a custom quote tailored to your itinerary.",
     featured: true
-  }
+  },
 
   {
     id: 7, title: "8-Day Morocco Cultural Journey", subtitle: "Casablanca · Rabat · Chefchaouen · Fes · Sahara · Marrakesh", category: "tours",

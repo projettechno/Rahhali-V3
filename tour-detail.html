@@ -62,6 +62,12 @@
         <p class="text-cream-muted leading-relaxed text-sm sm:text-base" id="tour-description"></p>
       </div>
 
+      <!-- Itinerary -->
+      <div class="mb-12 fade-up" id="tour-itinerary-section" style="display:none;">
+        <h3 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-6" style="font-size:0.65rem;">Itinerary</h3>
+        <div id="tour-itinerary"></div>
+      </div>
+
       <!-- Gallery -->
       <div class="mb-12 fade-up">
         <h3 class="text-cream text-xs font-bold tracking-[0.15em] uppercase mb-4" style="font-size:0.65rem;">Gallery</h3>
@@ -127,6 +133,23 @@
       document.getElementById('tour-info-stars').innerHTML=starsHtml;
       document.getElementById('tour-info-price').textContent=tour.price;
       document.getElementById('tour-description').textContent=tour.description;
+
+      document.getElementById('tour-inclusions').innerHTML=incHtml;
+
+      if(tour.itinerary && tour.itinerary.length > 0){
+        document.getElementById('tour-itinerary-section').style.display='block';
+        var itinHtml='';
+        for(var d=0;d<tour.itinerary.length;d++){
+          itinHtml+='<div style="display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start;">'
+            +'<div style="background:#C8A96E;color:#0A0A0A;padding:0.3rem 0.75rem;border-radius:4px;font-weight:700;white-space:nowrap;font-size:0.75rem;font-family:Lato,sans-serif;min-width:60px;text-align:center;">Day '+tour.itinerary[d].day+'</div>'
+            +'<div>'
+            +'<p style="color:#E8E2D8;font-weight:700;margin-bottom:0.25rem;font-size:0.9rem;">'+tour.itinerary[d].title+'</p>'
+            +'<p style="color:#B8B0A4;font-size:0.85rem;line-height:1.6;">'+tour.itinerary[d].description+'</p>'
+            +'</div>'
+            +'</div>';
+        }
+        document.getElementById('tour-itinerary').innerHTML=itinHtml;
+      },
 
       var galleryHtml='';for(var g=0;g<tour.gallery.length;g++){galleryHtml+='<img src="'+tour.gallery[g]+'" alt="'+tour.title+'" class="tour-gallery-img" loading="lazy">';}
       document.getElementById('tour-gallery').innerHTML=galleryHtml;

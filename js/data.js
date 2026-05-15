@@ -139,9 +139,14 @@ itinerary: [
     "images/td2.jpg",
     "images/td3.jpg",
     "images/td33.jpg",
-    "images/sahara.jpg",
-    "images/dades.jpg",
-    "images/marrakesh.jpg",
+    "images/td4f.jpg",
+    "images/td4f4.jpg",
+    "images/td5s.jpg",
+    "images/td6b.jpg",
+    "images/td7m.jpg",
+    "images/td7mm.jpg",
+    "images/td7mmm.jpg",
+      
 
       
   ],

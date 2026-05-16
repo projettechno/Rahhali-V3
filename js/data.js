@@ -62,6 +62,7 @@ itinerary: [
       "images/ourika-gallery-3.jpg",
       "images/ourika6.jpeg",
       "images/ourika7.jpeg",
+      "images/ourika9.jpg",
       
       
     ],

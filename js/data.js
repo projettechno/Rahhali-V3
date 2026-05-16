@@ -31,7 +31,7 @@ itinerary: [
     ],
     highlights: ["Visit Ait Benhaddou (UNESCO site)", "Ride camels in the dunes at sunset", "Overnight in a luxury Berber camp", "Tinghir Oasis and Valley of Roses", "Tinghir Gorge visit", "Erg Chebbi — highest dunes in Morocco", "Berber dinner under the stars"],
     inclusions: ["Comfortable air-conditioned transportation", "1 night hotel in Dades Valley", "1 night luxury desert camp in Merzouga", "Camel trekking in the dunes", "English-speaking driver/guide", "Breakfasts & dinners", "Bottled water", "Fuel and road expenses", "Entrance fees included"],
-    description: "Experience the magic of Morocco on this 3-day desert trip from Marrakech to Merzouga. Cross the High Atlas Mountains, visit the famous Aït Ben Haddou, explore the Todra Gorge, and ride camels through the golden dunes of Erg Chebbi at sunset. Spend a magical night in a luxury desert camp with Berber music under the stars before returning to Marrakech through the beautiful Valley of Roses. A journey full of breathtaking landscapes, culture, and unforgettable memories,Lunches, drinks, entrance fees, tips, and personal, expenses are not ,included
+    description: "Experience the magic of Morocco on this 3-day desert trip from Marrakech to Merzouga. Cross the High Atlas Mountains, visit the famous Aït Ben Haddou, explore the Todra Gorge, and ride camels through the golden dunes of Erg Chebbi at sunset. Spend a magical night in a luxury desert camp with Berber music under the stars before returning to Marrakech through the beautiful Valley of Roses. A journey full of breathtaking landscapes, culture, and unforgettable memories,Lunches, drinks, entrance fees, tips, and personal, expenses are not ,included ",
     featured: true
   }
   

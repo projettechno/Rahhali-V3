@@ -60,9 +60,7 @@ itinerary: [
       "images/ourika-gallery-1.jpg",
       "images/ourika-gallery-2.jpg",
       "images/ourika-gallery-3.jpg"
-      "images/ourika6.jpeg",
-      "images/ourika7.jpeg",
-      "images/ourika8.jpeg",
+      
     ],
     highlights: ["Discover the Berber village & tea with locals" , "Argan oil cooperative by Berber women", "Setti Fatma waterfalls visit", "Breathtaking Atlas Mountains landscape", "Visit Barbary House", "Mountain tour guide included"],
     inclusions: ["Transport with experienced driver", "Air-conditioned vehicle", "Visit Barbary House", "Water bottle", "Mountain tour guide"],

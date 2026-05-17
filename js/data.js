@@ -223,5 +223,37 @@ itinerary: [
   ],
   description: "Explore the wonders of Morocco on a captivating 9-day cultural journey that begins and ends in Casablanca. This private tour takes you through incredible destinations across Morocco, immersing you in its rich cultural tapestry.\n\nFrom the grandeur of Hassan II Mosque in Casablanca to the labyrinthine medinas of Fes, from the dreamy blue streets of Chefchaouen to a night beneath the Sahara stars in Merzouga — every day reveals a new facet of this extraordinary country.\n\nTraverse the dramatic Tizi n'Tichka mountain pass, walk through the ancient UNESCO-listed Kasbah of Aït Benhaddou, and lose yourself in the sensory magic of Marrakesh's souks and squares.\n\nAccommodation in comfortable hotels and authentic riads is included throughout, along with a knowledgeable private guide, meals, and seamless door-to-door transportation — ensuring a completely hassle-free and unforgettable Moroccan experience.",
   featured: true
-}
-];
+},
+
+{
+    id: 8, title: "Marrakech Half-Day Guided Tour", subtitle: "Historical Medina Discovery", category: "city",
+    duration: "5 Hours",
+    price: "\u20AC90 From 2 people",
+    image: "images/marrakech-halfday-main.jpg",
+    gallery: [
+       "images/mh1.jpg",
+       "images/mh2.jpg",
+       "images/mh3.jpg",
+       "images/mh4.jpg",
+       "images/mh5.jpg",
+       "images/mh6.jpg",
+    ],
+    highlights: [
+       "Visit the iconic Koutoubia Mosque",
+       "Explore the magnificent Bahia Palace",
+       "Discover the historical Saadian Tombs",
+       "Admire the architecture of Ben Youssef Madrasa",
+       "Walk through Jemaa el-Fnaa Square and traditional souks",
+       "Authentic guided tour inside Marrakech Medina",
+       "Comfortable private transportation included"
+    ],
+    inclusions: [
+       "Professional local guide",
+       "Comfortable private transportation",
+       "Bottled water during the tour",
+       "Walking tour inside the Medina",
+       "Historical and cultural explanations"
+    ],
+    description: "Experience the beauty and history of Marrakech on a carefully designed half-day guided tour. Starting at 9:00 AM, this 5-hour experience is perfect for travelers who want to discover the city's most iconic landmarks with comfort, culture, and authentic local guidance.\n\nYour journey begins at the legendary Koutoubia Mosque, the symbol of Marrakech, famous for its impressive minaret and rich historical significance.\n\nContinue to the elegant Bahia Palace, known for its magnificent Moroccan architecture, peaceful courtyards, intricate mosaics, and royal atmosphere.\n\nNext, discover the fascinating Saadian Tombs, one of Marrakech's hidden historical gems, beautifully decorated and full of history from the Saadian dynasty.\n\nThe tour then takes you to the famous Ben Youssef Madrasa, one of the finest examples of Islamic architecture in Morocco, admired for its stunning craftsmanship and cultural importance.\n\nEnd the experience with a walk through the vibrant souks and the lively Jemaa el-Fnaa Square, where travelers can enjoy the authentic atmosphere of Marrakech, local artisans, spices, and street entertainment.\n\nThroughout the tour, enjoy comfortable private transportation, bottled water, and detailed historical explanations from your professional local guide.\n\nThis experience is ideal for couples, families, solo travelers, and anyone looking to explore the highlights of Marrakech comfortably in just half a day.",
+    featured: true
+},

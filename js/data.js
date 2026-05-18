@@ -228,7 +228,7 @@ itinerary: [
 {
     id: 8, title: "Marrakech Half-Day Guided Tour", subtitle: "Historical Medina Discovery", category: "city",
     duration: "5 Hours",
-    price: "\u20AC90 From 2 people",
+    price: "\u20AC145 From 2 people",
     image: "images/v-main 1.jpg",
     gallery: [
        "images/v11.jpg",

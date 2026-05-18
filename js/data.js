@@ -138,7 +138,7 @@ itinerary: [
   {
     id: 7, title: "9-Day Morocco Cultural Journey", subtitle: "Casablanca · Rabat · Chefchaouen · Fes · Sahara · Marrakesh", category: "tours",
     duration: "9 Days / 8 Nights",
-    price: "Custom Quote",
+    price: " \u20AC4490 From 2 people",
     image: "images/tb.jpeg",
     gallery: [
     "images/td2.jpg",

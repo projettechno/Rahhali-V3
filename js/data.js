@@ -143,7 +143,6 @@ itinerary: [
     gallery: [
     "images/td2.jpg",
     "images/td3.jpg",
-    "images/td33.jpg",
     "images/td4f.jpg",
     "images/td4f4.jpg",
     "images/td5s.jpg",

@@ -263,8 +263,8 @@ itinerary: [
   {
     id: 9,title: "Rabat Historical Day Trip from Marrakech",subtitle: "Capital of Light & Heritage",category: "historical",
     duration: "Full Day (14 Hours)",
-    price: "\u20AC390 From 2 people",
-    image: "images/R11-main.jpg",
+    price: "\u20AC485 From 2 people",
+    image: "images/rabat1-main.jpg",
     gallery: [
       "images/r1.jpg",
       "images/r2.jpg",

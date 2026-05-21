@@ -266,12 +266,12 @@ itinerary: [
     price: "\u20AC485 From 2 people",
     image: "images/rabat1-main.jpg",
     gallery: [
-      "images/r1.jpg",
-      "images/r2.jpg",
-      "images/r3.jpg",
-      "images/r4.jpg",
-      "images/r5.jpg",
-      "images/r6.jpg",
+      "images/R1.jpg",
+      "images/R2.jpg",
+      "images/R3.jpg",
+      "images/R4.jpg",
+      "images/R5.jpg",
+      "images/R6.jpg",
     ],
     highlights: [
       "Visit the iconic Hassan Tower",

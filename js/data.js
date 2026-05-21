@@ -259,4 +259,44 @@ itinerary: [
     description: "Experience the beauty and history of Marrakech on a carefully designed half-day guided tour. Starting at 9:00 AM, this 5-hour experience is perfect for travelers who want to discover the city's most iconic landmarks with comfort, culture, and authentic local guidance.\n\nYour journey begins at the legendary Koutoubia Mosque, the symbol of Marrakech, famous for its impressive minaret and rich historical significance.\n\nContinue to the elegant Bahia Palace, known for its magnificent Moroccan architecture, peaceful courtyards, intricate mosaics, and royal atmosphere.\n\nNext, discover the fascinating Saadian Tombs, one of Marrakech's hidden historical gems, beautifully decorated and full of history from the Saadian dynasty.\n\nThe tour then takes you to the famous Ben Youssef Madrasa, one of the finest examples of Islamic architecture in Morocco, admired for its stunning craftsmanship and cultural importance.\n\nEnd the experience with a walk through the vibrant souks and the lively Jemaa el-Fnaa Square, where travelers can enjoy the authentic atmosphere of Marrakech, local artisans, spices, and street entertainment.\n\nThroughout the tour, enjoy comfortable private transportation, bottled water, and detailed historical explanations from your professional local guide.\n\nThis experience is ideal for couples, families, solo travelers, and anyone looking to explore the highlights of Marrakech comfortably in just half a day.",
     featured: true
 },
+
+  {
+    id: 5,
+    title: "Rabat Historical Day Trip from Marrakech",
+    subtitle: "Capital of Light & Heritage",
+    category: "historical",
+    duration: "Full Day (14 Hours)",
+    price: "\u20AC390 From 2 people",
+    image: "images/R11-main.jpg",
+    gallery: [
+      "images/r1.jpg",
+      "images/r2.jpg",
+      "images/r3.jpg",
+      "images/r4.jpg",
+      "images/r5.jpg",
+      "images/r6.jpg",
+    ],
+    highlights: [
+      "Visit the iconic Hassan Tower",
+      "Explore the Mausoleum of Mohammed V",
+      "Walk through the Kasbah of the Udayas",
+      "Relax in the Andalusian Gardens",
+      "Enjoy mint tea with Atlantic Ocean views",
+      "Discover Rabat Old Medina & Rue des Consuls",
+      "See the Royal Palace gates",
+      "Panoramic drive along Almohad ramparts"
+    ],
+    inclusions: [
+      "Private air-conditioned transportation",
+      "Professional English-speaking driver",
+      "Licensed local historical guide in Rabat",
+      "Traditional Moroccan mint tea & pastries",
+      "Entrance fees to monuments",
+      "Water bottle",
+      "Transport insurance",
+      "Diesel fuel"
+    ],
+    description: "Escape Marrakech for a full-day cultural journey to Rabat, Morocco’s elegant capital city where royal heritage, coastal beauty, and centuries of history blend together beautifully.\n\nYour adventure begins early in the morning with a comfortable drive through the Moroccan countryside. Upon arrival in Rabat, the first stop takes you to the legendary Hassan Tower, one of the most iconic unfinished monuments of the Almohad dynasty. Beside it stands the magnificent Mausoleum of Mohammed V, famous for its intricate zellij mosaics, carved plasterwork, and ceremonial royal guards.\n\nThe experience continues inside the charming Kasbah of the Udayas, a peaceful fortress overlooking the Atlantic Ocean. Wander through narrow blue-and-white alleys, admire the Andalusian Gardens, and enjoy a traditional Moroccan mint tea with pastries while taking in breathtaking ocean views.\n\nFor lunch, step into an authentic traditional Riad hidden within the old Medina, where you can enjoy delicious Moroccan specialties in a refined atmosphere.\n\nIn the afternoon, discover the vibrant Old Medina and the historic Rue des Consuls, once an important diplomatic street connecting Morocco with the world. Watch local artisans crafting traditional carpets, leather goods, and handmade Moroccan slippers.\n\nBefore leaving Rabat, enjoy a panoramic drive along the impressive Almohad walls and stop outside the majestic Royal Palace gates for memorable photos and fascinating insights into Morocco’s royal history.\n\nAfter a full day of exploration, relax on the drive back to Marrakech with arrival around 21:00.\n\nPlease note: Lunch, drinks, personal expenses, and tips are not included. This tour involves approximately 7 hours of driving time in total, so comfortable shoes and a camera are highly recommended.",
+    featured: true
+},
   ];

@@ -296,4 +296,44 @@ itinerary: [
     description: "Escape Marrakech for a full-day cultural journey to Rabat, Morocco’s elegant capital city where royal heritage, coastal beauty, and centuries of history blend together beautifully.\n\nYour adventure begins early in the morning with a comfortable drive through the Moroccan countryside. Upon arrival in Rabat, the first stop takes you to the legendary Hassan Tower, one of the most iconic unfinished monuments of the Almohad dynasty. Beside it stands the magnificent Mausoleum of Mohammed V, famous for its intricate zellij mosaics, carved plasterwork, and ceremonial royal guards.\n\nThe experience continues inside the charming Kasbah of the Udayas, a peaceful fortress overlooking the Atlantic Ocean. Wander through narrow blue-and-white alleys, admire the Andalusian Gardens, and enjoy a traditional Moroccan mint tea with pastries while taking in breathtaking ocean views.\n\nFor lunch, step into an authentic traditional Riad hidden within the old Medina, where you can enjoy delicious Moroccan specialties in a refined atmosphere.\n\nIn the afternoon, discover the vibrant Old Medina and the historic Rue des Consuls, once an important diplomatic street connecting Morocco with the world. Watch local artisans crafting traditional carpets, leather goods, and handmade Moroccan slippers.\n\nBefore leaving Rabat, enjoy a panoramic drive along the impressive Almohad walls and stop outside the majestic Royal Palace gates for memorable photos and fascinating insights into Morocco’s royal history.\n\nAfter a full day of exploration, relax on the drive back to Marrakech with arrival around 21:00.\n\nPlease note: Lunch, drinks, personal expenses, and tips are not included. This tour involves approximately 7 hours of driving time in total, so comfortable shoes and a camera are highly recommended.",
     featured: true
 },
+
+  {
+  id: 6,
+  title: "Agafay Desert Sunset Experience",
+  subtitle: "Luxury Camp, Camel Ride & Dinner Show",
+  category: "desert",
+  duration: "Half Day",
+  price: "€75 Per Person",
+  image: "images/agafay-main.jpg",
+  gallery: [
+    "images/agafay1.jpg",
+    "images/agafay2.jpg",
+    "images/agafay3.jpg",
+    "images/agafay4.jpg",
+    "images/agafay5.jpg",
+    "images/agafay6.jpg"
+  ],
+  highlights: [
+    "Scenic camel ride in the Agafay Desert",
+    "Access to a luxury desert camp swimming pool",
+    "Breathtaking sunset views",
+    "Traditional Moroccan dinner",
+    "Live music and entertainment",
+    "Comfortable round-trip transportation from Marrakech"
+  ],
+  inclusions: [
+    "Round-trip transportation",
+    "Air-conditioned vehicle",
+    "Professional driver",
+    "Bottled water",
+    "Camel ride experience",
+    "Swimming pool access",
+    "Traditional Moroccan dinner",
+    "Live entertainment and show",
+    "Transport insurance",
+    "Diesel fuel"
+  ],
+  description: "Escape the city and experience the beauty of the Agafay Desert on this unforgettable half-day adventure. Your journey begins with a comfortable transfer from Marrakech in a modern air-conditioned vehicle.\n\nUpon arrival, enjoy a relaxing camel ride across the stunning desert landscape before spending free time at a luxury desert camp where you can unwind by the swimming pool and admire the peaceful surroundings.\n\nAs the sun begins to set, witness the magical colors of the Agafay Desert during one of the most beautiful sunsets in Morocco. The evening continues with a delicious traditional Moroccan dinner served in an elegant desert atmosphere.\n\nAfter dinner, enjoy live entertainment and traditional performances under the stars before returning comfortably to Marrakech.\n\nThis experience is perfect for travelers looking to combine relaxation, adventure, authentic Moroccan hospitality, and unforgettable desert scenery in just a few hours.",
+  featured: true
+},
   ];

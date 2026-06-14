@@ -304,7 +304,7 @@ itinerary: [
   category: "desert",
   duration: "Half Day",
   price: "€75 Per Person",
-  image: "images/agafay-main.jpg",
+  image: "images/GA1-main.jpg",
   gallery: [
     "images/agafay1.jpg",
     "images/agafay2.jpg",

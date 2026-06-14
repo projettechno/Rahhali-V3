@@ -303,7 +303,7 @@ itinerary: [
   subtitle: "Luxury Camp, Camel Ride & Dinner Show",
   category: "desert",
   duration: "Half Day",
-  price: "€75 Per Person",
+  price: "€245 Per Person",
   image: "images/GA1.jpg",
   gallery: [
     "images/agafay1.jpg",

@@ -89,7 +89,7 @@ itinerary: [
     featured: true
   },
     {
-    id: 5, title: "Ouzoud Waterfalls", subtitle: "Nature's Masterpiece", category: "coastal",
+    id: 5, title: "Ouzoud Waterfalls", subtitle: "Nature's Masterpiece", category: "nature",
     duration: "1 Day", price: " \u20AC170 From 2 people",
     image: "images/oz-main.jpg",
     gallery: [
@@ -298,7 +298,7 @@ itinerary: [
 },
 
   {
-  id: 6,
+  id: 10,
   title: "Agafay Desert Sunset Experience",
   subtitle: "Luxury Camp, Camel Ride & Dinner Show",
   category: "desert",

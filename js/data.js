@@ -306,12 +306,12 @@ itinerary: [
   price: "€245 from 2 people ",
   image: "images/GA1.jpg",
   gallery: [
-    "images/agafay1.jpg",
-    "images/agafay2.jpg",
-    "images/agafay3.jpg",
-    "images/agafay4.jpg",
-    "images/agafay5.jpg",
-    "images/agafay6.jpg"
+    "images/GA2.jpg",
+    "images/GA3.jpg",
+    "images/GA4.jpg",
+    "images/GA5.jpg",
+    "images/GA6.jpg",
+    "images/GA7.jpg"
   ],
   highlights: [
     "Scenic camel ride in the Agafay Desert",

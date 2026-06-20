@@ -311,7 +311,7 @@ itinerary: [
     "images/GA4.jpg",
     "images/GA5.jpg",
     "images/GA6.jpg",
-    "images/GA7.jpeg"
+    "images/GA7.jpg"
   ],
   highlights: [
     "Scenic camel ride in the Agafay Desert",
